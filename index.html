@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -110,7 +111,7 @@
   #hero {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     position: relative;
     overflow: hidden;
   }
@@ -120,7 +121,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 80px 60px;
+    padding: 140px 80px 100px;
     position: relative;
     overflow: hidden;
   }
@@ -129,6 +130,7 @@
     content: '';
     position: absolute;
     inset: 0;
+    pointer-events: none;
     background: radial-gradient(ellipse at 30% 70%, rgba(196, 134, 106, 0.2) 0%, transparent 60%),
                 radial-gradient(ellipse at 80% 20%, rgba(138, 158, 140, 0.15) 0%, transparent 50%);
   }
@@ -169,10 +171,10 @@
 
   .hero-sub {
     font-size: 13px;
-    color: rgba(248, 244, 238, 0.55);
-    letter-spacing: 0.1em;
-    line-height: 2;
-    max-width: 340px;
+    color: rgba(248, 244, 238, 0.65);
+    letter-spacing: 0.08em;
+    line-height: 2.2;
+    max-width: 360px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.8s ease 0.7s forwards;
@@ -385,16 +387,42 @@
     background: linear-gradient(135deg, var(--cream) 0%, #EDE8E0 100%);
   }
 
-  .empathy-closing p {
+  .empathy-quote {
     font-family: 'Shippori Mincho', serif;
     font-size: clamp(16px, 2vw, 22px);
+    line-height: 1.8;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+
+  .empathy-body {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(14px, 1.6vw, 18px);
     line-height: 2;
     color: var(--charcoal);
+    margin-top: 24px;
   }
 
   .empathy-closing strong {
     color: var(--accent-terra);
     font-weight: 600;
+  }
+
+  .empathy-spacer {
+    height: 20px;
+    display: block;
+  }
+
+  .voice-lead {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 700;
+    color: var(--charcoal);
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
   }
 
   /* ── REASONS SECTION ── */
@@ -452,8 +480,8 @@
 
   .reason-desc {
     font-size: 13px;
-    color: rgba(248, 244, 238, 0.55);
-    line-height: 2;
+    color: rgba(248, 244, 238, 0.6);
+    line-height: 2.2;
   }
 
   .reason-accent {
@@ -541,7 +569,7 @@
   .menu-desc {
     font-size: 13px;
     color: var(--mid-brown);
-    line-height: 2;
+    line-height: 2.2;
     margin-bottom: 32px;
   }
 
@@ -627,8 +655,6 @@
     opacity: 0.5;
   }
 
-  .profile-content {}
-
   .profile-name-jp {
     font-family: 'Shippori Mincho', serif;
     font-size: 28px;
@@ -705,7 +731,7 @@
   #reserve .section-title {
     color: var(--cream);
     text-align: center;
-    max-width: 600px;
+    max-width: 680px;
     margin: 0 auto 24px;
   }
 
@@ -714,6 +740,7 @@
     color: rgba(248, 244, 238, 0.5);
     margin-bottom: 60px;
     letter-spacing: 0.05em;
+    line-height: 2;
   }
 
   .reserve-buttons {
@@ -1033,28 +1060,53 @@
     nav.scrolled { padding: 12px 24px; }
     .nav-links { display: none; }
 
-    #hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 120px 32px 60px; min-height: 70vh; }
-    .hero-right { display: none; }
-    .hero-tag { display: none; }
+    #hero { grid-template-columns: 1fr; min-height: 100vh; }
+    .hero-left { padding: 100px 28px 80px; min-height: 100vh; }
 
-    .container { padding: 0 24px; }
+    .hero-headline { font-size: clamp(26px, 7vw, 36px); }
+    .hero-sub { font-size: 13px; max-width: 100%; }
 
-    #empathy, #reasons, #menu, #profile, #reserve, #access { padding: 80px 0; }
+    .container { padding: 0 20px; }
+
+    #empathy, #reasons, #menu, #profile, #reserve, #access { padding: 72px 0; }
+    #voice { padding: 60px 0; }
+    #faq { padding: 72px 0; }
+
+    .empathy-closing { padding: 32px 24px; }
 
     .pain-grid { grid-template-columns: 1fr; }
+    .pain-item { padding: 24px 20px; }
+
     .reasons-grid { grid-template-columns: 1fr; }
+    .reason-card { padding: 36px 24px; }
+
     .menu-cards { grid-template-columns: 1fr; }
+    .menu-card { padding: 36px 28px; }
+
     .profile-grid { grid-template-columns: 1fr; gap: 40px; }
     .access-grid { grid-template-columns: 1fr; gap: 40px; }
 
     .voice-grid { grid-template-columns: 1fr; }
-    .reserve-buttons { flex-direction: column; align-items: center; }
-    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    .voice-card { padding: 28px 24px; }
 
-    footer { flex-direction: column; gap: 20px; text-align: center; padding: 48px 24px; }
+    .reserve-buttons { flex-direction: column; align-items: stretch; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; padding: 18px 24px; }
+
+    .floating-cta { bottom: 20px; right: 16px; left: 16px; }
+    .floating-btn { justify-content: center; width: 100%; }
+
+    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 24px; }
+    .footer-copy { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-headline { font-size: clamp(24px, 8vw, 32px); }
+    .section-title { font-size: clamp(22px, 6vw, 30px); }
+    .menu-price { font-size: 28px; }
+    .reason-number { font-size: 48px; }
   }
 </style>
+
 </head>
 <body>
 
@@ -1080,33 +1132,24 @@
   <div class="hero-left">
     <p class="hero-eyebrow">Hiroshima · Body Care Salon</p>
     <h1 class="hero-headline">
-      何度整体に行っても<br>
-      <em>変わらない</em>あなたへ。<br>
-      体を「読み解く」<br>ケアがあります。
+      何度通っても、<br>
+      また戻ってしまう。<br>
+      それは、<em>「部分」しか</em><br>
+      見ていなかったから。
     </h1>
     <p class="hero-sub">
-      体が整っているとき、人は静かに美しい。<br>
-      外側ではなく、内側から。つながりを整えることで、<br>
-      その状態に戻す。それが美体ラボです。
+      肩だけほぐしても腰が痛い。<br>
+      腰を整えても、また戻ってくる。<br><br>
+      それは体の「つながり」が乱れているから。<br>
+      美体ラボは、全身のバランスを読み解くことで<br>
+      根本から整えるボディケアサロンです。
     </p>
     <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary" style="margin-top:36px;display:inline-flex;">
       空き状況を確認・予約する
     </a>
-    <div class="hero-tag">モニター受付中</div>
+    <div class="hero-tag">開業記念 受付中</div>
   </div>
-  <div class="hero-right">
-    <div class="hero-visual">
-      <div class="hero-visual-inner">
-        <span class="hero-visual-text">サロンの写真</span>
-        <span class="hero-visual-text">施術イメージ</span>
-      </div>
-    </div>
-    <div class="hero-badge">
-      <p class="hero-badge-label">MONITOR PRICE</p>
-      <p class="hero-badge-value">60分 ¥7,800〜</p>
-    </div>
-  </div>
-  <div class="scroll-indicator" style="position:absolute;bottom:40px;left:calc(25% - 20px);">
+  <div class="scroll-indicator" style="position:absolute;bottom:40px;left:60px;">
     <div class="scroll-line"></div>
     <span class="scroll-text">SCROLL</span>
   </div>
@@ -1147,11 +1190,14 @@
     </div>
 
     <div class="empathy-closing reveal">
-      <p>
-        何度整体に行っても変わらない。でも、<strong>諦めていない。</strong><br>
-        そんなあなたのために、美体ラボはあります。<br>
-        症状の奥にある原因を丁寧に読み解き、<strong>本当の意味で整える</strong>ケアを提供します。
-      </p>
+      <p class="empathy-quote">「また同じところが痛い」</p>
+      <p class="empathy-quote">「通っているのに、なぜ変わらないんだろう」</p>
+      <p class="empathy-spacer"></p>
+      <p class="empathy-body">その繰り返しには、<strong>理由があります。</strong></p>
+      <p class="empathy-spacer"></p>
+      <p class="empathy-body">原因が「部分」にあるのではなく、<br>体全体の「つながりの乱れ」にある場合、<br>一箇所だけほぐしてもまた戻ってしまう。</p>
+      <p class="empathy-spacer"></p>
+      <p class="empathy-body">美体ラボは、その<strong>根本から向き合います。</strong></p>
     </div>
   </div>
 </section>
@@ -1168,7 +1214,7 @@
         <div class="reason-number">01</div>
         <h3 class="reason-title">「症状」ではなく<br>「あなたの体全体」を読み解く</h3>
         <p class="reason-desc">
-          痛みや不調だけを見るのではなく、あなたの体全体の状態・習慣・生活パターンを丁寧に読み解きます。その日だけよくなる施術ではなく、本質的な変化を目指します。
+          痛い場所だけを見ていても、根本は変わりません。美体ラボでは、姿勢・動作パターン・生活習慣まで含めた「体全体の状態」から施術を組み立てます。その日だけ楽になるのではなく、次に来たとき「あ、変わった」と感じられる変化を目指します。
         </p>
         <div class="reason-accent"></div>
       </div>
@@ -1176,15 +1222,15 @@
         <div class="reason-number">02</div>
         <h3 class="reason-title">他院で変わらなかった方が<br>変わっていく</h3>
         <p class="reason-desc">
-          「何をしても変わらない」と諦めかけていた方が、ここで初めて変化を実感しているのは、体全体のつながりを読み解く本質的なアプローチの違いにあります。
+          「2年間、どこに行っても変わらなかった膝の痛みが、なぜ起きているのか、初めて説明してもらえた」——そう言ってくださるお客様がいます。変化は、原因を正しく理解するところから始まります。
         </p>
         <div class="reason-accent"></div>
       </div>
       <div class="reason-card">
         <div class="reason-number">03</div>
-        <h3 class="reason-title">通い続けたくなる<br>サポート体制</h3>
+        <h3 class="reason-title">1回で終わらせない。<br>変化を一緒に確認する。</h3>
         <p class="reason-desc">
-          施術後も日常のケア方法をお伝えします。「次また来た時にどう変化したか」を一緒に確認しながら、継続的に体と向き合っていきます。
+          施術後は、日常で実践できるセルフケアをお伝えします。次回来院時には「前回からどう変わったか」を確認しながら施術を組み立て直します。ひとりで悩まず、体の変化を一緒に追っていける場所です。
         </p>
         <div class="reason-accent"></div>
       </div>
@@ -1199,36 +1245,36 @@
     <h2 class="section-title reveal">メニュー・料金</h2>
     <div class="divider reveal"></div>
     <p class="menu-intro reveal">
-      現在モニター期間中につき、通常価格より特別な料金でご提供しています。<br>
-      初めての方もお気軽にご相談ください。
+      開業記念につき、お一人おひとりに時間をかけた丁寧な施術を、特別価格でご提供しています。<br>
+      通常営業に移行すると価格変更となりますので、この機会にぜひお試しください。
     </p>
 
     <div class="menu-cards reveal">
       <div class="menu-card">
-        <div class="menu-monitor-badge">モニター価格</div>
+        <div class="menu-monitor-badge">開業記念価格</div>
         <p class="menu-type">First Layer · 60 min</p>
         <h3 class="menu-name">整える</h3>
         <p class="menu-subtitle">60分コース</p>
         <p class="menu-desc">
-          体の状態を丁寧に確認しながら、全体を整えていく施術。初めて来院される方にも安心していただけるコースです。
+          まず体全体の状態を把握し、優先度の高い部位を中心に整えるコース。「どこが問題でどうなっているか」施術前に必ず丁寧にご説明します。初めての方はほぼこちらからスタートされています。
         </p>
         <div class="menu-price-row">
-          <span class="menu-price-label">MONITOR</span>
+          <span class="menu-price-label">開業記念</span>
           <span class="menu-price">¥7,800</span>
           <span class="menu-price-unit">（通常 ¥10,000）</span>
         </div>
       </div>
 
       <div class="menu-card">
-        <div class="menu-monitor-badge">モニター価格</div>
+        <div class="menu-monitor-badge">開業記念価格</div>
         <p class="menu-type">First Layer · 90 min</p>
         <h3 class="menu-name">読み解く</h3>
         <p class="menu-subtitle">90分コース</p>
         <p class="menu-desc">
-          じっくりと時間をかけて体全体を読み解く施術。慢性的な不調や「何度行っても変わらない」方にとくにおすすめです。
+          全身をじっくり読み解き、根本にアプローチするコース。「何度行っても変わらない」という方、慢性的な不調が長く続いている方に特に選ばれているコースです。
         </p>
         <div class="menu-price-row">
-          <span class="menu-price-label">MONITOR</span>
+          <span class="menu-price-label">開業記念</span>
           <span class="menu-price">¥9,800</span>
           <span class="menu-price-unit">（通常 ¥13,000）</span>
         </div>
@@ -1236,7 +1282,7 @@
     </div>
 
     <p class="menu-note reveal">
-      ※ モニター期間終了後は通常価格に変更となります。紹介割引あり（紹介者様の次回施術を¥2,000引き）。
+      ※ 開業記念価格は期間限定となります。通常営業移行後は通常価格に変更となります。紹介割引あり（紹介者様の次回施術を¥2,000引き）。
     </p>
 
     <div class="reveal" style="text-align:center; margin-top:48px;">
@@ -1260,24 +1306,25 @@
         <h3 class="profile-name-jp">名前の由来</h3>
         <p class="profile-name-en">The Story Behind the Name</p>
 
-        <p class="profile-message">
-          <p>「美体」という言葉を選んだのは、「美しい体」を作りたかったからではありません。</p>
-          <p style="margin-top:16px">体が整っているとき、人は自然と背筋が伸び、よく眠れて、気力が湧いてくる。そういう状態の人が持つ、静かな存在感のようなものを「美しい」と感じていました。外側ではなく、内側から整っている状態のこと。</p>
+        <div class="profile-message">
+          <p>「美体」とは、美しい体を作ることではありません。</p>
+          <p style="margin-top:16px">体が整っているとき、人は自然と姿勢が伸び、よく眠れて、気力が湧いてくる。そういう状態の人が持つ、静かな存在感。外側ではなく、内側から整っている——その状態を「美しい」と呼びたかった。</p>
           <p style="margin-top:16px">あなたが「何度行っても変わらない」と感じているのは、部分しか見ていなかったからかもしれない。</p>
           <p style="margin-top:16px">美体ラボは、そのつながり全体を読み解くことから始めます。</p>
-        </p>
+        </div>
 
         <div class="profile-divider"></div>
 
         <h3 class="profile-name-jp" style="margin-bottom: 8px;">コンセプト</h3>
         <p class="profile-name-en" style="margin-bottom: 32px;">Our Concept</p>
 
-        <p class="profile-message">
+        <div class="profile-message">
           <p style="font-family:'Shippori Mincho',serif; font-size:18px; font-weight:600; color:var(--charcoal); letter-spacing:0.05em;">体は、全部つながっています。</p>
-          <p style="margin-top:16px">筋肉・筋膜・骨格は全身でネットワークを形成し、互いにバランスを支え合っています。どこか一箇所に緊張が溜まると、離れた場所にも不調が連鎖していく。</p>
-          <p style="margin-top:16px">だから肩だけほぐしても腰が痛い。腰を整えても頭が重い。何度通っても、また戻ってしまう。</p>
-          <p style="margin-top:16px">美体ラボは、そのつながり全体を読み解き、体のバランスを整えることで疲れが取れる・眠れる・動ける体へと導きます。部分を「治す」のではなく、全体を「整える」。それが美体ラボの仕事です。</p>
-        </p>
+          <p style="margin-top:16px">肩をほぐしても腰が痛い。腰を整えても頭が重い。それは、体が全身でバランスを取り合っているからです。一箇所だけ緩めても、他の場所がまた引っ張り直してしまう。</p>
+          <p style="margin-top:16px">だから何度通っても、また同じところが痛くなる。</p>
+          <p style="margin-top:16px">美体ラボは、痛みの出ている場所だけでなく、そこに影響を与えている体全体のバランスを確認しながら施術を組み立てます。力で押したり、骨をボキッと鳴らしたりはしません。筋肉とそれを包む膜に丁寧にアプローチすることで、体が本来の状態に戻ろうとする力を引き出します。</p>
+          <p style="margin-top:16px">「治す」ではなく、「整える」。それが、ここでやることです。</p>
+        </div>
 
         <div class="profile-divider"></div>
 
@@ -1302,17 +1349,19 @@
       <div class="profile-content">
         <h3 class="profile-name-jp" style="margin-bottom:6px;">30代・男性</h3>
         <p class="profile-name-en" style="margin-bottom:24px;">1対1のマンツーマン施術</p>
-        <div style="background:var(--cream);border:1px solid var(--border);padding:16px 24px;margin-bottom:32px;font-size:13px;color:var(--mid-brown);line-height:2;letter-spacing:0.05em;">
+        <div style="background:var(--warm-white);border:1px solid var(--border);padding:16px 24px;margin-bottom:32px;font-size:13px;color:var(--mid-brown);line-height:2;letter-spacing:0.05em;">
           完全個室 ／ 施術前に「今日触れる可能性のある部位」を説明 ／ 施術中も都度声かけあり ／ 動きやすい服装でお越しください
         </div>
 
-        <p class="profile-message">
-          <p>子どもの頃からサッカーを続け、体を動かすことが日常だった。自然と体のケアを習慣にしてきたつもりだった。それでも20代後半、仕事や生活環境の変化とともに、頭痛・倦怠感・原因のわからない不調が重なるようになった。</p>
-          <p style="margin-top:16px">慢性的な偏頭痛にも長年悩まされた。通い続けたカイロプラクティックで一時的に楽にはなる。でも、根本は変わらない。「このままでいいのか」という問いが、自ら学ぶきっかけになった。</p>
-          <p style="margin-top:16px">学びを深める中で辿り着いたのが、テンセグリティの考え方と「回復とは副交感神経優位への転換である」というアプローチだった。知識だけでなく、自分の体で実践を重ねた。</p>
-          <p style="margin-top:16px">気づけば、慢性的だった偏頭痛はほぼ出なくなっていた。今は、ひどくなる前に自分で対処できる体になっている。</p>
-          <p style="margin-top:16px">同じように悩んでいる人の力になりたい。その思いだけで、美体ラボを始めた。</p>
-        </p>
+        <div class="profile-message">
+          <p>子どもの頃からサッカーを続け、体を動かすことが日常でした。自然と体のケアを習慣にしてきたつもりでした。それでも20代後半、仕事や生活環境の変化とともに、頭痛・倦怠感・原因のわからない不調が重なるようになりました。</p>
+          <p style="margin-top:16px">慢性的な偏頭痛にも長年悩まされました。通い続けたカイロプラクティックで一時的に楽にはなる。でも、根本は変わらない。「このままでいいのか」という問いが、自ら学ぶきっかけになりました。</p>
+          <p style="margin-top:16px">学びを深める中で辿り着いたのが、体全身のつながりを前提としたアプローチと「回復とは副交感神経優位への転換である」という考え方でした。知識だけでなく、自分の体で実践を重ねました。</p>
+          <p style="margin-top:16px">気づけば、慢性的だった偏頭痛はほぼ出なくなっていました。今は、ひどくなる前に自分で対処できる体になっています。</p>
+          <p style="margin-top:16px">同じように悩んでいた経験があるから、「変わらない」という感覚の苦しさがわかります。</p>
+          <p style="margin-top:16px">だから美体ラボでは、まずじっくりヒアリングして体の状態を確認するところから始めます。何が起きているのかを一緒に把握することなしに、的確なケアはできないと考えているからです。</p>
+          <p style="margin-top:16px">あなたの体のことを、一緒に理解していきましょう。</p>
+        </div>
 
         <div class="profile-divider"></div>
 
@@ -1333,18 +1382,22 @@
     <div class="divider reveal"></div>
     <div class="voice-grid reveal">
       <div class="voice-card" style="border-left: 3px solid var(--accent-terra);">
+        <p class="voice-lead">「男性施術者でも、安心して受けられました」</p>
         <p class="voice-text">「施術者が男性と知り、最初は少し不安がありました。でも、施術前のヒアリングで『今日どこを触る可能性があるか』を丁寧に説明していただき、施術中も『次はここに触れますね』と都度声をかけてくださるので、安心して身を委ねることができました。」</p>
         <p class="voice-name">— 50代・女性</p>
       </div>
       <div class="voice-card" style="border-left: 3px solid var(--accent-sage);">
+        <p class="voice-lead">「2年間変わらなかった膝痛の、原因を初めて説明してもらえた」</p>
         <p class="voice-text">「この2年間膝の痛みがあり、いろんなところの施術を受けましたが、なかなか変化がありませんでした。それなのに、膝の痛みがどういうからくりで発生しているのかを説明していただき、とてもびっくりしました。」</p>
         <p class="voice-name">— 50代・女性</p>
       </div>
       <div class="voice-card" style="border-left: 3px solid var(--accent-gold);">
+        <p class="voice-lead">「原因の説明と、日々のケアまで教えてくれた」</p>
         <p class="voice-text">「急に肩の痛みが出て、腕を上げるのがとてもつらかったのですが、ほぐすだけでなく、原因を説明してくださり、日々のケアについても教えていただきました。大変満足しています。」</p>
         <p class="voice-name">— 40代・女性</p>
       </div>
       <div class="voice-card" style="border-left: 3px solid var(--accent-terra); opacity: 0.85;">
+        <p class="voice-lead">「自分でできるケアが増えて、楽な時間が増えてきた」</p>
         <p class="voice-text">「首と肩の凝りがひどく、いつもお世話になっています。私の状況を聞いた上で、私にできる範囲のアドバイスをしてくださり、徐々に体が楽な時間が増えてきました。」</p>
         <p class="voice-name">— 50代・女性</p>
       </div>
@@ -1386,6 +1439,21 @@
         <div class="faq-a">行っておりません。関節を強制的に鳴らす施術は、首・背中・腰いずれも神経や血管へのリスクがあるため、美体ラボでは採用していません。当サロンの施術は、筋肉・筋膜へのアプローチを中心とした、体に負担の少ない手技です。安心してお越しください。</div>
       </div>
 
+      <div class="faq-item" style="border-top: 1px solid var(--border);">
+        <div class="faq-q">施術者が男性とのことですが、女性でも安心して受けられますか？</div>
+        <div class="faq-a">はい、安心してお越しください。施術前のヒアリングで「本日触れる可能性のある部位」を必ずご説明し、ご同意をいただいてから施術に入ります。施術中も「次はここに触れますね」と都度声をかけながら進めますので、途中で止めていただくことも遠慮なくお申し付けください。完全個室・完全予約制で、ほかのお客様と顔を合わせることもありません。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">どんな施術をするのですか？痛みはありますか？</div>
+        <div class="faq-a">筋肉とそれを包む膜（筋膜）に対して、圧や動きを使ってアプローチする手技が中心です。骨をボキッと鳴らすことはしません。強い力を使わず、体が自然に緩むことを促す施術なので、強い痛みは出ません。「気持ちいい」「じわじわ緩む感覚がある」とおっしゃる方が多いです。施術中に気になることがあればいつでもお声がけください。</div>
+      </div>
+
+      <div class="faq-item" style="border-bottom: none;">
+        <div class="faq-q">何回通えば変化が出ますか？</div>
+        <div class="faq-a">個人差がありますが、初回から「なんとなく軽くなった」「呼吸がしやすい」という感想をいただくことは多いです。ただし、長年の慢性的な不調は1回で全て解決するものではありません。目安として3〜5回を一つの区切りとして体の変化を確認しながら進めています。施術のたびに状態をヒアリングして、次の施術内容を組み立て直すので、「また同じことをされただけ」にはなりません。</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1395,9 +1463,13 @@
   <div class="container">
     <span class="section-label reveal" style="text-align:center;display:block;color:rgba(196,134,106,0.8)">Reservation</span>
     <h2 class="section-title reveal">
-      まず一度、体験してみてください。
+      「なぜ変わらないのか」を、<br>一緒に考えてみませんか。
     </h2>
-    <p class="reserve-sub reveal">現在モニター価格でご提供中です。お気軽にご連絡ください。</p>
+    <p class="reserve-sub reveal">
+      まず体の状態をヒアリングして確認するところから始めます。<br>
+      開業記念期間中だからこそ、お一人おひとりに時間をかけられます。<br>
+      完全予約制・1対1・完全個室。
+    </p>
 
     <div class="reserve-buttons reveal">
       <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary">
@@ -1461,32 +1533,30 @@
   </div>
   <p class="footer-copy">
     <a href="tokusho.html" style="color: rgba(248,244,238,0.3); text-decoration: none; margin-right: 24px; letter-spacing: 0.15em; font-size: 11px;">特定商取引法に基づく表記</a>
+    <a href="privacy.html" style="color: rgba(248,244,238,0.3); text-decoration: none; margin-right: 24px; letter-spacing: 0.15em; font-size: 11px;">プライバシーポリシー</a>
     © 2026 美体ラボ. All rights reserved.
   </p>
 </footer>
 
 <!-- FLOATING CTA -->
 <div class="floating-cta" id="floatingCta">
-  <a href="https://www.instagram.com/bitai_lab/" target="_blank" class="floating-btn">まずは相談・お問い合わせ →</a>
+  <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="floating-btn">空き状況を確認する →</a>
 </div>
 
 <script>
-  // Navbar scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 80);
   });
 
-  // Floating CTA
   const floatingCta = document.getElementById('floatingCta');
   window.addEventListener('scroll', () => {
     floatingCta.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
   });
 
-  // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => entry.target.classList.add('visible'), 0);
         observer.unobserve(entry.target);
@@ -1496,5 +1566,6 @@
 
   reveals.forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
