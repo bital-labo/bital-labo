@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>美体ラボ | ボディケアサロン 広島市中区</title>
-<meta name="description" content="何度整体に行っても変わらない、でも諦めていない方へ。広島市中区のボディケアサロン「美体ラボ」。あなたの体を丁寧に読み解き、本質的なケアで整えます。">
+<meta name="description" content="忙しくて後回しにしてきた体の不調。もう誤魔化せないと感じているなら。広島市中区のボディケアサロン「美体ラボ」。全身のつながりから根本を整えます。">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T10MLVEX92"></script>
@@ -15,6 +14,7 @@
   gtag('js', new Date());
   gtag('config', 'G-T10MLVEX92');
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
@@ -29,14 +29,11 @@
     --accent-sage: #8A9E8C;
     --accent-terra: #C4866A;
     --accent-gold: #B8956A;
-    --light-sage: #E8EDE8;
     --border: rgba(107, 91, 78, 0.15);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--cream);
     color: var(--charcoal);
@@ -45,1120 +42,496 @@
     line-height: 1.8;
     overflow-x: hidden;
   }
-
-  /* ── NOISE TEXTURE OVERLAY ── */
   body::before {
     content: '';
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.4;
+    pointer-events: none; z-index: 9999; opacity: 0.4;
   }
 
-  /* ── NAVIGATION ── */
+  /* NAV */
   nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 20px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    mix-blend-mode: multiply;
+    display: flex; justify-content: space-between; align-items: center;
     transition: all 0.4s ease;
   }
-
   nav.scrolled {
-    background: rgba(248, 244, 238, 0.92);
+    background: rgba(248,244,238,0.95);
     backdrop-filter: blur(12px);
     padding: 14px 48px;
     border-bottom: 1px solid var(--border);
-    mix-blend-mode: normal;
   }
-
   .nav-logo {
     font-family: 'Shippori Mincho', serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 18px; font-weight: 600;
     letter-spacing: 0.15em;
-    color: var(--dark-brown);
-    text-decoration: none;
+    color: var(--cream);
+    text-decoration: none; transition: color 0.3s;
   }
-
+  nav.scrolled .nav-logo { color: var(--dark-brown); }
   .nav-logo span {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--mid-brown);
-    display: block;
-    letter-spacing: 0.2em;
-    margin-top: -2px;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 12px; color: rgba(248,244,238,0.5);
+    display: block; letter-spacing: 0.2em; margin-top: -2px; transition: color 0.3s;
   }
-
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    list-style: none;
-  }
-
+  nav.scrolled .nav-logo span { color: var(--mid-brown); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
   .nav-links a {
-    font-size: 12px;
-    letter-spacing: 0.15em;
-    color: var(--mid-brown);
-    text-decoration: none;
-    transition: color 0.2s;
+    font-size: 12px; letter-spacing: 0.12em;
+    color: rgba(248,244,238,0.6); text-decoration: none; transition: color 0.2s;
   }
+  nav.scrolled .nav-links a { color: var(--mid-brown); }
+  .nav-links a:hover { color: var(--accent-terra); }
+  .nav-cta-btn {
+    background: var(--accent-terra) !important;
+    color: white !important;
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1em !important;
+  }
+  .nav-cta-btn:hover { background: #B87258 !important; }
 
-  .nav-links a:hover { color: var(--charcoal); }
-
-  /* ── HERO ── */
+  /* HERO */
   #hero {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-left {
     background: var(--dark-brown);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    display: flex; flex-direction: column; justify-content: flex-end;
     padding: 140px 80px 100px;
-    position: relative;
-    overflow: hidden;
+    position: relative; overflow: hidden;
   }
-
-  .hero-left::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(ellipse at 30% 70%, rgba(196, 134, 106, 0.2) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 20%, rgba(138, 158, 140, 0.15) 0%, transparent 50%);
+  #hero::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at 20% 80%, rgba(196,134,106,0.25) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 20%, rgba(138,158,140,0.12) 0%, transparent 50%);
   }
-
   .hero-eyebrow {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--accent-terra);
-    letter-spacing: 0.3em;
-    margin-bottom: 28px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease 0.3s forwards;
-    position: relative;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 13px; color: var(--accent-terra); letter-spacing: 0.35em;
+    margin-bottom: 32px; position: relative;
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp 0.7s ease 0.2s forwards;
   }
-
   .hero-headline {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(28px, 3.5vw, 46px);
-    font-weight: 600;
-    color: #F8F4EE;
-    line-height: 1.6;
-    letter-spacing: 0.05em;
-    margin-bottom: 32px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease 0.5s forwards;
-    position: relative;
+    font-size: clamp(32px, 4vw, 54px); font-weight: 600;
+    color: #F8F4EE; line-height: 1.55; letter-spacing: 0.04em;
+    margin-bottom: 28px; max-width: 680px; position: relative;
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp 0.7s ease 0.4s forwards;
   }
-
-  .hero-headline em {
-    font-style: normal;
-    color: var(--accent-terra);
-    position: relative;
-    display: inline;
-  }
-
+  .hero-headline em { font-style: normal; color: var(--accent-terra); }
   .hero-sub {
-    font-size: 13px;
-    color: rgba(248, 244, 238, 0.65);
-    letter-spacing: 0.08em;
-    line-height: 2.2;
-    max-width: 360px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease 0.7s forwards;
-    position: relative;
+    font-size: 15px; color: rgba(248,244,238,0.6);
+    line-height: 2.2; max-width: 460px; margin-bottom: 48px; position: relative;
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp 0.7s ease 0.6s forwards;
   }
-
+  .hero-sub strong { color: rgba(248,244,238,0.9); font-weight: 400; }
+  .hero-cta-wrap {
+    display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+    position: relative;
+    opacity: 0; transform: translateY(16px);
+    animation: fadeUp 0.7s ease 0.8s forwards;
+  }
+  .hero-note { font-size: 12px; color: rgba(248,244,238,0.35); letter-spacing: 0.08em; }
   .hero-tag {
-    position: absolute;
-    bottom: 48px;
-    right: -1px;
-    background: var(--accent-sage);
-    color: white;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    padding: 10px 20px;
-    writing-mode: horizontal-tb;
-    opacity: 0;
-    animation: fadeIn 0.8s ease 1.2s forwards;
+    position: absolute; top: 140px; right: 0;
+    background: var(--accent-sage); color: white;
+    font-size: 11px; letter-spacing: 0.2em; padding: 10px 20px;
+    opacity: 0; animation: fadeIn 0.8s ease 1s forwards;
   }
-
-  .hero-right {
-    background: var(--cream);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 60px;
-    position: relative;
-  }
-
-  .hero-visual {
-    width: 100%;
-    max-width: 420px;
-    aspect-ratio: 3/4;
-    background: linear-gradient(135deg, #E8E0D5 0%, #D4C9BC 40%, #C9BDB0 100%);
-    border-radius: 2px;
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    animation: fadeIn 1s ease 0.8s forwards;
-  }
-
-  .hero-visual-inner {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .hero-visual-text {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 13px;
-    color: var(--mid-brown);
-    letter-spacing: 0.3em;
-    opacity: 0.6;
-  }
-
-  .hero-badge {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    background: var(--warm-white);
-    border: 1px solid var(--border);
-    padding: 16px 24px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1s forwards;
-  }
-
-  .hero-badge-label {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--mid-brown);
-    margin-bottom: 4px;
-  }
-
-  .hero-badge-value {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 16px;
-    color: var(--charcoal);
-    letter-spacing: 0.05em;
-  }
-
-  /* ── SCROLL INDICATOR ── */
   .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    opacity: 0;
-    animation: fadeIn 1s ease 1.5s forwards;
+    position: absolute; bottom: 40px; left: 80px;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0; animation: fadeIn 1s ease 1.4s forwards;
   }
-
   .scroll-line {
-    width: 1px;
-    height: 48px;
-    background: var(--mid-brown);
-    animation: scrollPulse 2s ease-in-out infinite;
-    transform-origin: top;
+    width: 1px; height: 48px; background: rgba(248,244,238,0.3);
+    animation: scrollPulse 2s ease-in-out infinite; transform-origin: top;
   }
+  .scroll-text { font-size: 9px; letter-spacing: 0.3em; color: rgba(248,244,238,0.3); }
 
-  .scroll-text {
-    font-size: 9px;
-    letter-spacing: 0.3em;
-    color: var(--mid-brown);
-  }
-
-  /* ── EMPATHY SECTION ── */
-  #empathy {
-    padding: 120px 0;
-    background: var(--warm-white);
-    position: relative;
-    overflow: hidden;
-  }
-
-  #empathy::before {
-    content: 'BODY';
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 120px;
-    font-weight: 300;
-    color: rgba(107, 91, 78, 0.04);
-    letter-spacing: 0.2em;
-    pointer-events: none;
-  }
-
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 48px;
-  }
-
+  /* SHARED */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
   .section-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 13px;
-    color: var(--accent-terra);
-    letter-spacing: 0.3em;
-    margin-bottom: 20px;
-    display: block;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 13px; color: var(--accent-terra);
+    letter-spacing: 0.3em; margin-bottom: 20px; display: block;
   }
-
   .section-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(24px, 3vw, 38px);
-    font-weight: 600;
-    line-height: 1.6;
-    letter-spacing: 0.05em;
-    color: var(--charcoal);
-    margin-bottom: 48px;
+    font-size: clamp(24px, 3vw, 36px); font-weight: 600;
+    line-height: 1.6; letter-spacing: 0.05em;
+    color: var(--charcoal); margin-bottom: 48px;
   }
+  .divider { width: 40px; height: 1px; background: var(--accent-terra); margin-bottom: 48px; }
+  .divider-dark { width: 40px; height: 1px; background: rgba(196,134,106,0.5); margin-bottom: 48px; }
 
+  /* EMPATHY */
+  #empathy { padding: 120px 0; background: var(--warm-white); position: relative; overflow: hidden; }
+  #empathy::before {
+    content: 'BODY'; position: absolute; right: -20px; top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px; font-weight: 300; color: rgba(107,91,78,0.04);
+    letter-spacing: 0.2em; pointer-events: none;
+  }
   .pain-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1px; background: var(--border); border: 1px solid var(--border);
     margin-bottom: 60px;
   }
-
   .pain-item {
-    background: var(--warm-white);
-    padding: 32px 36px;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    transition: background 0.2s;
+    background: var(--warm-white); padding: 28px 32px;
+    display: flex; align-items: flex-start; gap: 16px; transition: background 0.2s;
   }
-
   .pain-item:hover { background: var(--cream); }
-
   .pain-check {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--accent-terra);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--accent-terra); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
   }
-
-  .pain-check::after {
-    content: '✓';
-    color: white;
-    font-size: 11px;
-  }
-
-  .pain-text {
-    font-size: 14px;
-    line-height: 1.8;
-    color: var(--charcoal);
-  }
-
+  .pain-check::after { content: '✓'; color: white; font-size: 11px; }
+  .pain-text { font-size: 14px; line-height: 1.8; color: var(--charcoal); }
   .empathy-closing {
-    text-align: center;
-    padding: 48px;
+    text-align: center; padding: 52px 48px;
     border: 1px solid var(--border);
     background: linear-gradient(135deg, var(--cream) 0%, #EDE8E0 100%);
   }
-
   .empathy-quote {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(16px, 2vw, 22px);
-    line-height: 1.8;
-    color: var(--charcoal);
-    margin-bottom: 8px;
+    font-size: clamp(16px, 2vw, 22px); font-weight: 600;
+    line-height: 1.8; color: var(--charcoal); margin-bottom: 8px;
   }
-
   .empathy-body {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(14px, 1.6vw, 18px);
-    line-height: 2;
-    color: var(--charcoal);
-    margin-top: 24px;
+    font-size: clamp(14px, 1.6vw, 17px);
+    line-height: 2; color: var(--charcoal); margin-top: 24px;
   }
+  .empathy-closing strong { color: var(--accent-terra); font-weight: 600; }
+  .empathy-spacer { height: 20px; display: block; }
 
-  .empathy-closing strong {
-    color: var(--accent-terra);
-    font-weight: 600;
+  /* WHY */
+  #why { padding: 120px 0; background: var(--cream); }
+  .why-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; background: var(--border); margin-bottom: 0;
   }
-
-  .empathy-spacer {
-    height: 20px;
-    display: block;
+  .why-card { background: var(--cream); padding: 48px 40px; }
+  .why-card-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 11px; letter-spacing: 0.3em; color: var(--mid-brown);
+    margin-bottom: 16px; display: block;
   }
-
-  .voice-lead {
+  .why-card-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(15px, 1.8vw, 18px);
-    font-weight: 700;
-    color: var(--charcoal);
-    letter-spacing: 0.03em;
-    margin-bottom: 16px;
-    line-height: 1.6;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 12px;
+    font-size: 17px; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 16px; line-height: 1.6;
   }
+  .why-card-body { font-size: 13px; color: var(--mid-brown); line-height: 2.2; }
+  .why-card.dark { background: var(--dark-brown); }
+  .why-card.dark .why-card-label { color: var(--accent-terra); }
+  .why-card.dark .why-card-title { color: var(--cream); }
+  .why-card.dark .why-card-body { color: rgba(248,244,238,0.6); }
+  .why-card.wide { grid-column: 1 / -1; background: var(--warm-white); }
 
-  /* ── REASONS SECTION ── */
-  #reasons {
-    padding: 120px 0;
-    background: var(--dark-brown);
-    position: relative;
-    overflow: hidden;
-  }
-
+  /* REASONS */
+  #reasons { padding: 120px 0; background: var(--dark-brown); position: relative; overflow: hidden; }
   #reasons::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 20% 50%, rgba(196, 134, 106, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 30%, rgba(138, 158, 140, 0.1) 0%, transparent 40%);
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(196,134,106,0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 30%, rgba(138,158,140,0.1) 0%, transparent 40%);
   }
-
   #reasons .section-title { color: var(--cream); }
-
   .reasons-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: rgba(248, 244, 238, 0.08);
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px; background: rgba(248,244,238,0.08);
   }
-
-  .reason-card {
-    background: var(--dark-brown);
-    padding: 48px 36px;
-    position: relative;
-    transition: background 0.3s;
-  }
-
-  .reason-card:hover { background: rgba(248, 244, 238, 0.04); }
-
+  .reason-card { background: var(--dark-brown); padding: 48px 36px; transition: background 0.3s; }
+  .reason-card:hover { background: rgba(248,244,238,0.04); }
   .reason-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 64px;
-    font-weight: 300;
-    color: rgba(196, 134, 106, 0.2);
-    line-height: 1;
-    margin-bottom: 24px;
+    font-size: 64px; font-weight: 300; color: rgba(196,134,106,0.2);
+    line-height: 1; margin-bottom: 24px;
   }
-
   .reason-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--cream);
-    margin-bottom: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.05em;
+    font-size: 18px; font-weight: 600; color: var(--cream);
+    margin-bottom: 16px; line-height: 1.5; letter-spacing: 0.05em;
   }
+  .reason-desc { font-size: 13px; color: rgba(248,244,238,0.6); line-height: 2.2; }
+  .reason-accent { width: 24px; height: 1px; background: var(--accent-terra); margin-top: 28px; }
 
-  .reason-desc {
-    font-size: 13px;
-    color: rgba(248, 244, 238, 0.6);
-    line-height: 2.2;
+  /* MID CTA */
+  #mid-cta { padding: 80px 0; background: var(--dark-brown); text-align: center; position: relative; overflow: hidden; }
+  #mid-cta::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(196,134,106,0.15) 0%, transparent 60%);
   }
-
-  .reason-accent {
-    width: 24px;
-    height: 1px;
-    background: var(--accent-terra);
-    margin-top: 28px;
+  .mid-cta-text {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(18px, 2.5vw, 26px); font-weight: 600;
+    color: var(--cream); letter-spacing: 0.05em; margin-bottom: 12px; position: relative;
   }
-
-  /* ── MENU SECTION ── */
-  #menu {
-    padding: 120px 0;
-    background: var(--cream);
+  .mid-cta-sub { font-size: 13px; color: rgba(248,244,238,0.5); margin-bottom: 36px; position: relative; }
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--accent-terra); color: white;
+    text-decoration: none; padding: 18px 48px;
+    font-size: 14px; letter-spacing: 0.15em;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 400;
+    transition: all 0.3s; position: relative;
   }
+  .btn-white:hover { background: #B87258; transform: translateY(-2px); }
 
-  .menu-intro {
-    font-size: 14px;
-    color: var(--mid-brown);
-    line-height: 2;
-    max-width: 600px;
-    margin-bottom: 60px;
-  }
-
-  .menu-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 24px;
-  }
-
+  /* MENU */
+  #menu { padding: 120px 0; background: var(--cream); }
+  .menu-intro { font-size: 14px; color: var(--mid-brown); line-height: 2; max-width: 600px; margin-bottom: 60px; }
+  .menu-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
   .menu-card {
-    border: 1px solid var(--border);
-    padding: 48px;
-    position: relative;
-    background: var(--warm-white);
-    transition: border-color 0.3s, transform 0.3s;
-    overflow: hidden;
+    border: 1px solid var(--border); padding: 48px;
+    position: relative; background: var(--warm-white);
+    transition: border-color 0.3s, transform 0.3s; overflow: hidden;
   }
-
-  .menu-card:hover {
-    border-color: var(--accent-terra);
-    transform: translateY(-4px);
-  }
-
+  .menu-card:hover { border-color: var(--accent-terra); transform: translateY(-4px); }
   .menu-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--accent-terra);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--accent-terra); transform: scaleX(0);
+    transform-origin: left; transition: transform 0.4s ease;
   }
-
   .menu-card:hover::before { transform: scaleX(1); }
-
-  .menu-type {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 12px;
-    color: var(--accent-sage);
-    letter-spacing: 0.3em;
-    margin-bottom: 12px;
+  .menu-badge {
+    position: absolute; top: 24px; right: 24px;
+    background: var(--accent-terra); color: white;
+    font-size: 10px; letter-spacing: 0.15em; padding: 4px 12px; border-radius: 2px;
   }
-
+  .menu-type {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 12px; color: var(--accent-sage); letter-spacing: 0.3em; margin-bottom: 12px;
+  }
   .menu-name {
     font-family: 'Shippori Mincho', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--charcoal);
-    margin-bottom: 8px;
-    letter-spacing: 0.05em;
+    font-size: 22px; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 6px; letter-spacing: 0.05em;
   }
+  .menu-subtitle { font-size: 13px; color: var(--mid-brown); margin-bottom: 24px; }
+  .menu-desc { font-size: 13px; color: var(--mid-brown); line-height: 2.2; margin-bottom: 32px; }
+  .menu-price-row { display: flex; align-items: baseline; gap: 8px; }
+  .menu-price-label { font-size: 11px; color: var(--mid-brown); letter-spacing: 0.15em; }
+  .menu-price { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: var(--charcoal); }
+  .menu-price-unit { font-size: 13px; color: var(--mid-brown); }
+  .menu-note { font-size: 12px; color: var(--mid-brown); border-top: 1px solid var(--border); padding-top: 16px; }
 
-  .menu-subtitle {
-    font-size: 13px;
-    color: var(--mid-brown);
-    margin-bottom: 24px;
-    letter-spacing: 0.05em;
-  }
-
-  .menu-desc {
-    font-size: 13px;
-    color: var(--mid-brown);
-    line-height: 2.2;
-    margin-bottom: 32px;
-  }
-
-  .menu-price-row {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-  }
-
-  .menu-price-label {
-    font-size: 11px;
-    color: var(--mid-brown);
-    letter-spacing: 0.15em;
-  }
-
-  .menu-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 400;
-    color: var(--charcoal);
-  }
-
-  .menu-price-unit {
-    font-size: 13px;
-    color: var(--mid-brown);
-  }
-
-  .menu-monitor-badge {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    background: var(--accent-terra);
-    color: white;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    padding: 4px 12px;
-    border-radius: 2px;
-  }
-
-  .menu-note {
-    font-size: 12px;
-    color: var(--mid-brown);
-    border-top: 1px solid var(--border);
-    padding-top: 16px;
-    letter-spacing: 0.05em;
-  }
-
-  /* ── PROFILE SECTION ── */
-  #profile {
-    padding: 120px 0;
-    background: var(--warm-white);
-  }
-
-  .profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .profile-visual {
-    aspect-ratio: 4/5;
-    background: linear-gradient(135deg, #DDD5C8 0%, #C9BDB0 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .profile-visual-placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .profile-visual-placeholder span {
+  /* VOICE */
+  #voice { padding: 100px 0; background: var(--warm-white); }
+  .voice-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .voice-card { padding: 36px; background: var(--cream); }
+  .voice-lead {
     font-family: 'Shippori Mincho', serif;
-    font-size: 13px;
-    color: var(--mid-brown);
-    letter-spacing: 0.3em;
-    opacity: 0.5;
+    font-size: clamp(15px, 1.8vw, 17px); font-weight: 700;
+    color: var(--charcoal); margin-bottom: 16px; line-height: 1.6;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border);
   }
+  .voice-text { font-size: 14px; line-height: 2.2; color: var(--mid-brown); font-family: 'Shippori Mincho', serif; }
+  .voice-name { margin-top: 16px; font-size: 12px; color: var(--mid-brown); letter-spacing: 0.15em; }
 
-  .profile-name-jp {
+  /* THERAPIST */
+  #therapist { padding: 120px 0; background: var(--cream); }
+  .therapist-safety {
+    background: var(--warm-white); border: 1px solid var(--border);
+    padding: 20px 28px; margin-bottom: 36px;
+    font-size: 13px; color: var(--mid-brown); line-height: 2; letter-spacing: 0.05em;
+  }
+  .therapist-name-jp {
     font-family: 'Shippori Mincho', serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--charcoal);
-    letter-spacing: 0.1em;
-    margin-bottom: 4px;
+    font-size: 22px; font-weight: 600; color: var(--charcoal);
+    letter-spacing: 0.1em; margin-bottom: 4px;
   }
-
-  .profile-name-en {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 16px;
-    color: var(--mid-brown);
-    letter-spacing: 0.2em;
-    margin-bottom: 36px;
+  .therapist-name-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--mid-brown); letter-spacing: 0.2em; margin-bottom: 32px;
   }
+  .therapist-body { font-size: 14px; line-height: 2.4; color: var(--charcoal); }
+  .therapist-body p + p { margin-top: 20px; }
+  .therapist-divider { width: 40px; height: 1px; background: var(--accent-terra); margin: 36px 0; }
+  .therapist-quals { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .therapist-quals li { font-size: 12px; color: var(--mid-brown); padding-left: 16px; position: relative; }
+  .therapist-quals li::before { content: '─'; position: absolute; left: 0; color: var(--accent-terra); font-size: 10px; }
 
-  .profile-message {
-    font-size: 14px;
-    line-height: 2.2;
-    color: var(--charcoal);
-    margin-bottom: 36px;
-  }
-
-  .profile-message p + p { margin-top: 16px; }
-
-  .profile-divider {
-    width: 40px;
-    height: 1px;
-    background: var(--accent-terra);
-    margin: 36px 0;
-  }
-
-  .profile-quals {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .profile-quals li {
-    font-size: 12px;
-    color: var(--mid-brown);
-    letter-spacing: 0.05em;
-    padding-left: 16px;
-    position: relative;
-  }
-
-  .profile-quals li::before {
-    content: '─';
-    position: absolute;
-    left: 0;
-    color: var(--accent-terra);
-    font-size: 10px;
-  }
-
-  /* ── CTA SECTION ── */
-  #reserve {
-    padding: 120px 0;
-    background: var(--dark-brown);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #reserve::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 50%, rgba(196, 134, 106, 0.15) 0%, transparent 60%);
-  }
-
-  #reserve .section-title {
-    color: var(--cream);
-    text-align: center;
-    max-width: 680px;
-    margin: 0 auto 24px;
-  }
-
-  .reserve-sub {
-    font-size: 14px;
-    color: rgba(248, 244, 238, 0.5);
-    margin-bottom: 60px;
-    letter-spacing: 0.05em;
-    line-height: 2;
-  }
-
-  .reserve-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    position: relative;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--accent-terra);
-    color: white;
-    text-decoration: none;
-    padding: 20px 48px;
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    transition: all 0.3s;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 400;
-  }
-
-  .btn-primary:hover {
-    background: #B87258;
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: transparent;
-    color: rgba(248, 244, 238, 0.7);
-    text-decoration: none;
-    padding: 20px 48px;
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    border: 1px solid rgba(248, 244, 238, 0.2);
-    transition: all 0.3s;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 400;
-  }
-
-  .btn-secondary:hover {
-    border-color: rgba(248, 244, 238, 0.5);
-    color: var(--cream);
-    transform: translateY(-2px);
-  }
-
-  .reserve-note {
-    margin-top: 36px;
-    font-size: 12px;
-    color: rgba(248, 244, 238, 0.3);
-    letter-spacing: 0.1em;
-    position: relative;
-  }
-
-  .btn-icon {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* ── ACCESS SECTION ── */
-  #access {
-    padding: 120px 0;
-    background: var(--cream);
-  }
-
-  .access-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .map-placeholder {
-    aspect-ratio: 4/3;
-    background: #E8E0D5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border);
-    overflow: hidden;
-  }
-
-  .map-placeholder iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
-
-  .map-placeholder-text {
-    font-size: 13px;
-    color: var(--mid-brown);
-    letter-spacing: 0.15em;
-  }
-
-  .access-info { padding-top: 8px; }
-
-  .access-info-item {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    gap: 24px;
-  }
-
-  .access-info-label {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--mid-brown);
-    flex-shrink: 0;
-    width: 80px;
-    padding-top: 2px;
-  }
-
-  .access-info-value {
-    font-size: 14px;
-    color: var(--charcoal);
-    line-height: 1.8;
-  }
-
-  /* ── FAQ ── */
-  .faq-item {
-    border-bottom: 1px solid var(--border);
-    padding: 32px 0;
-  }
-
+  /* FAQ */
+  #faq { padding: 100px 0; background: var(--warm-white); }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 32px 0; }
   .faq-q {
     font-family: 'Shippori Mincho', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--charcoal);
-    letter-spacing: 0.05em;
-    margin-bottom: 16px;
-    padding-left: 28px;
-    position: relative;
+    font-size: 16px; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 16px; padding-left: 28px; position: relative; line-height: 1.6;
   }
-
   .faq-q::before {
-    content: 'Q';
-    position: absolute;
-    left: 0;
-    color: var(--accent-terra);
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.2;
+    content: 'Q'; position: absolute; left: 0; color: var(--accent-terra);
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 20px; font-weight: 400; line-height: 1.2;
   }
-
-  .faq-a {
-    font-size: 14px;
-    color: var(--mid-brown);
-    line-height: 2;
-    padding-left: 28px;
-    position: relative;
-  }
-
+  .faq-a { font-size: 14px; color: var(--mid-brown); line-height: 2; padding-left: 28px; position: relative; }
   .faq-a::before {
-    content: 'A';
-    position: absolute;
-    left: 0;
-    color: var(--accent-sage);
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.2;
+    content: 'A'; position: absolute; left: 0; color: var(--accent-sage);
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 20px; font-weight: 400; line-height: 1.2;
   }
 
-  .voice-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+  /* RESERVE */
+  #reserve { padding: 120px 0; background: var(--dark-brown); text-align: center; position: relative; overflow: hidden; }
+  #reserve::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(196,134,106,0.15) 0%, transparent 60%);
   }
+  #reserve .section-title { color: var(--cream); max-width: 640px; margin: 0 auto 20px; }
+  .reserve-sub { font-size: 14px; color: rgba(248,244,238,0.5); margin-bottom: 52px; line-height: 2.2; }
+  .reserve-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; position: relative; }
+  .reserve-note { margin-top: 32px; font-size: 12px; color: rgba(248,244,238,0.25); letter-spacing: 0.08em; position: relative; }
 
-  .voice-card {
-    padding: 32px 36px;
-    background: var(--warm-white);
+  /* BUTTONS */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--accent-terra); color: white; text-decoration: none;
+    padding: 20px 48px; font-size: 14px; letter-spacing: 0.15em;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 400; transition: all 0.3s;
   }
-
-  .voice-text {
-    font-size: 14px;
-    line-height: 2.2;
-    color: var(--charcoal);
-    font-family: 'Shippori Mincho', serif;
+  .btn-primary:hover { background: #B87258; transform: translateY(-2px); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: transparent; color: rgba(248,244,238,0.7); text-decoration: none;
+    padding: 20px 48px; font-size: 14px; letter-spacing: 0.15em;
+    border: 1px solid rgba(248,244,238,0.2);
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 400; transition: all 0.3s;
   }
+  .btn-secondary:hover { border-color: rgba(248,244,238,0.5); color: var(--cream); transform: translateY(-2px); }
+  .btn-icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
 
-  .voice-name {
-    margin-top: 16px;
-    font-size: 12px;
-    color: var(--mid-brown);
-    letter-spacing: 0.15em;
-  }
+  /* ACCESS */
+  #access { padding: 120px 0; background: var(--cream); }
+  .access-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+  .map-placeholder { aspect-ratio: 4/3; background: #E8E0D5; border: 1px solid var(--border); overflow: hidden; }
+  .map-placeholder iframe { width: 100%; height: 100%; border: none; display: block; }
+  .access-info-item { padding: 20px 0; border-bottom: 1px solid var(--border); display: flex; gap: 24px; }
+  .access-info-label { font-size: 11px; letter-spacing: 0.2em; color: var(--mid-brown); flex-shrink: 0; width: 80px; padding-top: 2px; }
+  .access-info-value { font-size: 14px; color: var(--charcoal); line-height: 1.8; }
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--dark-brown);
-    padding: 60px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  /* FOOTER */
+  footer { background: var(--dark-brown); padding: 60px 48px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-logo { font-family: 'Shippori Mincho', serif; font-size: 20px; font-weight: 600; color: var(--cream); letter-spacing: 0.1em; }
+  .footer-logo span { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 12px; color: rgba(248,244,238,0.4); display: block; margin-top: 4px; letter-spacing: 0.2em; }
+  .footer-copy { font-size: 11px; color: rgba(248,244,238,0.3); letter-spacing: 0.15em; }
 
-  .footer-logo {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--cream);
-    letter-spacing: 0.1em;
-  }
-
-  .footer-logo span {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 12px;
-    color: rgba(248, 244, 238, 0.4);
-    display: block;
-    margin-top: 4px;
-    letter-spacing: 0.2em;
-  }
-
-  .footer-copy {
-    font-size: 11px;
-    color: rgba(248, 244, 238, 0.3);
-    letter-spacing: 0.15em;
-  }
-
-  /* ── FLOATING CTA ── */
-  .floating-cta {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 50;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-    pointer-events: none;
-  }
-
-  .floating-cta.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: all;
-  }
-
+  /* FLOATING CTA */
+  .floating-cta { position: fixed; bottom: 32px; right: 32px; z-index: 50; opacity: 0; transform: translateY(20px); transition: all 0.4s ease; pointer-events: none; }
+  .floating-cta.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
   .floating-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--accent-terra);
-    color: white;
-    text-decoration: none;
-    padding: 14px 28px;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    box-shadow: 0 8px 32px rgba(196, 134, 106, 0.4);
-    transition: all 0.3s;
+    display: flex; align-items: center; gap: 10px;
+    background: var(--accent-terra); color: white; text-decoration: none;
+    padding: 14px 28px; font-size: 13px; letter-spacing: 0.1em;
+    box-shadow: 0 8px 32px rgba(196,134,106,0.4); transition: all 0.3s;
   }
+  .floating-btn:hover { background: #B87258; transform: translateY(-2px); }
 
-  .floating-btn:hover {
-    background: #B87258;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(196, 134, 106, 0.5);
-  }
+  /* ANIMATIONS */
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { to { opacity: 1; } }
+  @keyframes scrollPulse { 0%, 100% { transform: scaleY(1); opacity: 0.6; } 50% { transform: scaleY(0.6); opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── SECTION DIVIDER ── */
-  .divider {
-    width: 40px;
-    height: 1px;
-    background: var(--accent-terra);
-    margin-bottom: 48px;
-  }
-
-  .divider-dark {
-    width: 40px;
-    height: 1px;
-    background: rgba(196, 134, 106, 0.5);
-    margin-bottom: 48px;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-
-  @keyframes scrollPulse {
-    0%, 100% { transform: scaleY(1); opacity: 0.6; }
-    50% { transform: scaleY(0.6); opacity: 1; }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ── MOBILE ── */
+  /* MOBILE */
   @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    nav.scrolled { padding: 12px 24px; }
+    nav { padding: 16px 20px; }
+    nav.scrolled { padding: 12px 20px; }
     .nav-links { display: none; }
 
-    #hero { grid-template-columns: 1fr; min-height: 100vh; }
-    .hero-left { padding: 100px 28px 80px; min-height: 100vh; }
-
-    .hero-headline { font-size: clamp(26px, 7vw, 36px); }
+    #hero { padding: 100px 24px 80px; min-height: 100vh; }
+    .hero-headline { font-size: clamp(28px, 8vw, 38px); }
     .hero-sub { font-size: 13px; max-width: 100%; }
+    .hero-tag { top: 100px; }
+    .scroll-indicator { left: 24px; }
 
     .container { padding: 0 20px; }
 
-    #empathy, #reasons, #menu, #profile, #reserve, #access { padding: 72px 0; }
-    #voice { padding: 60px 0; }
-    #faq { padding: 72px 0; }
+    #empathy, #why, #reasons, #menu, #therapist, #reserve, #access { padding: 80px 0; }
+    #voice, #faq { padding: 72px 0; }
+    #mid-cta { padding: 60px 0; }
 
     .empathy-closing { padding: 32px 24px; }
-
     .pain-grid { grid-template-columns: 1fr; }
-    .pain-item { padding: 24px 20px; }
+    .pain-item { padding: 22px 20px; }
+
+    .why-grid { grid-template-columns: 1fr; }
+    .why-card { padding: 36px 24px; }
+    .why-card.wide { grid-column: 1; }
 
     .reasons-grid { grid-template-columns: 1fr; }
     .reason-card { padding: 36px 24px; }
 
     .menu-cards { grid-template-columns: 1fr; }
-    .menu-card { padding: 36px 28px; }
-
-    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
-    .access-grid { grid-template-columns: 1fr; gap: 40px; }
+    .menu-card { padding: 36px 24px; }
 
     .voice-grid { grid-template-columns: 1fr; }
-    .voice-card { padding: 28px 24px; }
+    .voice-card { padding: 28px 20px; }
+
+    .access-grid { grid-template-columns: 1fr; gap: 40px; }
 
     .reserve-buttons { flex-direction: column; align-items: stretch; }
     .btn-primary, .btn-secondary { width: 100%; justify-content: center; padding: 18px 24px; }
+    .btn-white { width: 100%; justify-content: center; }
 
     .floating-cta { bottom: 20px; right: 16px; left: 16px; }
     .floating-btn { justify-content: center; width: 100%; }
 
-    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 24px; }
+    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 20px; }
     .footer-copy { display: flex; flex-direction: column; gap: 12px; align-items: center; }
   }
-
   @media (max-width: 480px) {
-    .hero-headline { font-size: clamp(24px, 8vw, 32px); }
-    .section-title { font-size: clamp(22px, 6vw, 30px); }
+    .hero-headline { font-size: clamp(26px, 8.5vw, 34px); }
+    .section-title { font-size: clamp(22px, 6vw, 28px); }
     .menu-price { font-size: 28px; }
-    .reason-number { font-size: 48px; }
   }
 </style>
-
 </head>
 <body>
 
 <!-- NAVIGATION -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">
-    美体ラボ
-    <span>Bital-Labo</span>
-  </a>
+  <a href="#hero" class="nav-logo">美体ラボ<span>Bital-Labo</span></a>
   <ul class="nav-links">
+    <li><a href="#why">なぜ変わらないのか</a></li>
     <li><a href="#reasons">選ばれる理由</a></li>
     <li><a href="#menu">メニュー</a></li>
-    <li><a href="#profile">美体ラボについて</a></li>
     <li><a href="#therapist">施術者について</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#access">アクセス</a></li>
-    <li><a href="#reserve">ご予約</a></li>
+    <li><a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="nav-cta-btn">予約する</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Hiroshima · Body Care Salon</p>
-    <h1 class="hero-headline">
-      何度通っても、<br>
-      また戻ってしまう。<br>
-      それは、<em>「部分」しか</em><br>
-      見ていなかったから。
-    </h1>
-    <p class="hero-sub">
-      肩だけほぐしても腰が痛い。<br>
-      腰を整えても、また戻ってくる。<br><br>
-      それは体の「つながり」が乱れているから。<br>
-      美体ラボは、全身のバランスを読み解くことで<br>
-      根本から整えるボディケアサロンです。
-    </p>
-    <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary" style="margin-top:36px;display:inline-flex;">
+  <p class="hero-eyebrow">Hiroshima · Body Care Salon</p>
+  <h1 class="hero-headline">
+    忙しくて、ずっと<br>
+    後回しにしてきた。<br>
+    でも、<em>もう誤魔化せない。</em>
+  </h1>
+  <p class="hero-sub">
+    肩が重い。腰がだるい。頭痛が取れない。<br>
+    それでも今日も仕事がある。<br><br>
+    <strong>その体の状態には、ちゃんと理由があります。</strong>
+  </p>
+  <div class="hero-cta-wrap">
+    <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary">
       空き状況を確認・予約する
     </a>
-    <div class="hero-tag">開業記念 受付中</div>
+    <span class="hero-note">完全予約制 · 1対1 · 完全個室</span>
   </div>
-  <div class="scroll-indicator" style="position:absolute;bottom:40px;left:60px;">
+  <div class="hero-tag">開業記念 受付中</div>
+  <div class="scroll-indicator">
     <div class="scroll-line"></div>
     <span class="scroll-text">SCROLL</span>
   </div>
@@ -1168,45 +541,51 @@
 <section id="empathy">
   <div class="container">
     <span class="section-label reveal">Your Situation</span>
-    <h2 class="section-title reveal">こんなお悩み、<br>ありませんか？</h2>
+    <h2 class="section-title reveal">こんな状態、<br>続いていませんか？</h2>
     <div class="divider reveal"></div>
-
     <div class="pain-grid reveal">
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p class="pain-text">肩こり・腰痛が慢性化して、何をしても改善しない</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p class="pain-text">体の不調が仕事や育児のパフォーマンスを下げている</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p class="pain-text">マッサージや整体に何度も行ったが、体質や習慣からの変化を感じられない</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p class="pain-text">「また同じところに来ただけ」という繰り返しに疲れた</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p class="pain-text">自分の体のことを、体系的に理解して整理したい</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p class="pain-text">「ここは違う気がする」と感じられる場所を探し続けている</p>
-      </div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">肩こり・腰痛が慢性化して、何をしても一時的にしか楽にならない</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">体の不調が仕事や日常のパフォーマンスを確実に下げている</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">整体やマッサージに行っても、しばらくするとまた同じところが痛くなる</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">湿布を貼ったり、痛み止めを飲んでその場をしのいでいる</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">「また来ただけ」「また戻った」という繰り返しに、もう疲れた</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">本当に変わる場所を探し続けているが、なかなか見つからない</p></div>
     </div>
-
     <div class="empathy-closing reveal">
       <p class="empathy-quote">「また同じところが痛い」</p>
       <p class="empathy-quote">「通っているのに、なぜ変わらないんだろう」</p>
-      <p class="empathy-spacer"></p>
+      <div class="empathy-spacer"></div>
       <p class="empathy-body">その繰り返しには、<strong>理由があります。</strong></p>
-      <p class="empathy-spacer"></p>
+      <div class="empathy-spacer"></div>
       <p class="empathy-body">原因が「部分」にあるのではなく、<br>体全体の「つながりの乱れ」にある場合、<br>一箇所だけほぐしてもまた戻ってしまう。</p>
-      <p class="empathy-spacer"></p>
+      <div class="empathy-spacer"></div>
       <p class="empathy-body">美体ラボは、その<strong>根本から向き合います。</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="container">
+    <span class="section-label reveal">About Your Pain</span>
+    <h2 class="section-title reveal">その痛み、<br>なぜ繰り返されるのか。</h2>
+    <div class="divider reveal"></div>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <span class="why-card-label">The Common Approach</span>
+        <h3 class="why-card-title">湿布・マッサージ・整体では<br>根本は変わらない</h3>
+        <p class="why-card-body">湿布を貼れば、その日は少し楽になります。マッサージに行けば、帰り道は軽く感じます。でも、また同じところが痛くなる。それは「症状を抑えている」だけで、「なぜそこが痛むのか」に触れていないからです。</p>
+      </div>
+      <div class="why-card dark">
+        <span class="why-card-label">The Real Reason</span>
+        <h3 class="why-card-title">体の筋肉はすべて<br>薄い膜でつながっています</h3>
+        <p class="why-card-body">肩に緊張が溜まれば腰に影響し、腰が硬くなれば首や頭にも波及する。だから肩だけほぐしても、腰だけ整えても、別の場所がまた引っ張り直してしまう。部分しか見ていないと、繰り返しは終わりません。</p>
+      </div>
+      <div class="why-card wide">
+        <span class="why-card-label">What Needs to Change</span>
+        <h3 class="why-card-title">原因は、痛い場所にはない。</h3>
+        <p class="why-card-body">痛みが出ている場所ではなく、そこに影響を与えている体全体のバランスを確認すること。美体ラボは、まずじっくりヒアリングして体の状態を把握するところから始めます。何が起きているのかを一緒に理解することなしに、的確なケアはできないと考えているからです。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1214,35 +593,39 @@
 <!-- REASONS -->
 <section id="reasons">
   <div class="container">
-    <span class="section-label reveal" style="color: rgba(196,134,106,0.8)">Why Bital-Labo</span>
+    <span class="section-label reveal" style="color:rgba(196,134,106,0.8)">Why Bital-Labo</span>
     <h2 class="section-title reveal">美体ラボが<br>選ばれる理由</h2>
     <div class="divider-dark reveal"></div>
-
     <div class="reasons-grid reveal">
       <div class="reason-card">
         <div class="reason-number">01</div>
-        <h3 class="reason-title">「症状」ではなく<br>「あなたの体全体」を読み解く</h3>
-        <p class="reason-desc">
-          痛い場所だけを見ていても、根本は変わりません。美体ラボでは、姿勢・動作パターン・生活習慣まで含めた「体全体の状態」から施術を組み立てます。その日だけ楽になるのではなく、次に来たとき「あ、変わった」と感じられる変化を目指します。
-        </p>
+        <h3 class="reason-title">痛い場所ではなく<br>全身のバランスから整える</h3>
+        <p class="reason-desc">姿勢・動作パターン・生活習慣まで含めた体全体の状態を確認しながら施術を組み立てます。その日だけ楽になるのではなく、次に来たとき「あ、変わった」と感じられる変化を目指します。</p>
         <div class="reason-accent"></div>
       </div>
       <div class="reason-card">
         <div class="reason-number">02</div>
         <h3 class="reason-title">他院で変わらなかった方が<br>変わっていく</h3>
-        <p class="reason-desc">
-          「2年間、どこに行っても変わらなかった膝の痛みが、なぜ起きているのか、初めて説明してもらえた」——そう言ってくださるお客様がいます。変化は、原因を正しく理解するところから始まります。
-        </p>
+        <p class="reason-desc">「2年間、どこに行っても変わらなかった膝の痛みが、なぜ起きているのか、初めて説明してもらえた」——そう言ってくださるお客様がいます。変化は、原因を正しく理解するところから始まります。</p>
         <div class="reason-accent"></div>
       </div>
       <div class="reason-card">
         <div class="reason-number">03</div>
         <h3 class="reason-title">1回で終わらせない。<br>変化を一緒に確認する。</h3>
-        <p class="reason-desc">
-          施術後は、日常で実践できるセルフケアをお伝えします。次回来院時には「前回からどう変わったか」を確認しながら施術を組み立て直します。ひとりで悩まず、体の変化を一緒に追っていける場所です。
-        </p>
+        <p class="reason-desc">施術後は日常で実践できるセルフケアをお伝えします。次回来院時には「前回からどう変わったか」を確認しながら施術を組み立て直します。体の変化を一緒に追っていける場所です。</p>
         <div class="reason-accent"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<section id="mid-cta">
+  <div class="container">
+    <p class="mid-cta-text reveal">まず、体の状態を確認してみませんか。</p>
+    <p class="mid-cta-sub reveal">開業記念期間中につき、お一人おひとりに時間をかけた施術を特別価格でご提供しています。</p>
+    <div class="reveal">
+      <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-white">空き状況を確認・予約する →</a>
     </div>
   </div>
 </section>
@@ -1253,48 +636,35 @@
     <span class="section-label reveal">Menu & Price</span>
     <h2 class="section-title reveal">メニュー・料金</h2>
     <div class="divider reveal"></div>
-    <p class="menu-intro reveal">
-      開業記念につき、お一人おひとりに時間をかけた丁寧な施術を、特別価格でご提供しています。<br>
-      通常営業に移行すると価格変更となりますので、この機会にぜひお試しください。
-    </p>
-
+    <p class="menu-intro reveal">開業記念につき、お一人おひとりに時間をかけた丁寧な施術を特別価格でご提供しています。通常営業に移行すると価格変更となりますので、この機会にぜひお試しください。</p>
     <div class="menu-cards reveal">
       <div class="menu-card">
-        <div class="menu-monitor-badge">開業記念価格</div>
-        <p class="menu-type">First Layer · 60 min</p>
-        <h3 class="menu-name">整える</h3>
-        <p class="menu-subtitle">60分コース</p>
-        <p class="menu-desc">
-          まず体全体の状態を把握し、優先度の高い部位を中心に整えるコース。「どこが問題でどうなっているか」施術前に必ず丁寧にご説明します。初めての方はほぼこちらからスタートされています。
-        </p>
+        <div class="menu-badge">開業記念価格</div>
+        <p class="menu-type">Body Care · 60 min</p>
+        <h3 class="menu-name">全身調整コース</h3>
+        <p class="menu-subtitle">60分 · はじめての方にも</p>
+        <p class="menu-desc">まず体全体の状態を把握し、優先度の高い部位を中心に整えるコース。「どこが問題でどうなっているか」施術前に必ず丁寧にご説明します。初めての方はほぼこちらからスタートされています。</p>
         <div class="menu-price-row">
           <span class="menu-price-label">開業記念</span>
-          <span class="menu-price">¥7,800</span>
-          <span class="menu-price-unit">（通常 ¥10,000）</span>
+          <span class="menu-price">¥8,000</span>
+          <span class="menu-price-unit">（通常 ¥12,000）</span>
         </div>
       </div>
-
       <div class="menu-card">
-        <div class="menu-monitor-badge">開業記念価格</div>
-        <p class="menu-type">First Layer · 90 min</p>
-        <h3 class="menu-name">読み解く</h3>
-        <p class="menu-subtitle">90分コース</p>
-        <p class="menu-desc">
-          全身をじっくり読み解き、根本にアプローチするコース。「何度行っても変わらない」という方、慢性的な不調が長く続いている方に特に選ばれているコースです。
-        </p>
+        <div class="menu-badge">開業記念価格</div>
+        <p class="menu-type">Body Care · 90 min</p>
+        <h3 class="menu-name">根本ケアコース</h3>
+        <p class="menu-subtitle">90分 · 慢性的な不調の方に</p>
+        <p class="menu-desc">全身をじっくり読み解き、根本にアプローチするコース。「何度行っても変わらない」という方、慢性的な不調が長く続いている方に特に選ばれているコースです。</p>
         <div class="menu-price-row">
           <span class="menu-price-label">開業記念</span>
-          <span class="menu-price">¥9,800</span>
-          <span class="menu-price-unit">（通常 ¥13,000）</span>
+          <span class="menu-price">¥10,000</span>
+          <span class="menu-price-unit">（通常 ¥15,000）</span>
         </div>
       </div>
     </div>
-
-    <p class="menu-note reveal">
-      ※ 開業記念価格は期間限定となります。通常営業移行後は通常価格に変更となります。紹介割引あり（紹介者様の次回施術を¥2,000引き）。
-    </p>
-
-    <div class="reveal" style="text-align:center; margin-top:48px;">
+    <p class="menu-note reveal">※ 開業記念価格は期間限定となります。通常営業移行後は通常価格に変更となります。紹介割引あり（紹介者様の次回施術を¥2,000引き）。</p>
+    <div class="reveal" style="text-align:center;margin-top:48px;">
       <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:12px;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
         予約する
@@ -1303,109 +673,29 @@
   </div>
 </section>
 
-<!-- ABOUT SALON -->
-<section id="profile" style="background: var(--warm-white); padding: 120px 0;">
-  <div class="container">
-    <span class="section-label reveal">About</span>
-    <h2 class="section-title reveal">美体ラボについて</h2>
-    <div class="divider reveal"></div>
-
-    <div class="profile-grid reveal" style="grid-template-columns: 1fr;">
-      <div class="profile-content">
-        <h3 class="profile-name-jp">名前の由来</h3>
-        <p class="profile-name-en">The Story Behind the Name</p>
-
-        <div class="profile-message">
-          <p>「美体」とは、美しい体を作ることではありません。</p>
-          <p style="margin-top:16px">体が整っているとき、人は自然と姿勢が伸び、よく眠れて、気力が湧いてくる。そういう状態の人が持つ、静かな存在感。外側ではなく、内側から整っている——その状態を「美しい」と呼びたかった。</p>
-          <p style="margin-top:16px">あなたが「何度行っても変わらない」と感じているのは、部分しか見ていなかったからかもしれない。</p>
-          <p style="margin-top:16px">美体ラボは、そのつながり全体を読み解くことから始めます。</p>
-        </div>
-
-        <div class="profile-divider"></div>
-
-        <h3 class="profile-name-jp" style="margin-bottom: 8px;">コンセプト</h3>
-        <p class="profile-name-en" style="margin-bottom: 32px;">Our Concept</p>
-
-        <div class="profile-message">
-          <p style="font-family:'Shippori Mincho',serif; font-size:18px; font-weight:600; color:var(--charcoal); letter-spacing:0.05em;">体は、全部つながっています。</p>
-          <p style="margin-top:16px">肩をほぐしても腰が痛い。腰を整えても頭が重い。それは、体が全身でバランスを取り合っているからです。一箇所だけ緩めても、他の場所がまた引っ張り直してしまう。</p>
-          <p style="margin-top:16px">だから何度通っても、また同じところが痛くなる。</p>
-          <p style="margin-top:16px">美体ラボは、痛みの出ている場所だけでなく、そこに影響を与えている体全体のバランスを確認しながら施術を組み立てます。力で押したり、骨をボキッと鳴らしたりはしません。筋肉とそれを包む膜に丁寧にアプローチすることで、体が本来の状態に戻ろうとする力を引き出します。</p>
-          <p style="margin-top:16px">「治す」ではなく、「整える」。それが、ここでやることです。</p>
-        </div>
-
-        <div class="profile-divider"></div>
-
-        <ul class="profile-quals">
-          <li>広島市中区 大手町4-3-18 ABE bldg 2F</li>
-          <li>完全予約制・土日祝営業</li>
-          <li>1対1のマンツーマン施術</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- THERAPIST -->
-<section id="therapist" style="background: var(--cream); padding: 120px 0;">
-  <div class="container">
-    <span class="section-label reveal">Therapist</span>
-    <h2 class="section-title reveal">施術者について</h2>
-    <div class="divider reveal"></div>
-
-    <div class="profile-grid reveal" style="grid-template-columns: 1fr;">
-      <div class="profile-content">
-        <h3 class="profile-name-jp" style="margin-bottom:6px;">30代・男性</h3>
-        <p class="profile-name-en" style="margin-bottom:24px;">1対1のマンツーマン施術</p>
-        <div style="background:var(--warm-white);border:1px solid var(--border);padding:16px 24px;margin-bottom:32px;font-size:13px;color:var(--mid-brown);line-height:2;letter-spacing:0.05em;">
-          完全個室 ／ 施術前に「今日触れる可能性のある部位」を説明 ／ 施術中も都度声かけあり ／ 動きやすい服装でお越しください
-        </div>
-
-        <div class="profile-message">
-          <p>子どもの頃からサッカーを続け、体を動かすことが日常でした。自然と体のケアを習慣にしてきたつもりでした。それでも20代後半、仕事や生活環境の変化とともに、頭痛・倦怠感・原因のわからない不調が重なるようになりました。</p>
-          <p style="margin-top:16px">慢性的な偏頭痛にも長年悩まされました。通い続けたカイロプラクティックで一時的に楽にはなる。でも、根本は変わらない。「このままでいいのか」という問いが、自ら学ぶきっかけになりました。</p>
-          <p style="margin-top:16px">学びを深める中で辿り着いたのが、体全身のつながりを前提としたアプローチと「回復とは副交感神経優位への転換である」という考え方でした。知識だけでなく、自分の体で実践を重ねました。</p>
-          <p style="margin-top:16px">気づけば、慢性的だった偏頭痛はほぼ出なくなっていました。今は、ひどくなる前に自分で対処できる体になっています。</p>
-          <p style="margin-top:16px">同じように悩んでいた経験があるから、「変わらない」という感覚の苦しさがわかります。</p>
-          <p style="margin-top:16px">だから美体ラボでは、まずじっくりヒアリングして体の状態を確認するところから始めます。何が起きているのかを一緒に把握することなしに、的確なケアはできないと考えているからです。</p>
-          <p style="margin-top:16px">あなたの体のことを、一緒に理解していきましょう。</p>
-        </div>
-
-        <div class="profile-divider"></div>
-
-        <ul class="profile-quals">
-          <li>民間カイロプラクティック資格取得</li>
-          <li>1年間の実践修行を経て開業</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- VOICE -->
-<section id="voice" style="background: var(--cream); padding: 80px 0;">
+<section id="voice">
   <div class="container">
     <span class="section-label reveal">Voice</span>
     <h2 class="section-title reveal">お客様の声</h2>
     <div class="divider reveal"></div>
     <div class="voice-grid reveal">
-      <div class="voice-card" style="border-left: 3px solid var(--accent-terra);">
+      <div class="voice-card" style="border-left:3px solid var(--accent-terra)">
         <p class="voice-lead">「男性施術者でも、安心して受けられました」</p>
-        <p class="voice-text">「施術者が男性と知り、最初は少し不安がありました。でも、施術前のヒアリングで『今日どこを触る可能性があるか』を丁寧に説明していただき、施術中も『次はここに触れますね』と都度声をかけてくださるので、安心して身を委ねることができました。」</p>
+        <p class="voice-text">「施術者が男性と知り、最初は少し不安がありました。でも、施術前のヒアリングで『今日どこを触る可能性があるか』を丁寧に説明していただき、施術中も都度声をかけてくださるので、安心して身を委ねることができました。」</p>
         <p class="voice-name">— 50代・女性</p>
       </div>
-      <div class="voice-card" style="border-left: 3px solid var(--accent-sage);">
-        <p class="voice-lead">「2年間変わらなかった膝痛の、原因を初めて説明してもらえた」</p>
+      <div class="voice-card" style="border-left:3px solid var(--accent-sage)">
+        <p class="voice-lead">「2年間変わらなかった膝痛の原因を、初めて説明してもらえた」</p>
         <p class="voice-text">「この2年間膝の痛みがあり、いろんなところの施術を受けましたが、なかなか変化がありませんでした。それなのに、膝の痛みがどういうからくりで発生しているのかを説明していただき、とてもびっくりしました。」</p>
         <p class="voice-name">— 50代・女性</p>
       </div>
-      <div class="voice-card" style="border-left: 3px solid var(--accent-gold);">
+      <div class="voice-card" style="border-left:3px solid var(--accent-gold)">
         <p class="voice-lead">「原因の説明と、日々のケアまで教えてくれた」</p>
         <p class="voice-text">「急に肩の痛みが出て、腕を上げるのがとてもつらかったのですが、ほぐすだけでなく、原因を説明してくださり、日々のケアについても教えていただきました。大変満足しています。」</p>
         <p class="voice-name">— 40代・女性</p>
       </div>
-      <div class="voice-card" style="border-left: 3px solid var(--accent-terra); opacity: 0.85;">
+      <div class="voice-card" style="border-left:3px solid var(--accent-terra)">
         <p class="voice-lead">「自分でできるケアが増えて、楽な時間が増えてきた」</p>
         <p class="voice-text">「首と肩の凝りがひどく、いつもお世話になっています。私の状況を聞いた上で、私にできる範囲のアドバイスをしてくださり、徐々に体が楽な時間が増えてきました。」</p>
         <p class="voice-name">— 50代・女性</p>
@@ -1414,83 +704,91 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" style="background: var(--warm-white); padding: 100px 0;">
+<!-- THERAPIST -->
+<section id="therapist">
   <div class="container">
-    <span class="section-label reveal">FAQ</span>
-    <h2 class="section-title reveal">よくあるご質問</h2>
+    <span class="section-label reveal">Therapist</span>
+    <h2 class="section-title reveal">施術者について</h2>
     <div class="divider reveal"></div>
-
-    <div class="reveal" style="max-width: 760px;">
-
-      <div class="faq-item">
-        <div class="faq-q">初めてでも大丈夫ですか？施術の流れを教えてください。</div>
-        <div class="faq-a">はじめての方も安心してお越しください。施術はヒアリング→施術内容の説明→ご同意の確認→施術の順で進みます。いきなり触れることはありませんので、不安なことがあればヒアリング時にお気軽にご相談ください。</div>
+    <div class="reveal" style="max-width:720px;">
+      <p class="therapist-name-jp" style="margin-bottom:6px;">30代・男性</p>
+      <p class="therapist-name-en">1対1のマンツーマン施術</p>
+      <div class="therapist-safety">完全個室 ／ 施術前に「今日触れる可能性のある部位」を説明 ／ 施術中も都度声かけあり ／ 動きやすい服装でお越しください</div>
+      <div class="therapist-body">
+        <p>子どもの頃からサッカーを続け、体を動かすことが日常でした。自然と体のケアを習慣にしてきたつもりでした。それでも20代後半、仕事や生活環境の変化とともに、頭痛・倦怠感・原因のわからない不調が重なるようになりました。</p>
+        <p>慢性的な偏頭痛にも長年悩まされました。通い続けた整体で一時的に楽にはなる。でも、根本は変わらない。「このままでいいのか」という問いが、自ら学ぶきっかけになりました。</p>
+        <p>学びを深める中で辿り着いたのが、体全身のつながりを前提としたアプローチでした。知識だけでなく、自分の体で実践を重ねました。気づけば、慢性的だった偏頭痛はほぼ出なくなっていました。今は、ひどくなる前に自分で対処できる体になっています。</p>
+        <p>同じように悩んでいた経験があるから、「変わらない」という感覚の苦しさがわかります。だから美体ラボでは、まずじっくりヒアリングして体の状態を確認するところから始めます。あなたの体のことを、一緒に理解していきましょう。</p>
       </div>
-
-      <div class="faq-item">
-        <div class="faq-q">施術後に体の反応が出ることはありますか？</div>
-        <div class="faq-a">痛みが出ることはありません。ただ、眠くなったり、施術後にだるさを感じる方がいらっしゃいます。これは体が変化しているサインです。施術後は無理をせず、ゆっくり過ごしていただけると理想的です。眠気を感じることもあるため、お車でお越しの際はご注意ください。</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">駐車場はありますか？</div>
-        <div class="faq-a">駐車場はございません。お近くのコインパーキング（お客様負担）をご利用ください。施術後に眠気を感じる方もいらっしゃいますので、公共交通機関のご利用もご検討いただけると幸いです。</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">当日・前日のキャンセルはできますか？</div>
-        <div class="faq-a">当日・前日のキャンセルも承っております。ご予定が変わった際はお早めにご連絡ください。体調が優れない場合は無理をせずご連絡いただければ大丈夫です。</div>
-      </div>
-
-      <div class="faq-item" style="border-bottom: none;">
-        <div class="faq-q">ボキボキする施術はありますか？</div>
-        <div class="faq-a">行っておりません。関節を強制的に鳴らす施術は、首・背中・腰いずれも神経や血管へのリスクがあるため、美体ラボでは採用していません。当サロンの施術は、筋肉・筋膜へのアプローチを中心とした、体に負担の少ない手技です。安心してお越しください。</div>
-      </div>
-
-      <div class="faq-item" style="border-top: 1px solid var(--border);">
-        <div class="faq-q">施術者が男性とのことですが、女性でも安心して受けられますか？</div>
-        <div class="faq-a">はい、安心してお越しください。施術前のヒアリングで「本日触れる可能性のある部位」を必ずご説明し、ご同意をいただいてから施術に入ります。施術中も「次はここに触れますね」と都度声をかけながら進めますので、途中で止めていただくことも遠慮なくお申し付けください。完全個室・完全予約制で、ほかのお客様と顔を合わせることもありません。</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">どんな施術をするのですか？痛みはありますか？</div>
-        <div class="faq-a">筋肉とそれを包む膜（筋膜）に対して、圧や動きを使ってアプローチする手技が中心です。骨をボキッと鳴らすことはしません。強い力を使わず、体が自然に緩むことを促す施術なので、強い痛みは出ません。「気持ちいい」「じわじわ緩む感覚がある」とおっしゃる方が多いです。施術中に気になることがあればいつでもお声がけください。</div>
-      </div>
-
-      <div class="faq-item" style="border-bottom: none;">
-        <div class="faq-q">何回通えば変化が出ますか？</div>
-        <div class="faq-a">個人差がありますが、初回から「なんとなく軽くなった」「呼吸がしやすい」という感想をいただくことは多いです。ただし、長年の慢性的な不調は1回で全て解決するものではありません。目安として3〜5回を一つの区切りとして体の変化を確認しながら進めています。施術のたびに状態をヒアリングして、次の施術内容を組み立て直すので、「また同じことをされただけ」にはなりません。</div>
-      </div>
-
+      <div class="therapist-divider"></div>
+      <ul class="therapist-quals">
+        <li>民間カイロプラクティック資格取得</li>
+        <li>1年間の実践修行を経て開業</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- CTA / RESERVE -->
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <span class="section-label reveal">FAQ</span>
+    <h2 class="section-title reveal">よくあるご質問</h2>
+    <div class="divider reveal"></div>
+    <div class="reveal" style="max-width:760px;">
+      <div class="faq-item">
+        <div class="faq-q">初めてでも大丈夫ですか？施術の流れを教えてください。</div>
+        <div class="faq-a">はじめての方も安心してお越しください。施術はヒアリング→施術内容の説明→ご同意の確認→施術の順で進みます。いきなり触れることはありませんので、不安なことがあればヒアリング時にお気軽にご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">施術者が男性とのことですが、女性でも安心して受けられますか？</div>
+        <div class="faq-a">はい、安心してお越しください。施術前のヒアリングで「本日触れる可能性のある部位」を必ずご説明し、ご同意をいただいてから施術に入ります。施術中も「次はここに触れますね」と都度声をかけながら進めますので、途中で止めていただくことも遠慮なくお申し付けください。完全個室・完全予約制で、ほかのお客様と顔を合わせることもありません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">どんな施術をするのですか？痛みはありますか？</div>
+        <div class="faq-a">筋肉とそれを包む膜に対して、圧や動きを使ってアプローチする手技が中心です。骨をボキッと鳴らすことはしません。強い力を使わず、体が自然に緩むことを促す施術なので、強い痛みは出ません。「気持ちいい」「じわじわ緩む感覚がある」とおっしゃる方が多いです。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">何回通えば変化が出ますか？</div>
+        <div class="faq-a">個人差がありますが、初回から「なんとなく軽くなった」「呼吸がしやすい」という感想をいただくことは多いです。ただし、長年の慢性的な不調は1回で全て解決するものではありません。目安として3〜5回を一つの区切りとして体の変化を確認しながら進めています。毎回状態をヒアリングして施術内容を組み立て直すので、「また同じことをされただけ」にはなりません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">施術後に体の反応が出ることはありますか？</div>
+        <div class="faq-a">痛みが出ることはありません。ただ、眠くなったり、施術後にだるさを感じる方がいらっしゃいます。これは体が変化しているサインです。施術後は無理をせず、ゆっくり過ごしていただけると理想的です。眠気を感じることもあるため、お車でお越しの際はご注意ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">ボキボキする施術はありますか？</div>
+        <div class="faq-a">行っておりません。関節を強制的に鳴らす施術は、首・背中・腰いずれも神経や血管へのリスクがあるため、美体ラボでは採用していません。筋肉・筋膜へのアプローチを中心とした、体に負担の少ない手技です。安心してお越しください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">駐車場はありますか？</div>
+        <div class="faq-a">駐車場はございません。お近くのコインパーキング（お客様負担）をご利用ください。施術後に眠気を感じる方もいらっしゃいますので、公共交通機関のご利用もご検討いただけると幸いです。</div>
+      </div>
+      <div class="faq-item" style="border-bottom:none;">
+        <div class="faq-q">当日・前日のキャンセルはできますか？</div>
+        <div class="faq-a">当日・前日のキャンセルも承っております。ご予定が変わった際はお早めにご連絡ください。体調が優れない場合は無理をせずご連絡いただければ大丈夫です。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVE -->
 <section id="reserve">
   <div class="container">
     <span class="section-label reveal" style="text-align:center;display:block;color:rgba(196,134,106,0.8)">Reservation</span>
-    <h2 class="section-title reveal">
-      「なぜ変わらないのか」を、<br>一緒に考えてみませんか。
-    </h2>
+    <h2 class="section-title reveal">その体の状態、<br>一度ちゃんと確認しませんか。</h2>
     <p class="reserve-sub reveal">
-      まず体の状態をヒアリングして確認するところから始めます。<br>
+      ヒアリングから始めます。何が起きているのかを一緒に把握することから。<br>
       開業記念期間中だからこそ、お一人おひとりに時間をかけられます。<br>
       完全予約制・1対1・完全個室。
     </p>
-
     <div class="reserve-buttons reveal">
       <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary">
-        <span class="btn-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
-        </span>
+        <span class="btn-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></span>
         空き状況を確認・予約する
       </a>
       <a href="https://forms.gle/1JnssM3GDza1YJNg6" target="_blank" class="btn-secondary">
-        <span class="btn-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </span>
+        <span class="btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
         ご相談・お問い合わせ
       </a>
     </div>
@@ -1504,31 +802,15 @@
     <span class="section-label reveal">Access</span>
     <h2 class="section-title reveal">アクセス・営業時間</h2>
     <div class="divider reveal"></div>
-
     <div class="access-grid reveal">
       <div class="map-placeholder">
-        <iframe
-          src="https://www.google.com/maps?q=広島県広島市中区大手町4-3-18+ABE+bldg+2F&output=embed"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe src="https://www.google.com/maps?q=広島県広島市中区大手町4-3-18+ABE+bldg+2F&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-      <div class="access-info">
-        <div class="access-info-item">
-          <span class="access-info-label">サロン名</span>
-          <span class="access-info-value">美体ラボ</span>
-        </div>
-        <div class="access-info-item">
-          <span class="access-info-label">所在地</span>
-          <span class="access-info-value">広島県広島市中区大手町4-3-18<br>ABE bldg 2F</span>
-        </div>
-        <div class="access-info-item">
-          <span class="access-info-label">営業時間</span>
-          <span class="access-info-value">土・日・祝　10:00〜18:00<br>完全予約制</span>
-        </div>
-        <div class="access-info-item">
-          <span class="access-info-label">アクセス</span>
-          <span class="access-info-value">広島電鉄 1・3・7線「市役所前」駅<br>バス「市役所前」停留所</span>
-        </div>
+      <div>
+        <div class="access-info-item"><span class="access-info-label">サロン名</span><span class="access-info-value">美体ラボ</span></div>
+        <div class="access-info-item"><span class="access-info-label">所在地</span><span class="access-info-value">広島県広島市中区大手町4-3-18<br>ABE bldg 2F</span></div>
+        <div class="access-info-item"><span class="access-info-label">営業時間</span><span class="access-info-value">土・日・祝　10:00〜18:00<br>完全予約制</span></div>
+        <div class="access-info-item"><span class="access-info-label">アクセス</span><span class="access-info-value">広島電鉄 1・3・7線「市役所前」駅<br>バス「市役所前」停留所</span></div>
       </div>
     </div>
   </div>
@@ -1536,13 +818,10 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    美体ラボ
-    <span>Bital-Labo · Body Care Salon</span>
-  </div>
+  <div class="footer-logo">美体ラボ<span>Bital-Labo · Body Care Salon</span></div>
   <p class="footer-copy">
-    <a href="tokusho.html" style="color: rgba(248,244,238,0.3); text-decoration: none; margin-right: 24px; letter-spacing: 0.15em; font-size: 11px;">特定商取引法に基づく表記</a>
-    <a href="privacy.html" style="color: rgba(248,244,238,0.3); text-decoration: none; margin-right: 24px; letter-spacing: 0.15em; font-size: 11px;">プライバシーポリシー</a>
+    <a href="tokusho.html" style="color:rgba(248,244,238,0.3);text-decoration:none;margin-right:24px;letter-spacing:0.15em;font-size:11px;">特定商取引法に基づく表記</a>
+    <a href="privacy.html" style="color:rgba(248,244,238,0.3);text-decoration:none;margin-right:24px;letter-spacing:0.15em;font-size:11px;">プライバシーポリシー</a>
     © 2026 美体ラボ. All rights reserved.
   </p>
 </footer>
@@ -1557,12 +836,10 @@
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 80);
   });
-
   const floatingCta = document.getElementById('floatingCta');
   window.addEventListener('scroll', () => {
     floatingCta.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
   });
-
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -1571,8 +848,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   reveals.forEach(el => observer.observe(el));
 </script>
 
