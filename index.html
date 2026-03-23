@@ -236,6 +236,59 @@
   .why-card.dark .why-card-body { color: rgba(248,244,238,0.6); }
   .why-card.wide { grid-column: 1 / -1; background: var(--warm-white); }
 
+  /* TENSEGRITY BRIEF */
+  .tensegrity-brief {
+    margin-top: 2px;
+    background: var(--dark-brown);
+    border: 1px solid rgba(248,244,238,0.06);
+  }
+  .tensegrity-brief-inner {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 0;
+  }
+  .tensegrity-brief-text {
+    padding: 56px 52px;
+    border-right: 1px solid rgba(248,244,238,0.06);
+  }
+  .tensegrity-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 12px; color: var(--accent-terra);
+    letter-spacing: 0.35em; margin-bottom: 20px; display: block;
+  }
+  .tensegrity-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(18px, 2.2vw, 24px); font-weight: 600;
+    color: var(--cream); line-height: 1.6;
+    letter-spacing: 0.04em; margin-bottom: 20px;
+  }
+  .tensegrity-body {
+    font-size: 13px; color: rgba(248,244,238,0.55);
+    line-height: 2.2; margin-bottom: 32px;
+  }
+  .tensegrity-link {
+    display: inline-flex; align-items: center;
+    font-size: 13px; color: var(--accent-terra);
+    text-decoration: none; letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(196,134,106,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .tensegrity-link:hover { color: #D4967A; border-color: rgba(196,134,106,0.7); }
+  .tensegrity-brief-figure {
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 24px;
+    background: rgba(248,244,238,0.02);
+  }
+  .tensegrity-brief-figure svg { width: 100%; height: auto; max-width: 220px; }
+
+  @media (max-width: 768px) {
+    .tensegrity-brief-inner { grid-template-columns: 1fr; }
+    .tensegrity-brief-text { padding: 40px 24px; border-right: none; border-bottom: 1px solid rgba(248,244,238,0.06); }
+    .tensegrity-brief-figure { padding: 32px 24px; }
+    .tensegrity-brief-figure svg { max-width: 160px; }
+  }
+
   /* REASONS */
   #reasons { padding: 120px 0; background: var(--dark-brown); position: relative; overflow: hidden; }
   #reasons::before {
@@ -515,14 +568,14 @@
 <section id="hero">
   <p class="hero-eyebrow">Hiroshima · Body Care Salon</p>
   <h1 class="hero-headline">
-    忙しくて、ずっと<br>
-    後回しにしてきた。<br>
-    でも、<em>もう誤魔化せない。</em>
+    また、同じところが<br>
+    痛くなった。<br>
+    その繰り返しには、<em>原因があります。</em>
   </h1>
   <p class="hero-sub">
-    肩が重い。腰がだるい。頭痛が取れない。<br>
-    それでも今日も仕事がある。<br><br>
-    <strong>その体の状態には、ちゃんと理由があります。</strong>
+    整体に行くたびに、楽になる。<br>
+    でも、また戻ってしまう。<br><br>
+    <strong>その繰り返しを終わらせるために、美体ラボはあります。</strong>
   </p>
   <div class="hero-cta-wrap">
     <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary">
@@ -541,25 +594,25 @@
 <section id="empathy">
   <div class="container">
     <span class="section-label reveal">Your Situation</span>
-    <h2 class="section-title reveal">こんな状態、<br>続いていませんか？</h2>
+    <h2 class="section-title reveal">こんな経験、<br>繰り返していませんか？</h2>
     <div class="divider reveal"></div>
     <div class="pain-grid reveal">
-      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">肩こり・腰痛が慢性化して、何をしても一時的にしか楽にならない</p></div>
-      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">体の不調が仕事や日常のパフォーマンスを確実に下げている</p></div>
-      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">整体やマッサージに行っても、しばらくするとまた同じところが痛くなる</p></div>
-      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">湿布を貼ったり、痛み止めを飲んでその場をしのいでいる</p></div>
-      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">「また来ただけ」「また戻った」という繰り返しに、もう疲れた</p></div>
-      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">本当に変わる場所を探し続けているが、なかなか見つからない</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">整体やマッサージに行くと楽になるが、しばらくするとまた同じところが痛くなる</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">「また来ただけ」という感覚が続いて、通い続けることに疑問を感じている</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">肩こり・腰痛が慢性化して、その場しのぎの対処では変わらないと分かっている</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">湿布や痛み止めでごまかしながら、根本から変えたいとずっと思っている</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">「ここじゃない気がする」と感じながらも、なかなか別の場所に踏み出せない</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p class="pain-text">体の不調が仕事や日常のパフォーマンスを下げていることに気づいている</p></div>
     </div>
     <div class="empathy-closing reveal">
-      <p class="empathy-quote">「また同じところが痛い」</p>
-      <p class="empathy-quote">「通っているのに、なぜ変わらないんだろう」</p>
+      <p class="empathy-quote">「また戻ってしまった」</p>
+      <p class="empathy-quote">「どこに行っても、同じなのかな」</p>
       <div class="empathy-spacer"></div>
       <p class="empathy-body">その繰り返しには、<strong>理由があります。</strong></p>
       <div class="empathy-spacer"></div>
-      <p class="empathy-body">原因が「部分」にあるのではなく、<br>体全体の「つながりの乱れ」にある場合、<br>一箇所だけほぐしてもまた戻ってしまう。</p>
+      <p class="empathy-body">痛みの出ている「部分」だけを整えても、<br>全身のつながりが乱れている限り、また戻ってしまう。<br>どこに行っても変わらないのは、そういう理由からです。</p>
       <div class="empathy-spacer"></div>
-      <p class="empathy-body">美体ラボは、その<strong>根本から向き合います。</strong></p>
+      <p class="empathy-body">美体ラボは、その<strong>つながりの全体から向き合います。</strong></p>
     </div>
   </div>
 </section>
@@ -585,6 +638,69 @@
         <span class="why-card-label">What Needs to Change</span>
         <h3 class="why-card-title">原因は、痛い場所にはない。</h3>
         <p class="why-card-body">痛みが出ている場所ではなく、そこに影響を与えている体全体のバランスを確認すること。美体ラボは、まずじっくりヒアリングして体の状態を把握するところから始めます。何が起きているのかを一緒に理解することなしに、的確なケアはできないと考えているからです。</p>
+      </div>
+    </div>
+
+    <!-- テンセグリティ簡略説明 -->
+    <div class="tensegrity-brief reveal">
+      <div class="tensegrity-brief-inner">
+        <div class="tensegrity-brief-text">
+          <span class="tensegrity-label">Tensegrity &amp; Fascia</span>
+          <h3 class="tensegrity-title">体が「全部つながっている」<br>理由には、根拠があります。</h3>
+          <p class="tensegrity-body">人体は骨格（圧縮材）と筋膜（張力材）が全身でネットワークを形成するテンセグリティ構造を持っています。この構造が、一箇所の緊張が離れた場所の痛みを引き起こす原因です。</p>
+          <a href="concept.html" class="tensegrity-link">
+            施術のアプローチについて詳しく →
+          </a>
+        </div>
+        <div class="tensegrity-brief-figure">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+            <defs>
+              <radialGradient id="bgT" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" stop-color="#2A2520"/>
+                <stop offset="100%" stop-color="#1C1714"/>
+              </radialGradient>
+              <filter id="sgT">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <rect width="400" height="500" fill="url(#bgT)"/>
+            <ellipse cx="200" cy="250" rx="150" ry="160" fill="#C4866A" fill-opacity="0.06"/>
+            <!-- Compression -->
+            <line x1="200" y1="70" x2="200" y2="285" stroke="#F8F4EE" stroke-width="2.5" stroke-opacity="0.8" filter="url(#sgT)"/>
+            <line x1="200" y1="110" x2="130" y2="145" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.75"/>
+            <line x1="200" y1="110" x2="270" y2="145" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.75"/>
+            <line x1="130" y1="145" x2="110" y2="225" stroke="#F8F4EE" stroke-width="1.5" stroke-opacity="0.65"/>
+            <line x1="270" y1="145" x2="290" y2="225" stroke="#F8F4EE" stroke-width="1.5" stroke-opacity="0.65"/>
+            <line x1="200" y1="285" x2="165" y2="365" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.75"/>
+            <line x1="200" y1="285" x2="235" y2="365" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.75"/>
+            <line x1="165" y1="365" x2="155" y2="430" stroke="#F8F4EE" stroke-width="1.5" stroke-opacity="0.65"/>
+            <line x1="235" y1="365" x2="245" y2="430" stroke="#F8F4EE" stroke-width="1.5" stroke-opacity="0.65"/>
+            <!-- Tension -->
+            <line x1="200" y1="70" x2="130" y2="145" stroke="#C4866A" stroke-width="1" stroke-opacity="0.55" stroke-dasharray="3,3"/>
+            <line x1="130" y1="145" x2="165" y2="365" stroke="#C4866A" stroke-width="1" stroke-opacity="0.55" stroke-dasharray="3,3"/>
+            <line x1="165" y1="365" x2="155" y2="430" stroke="#C4866A" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3,3"/>
+            <line x1="200" y1="70" x2="270" y2="145" stroke="#C4866A" stroke-width="1" stroke-opacity="0.55" stroke-dasharray="3,3"/>
+            <line x1="270" y1="145" x2="235" y2="365" stroke="#C4866A" stroke-width="1" stroke-opacity="0.55" stroke-dasharray="3,3"/>
+            <line x1="235" y1="365" x2="245" y2="430" stroke="#C4866A" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3,3"/>
+            <line x1="130" y1="145" x2="235" y2="365" stroke="#8A9E8C" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="2,4"/>
+            <line x1="270" y1="145" x2="165" y2="365" stroke="#8A9E8C" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="2,4"/>
+            <!-- Nodes -->
+            <circle cx="200" cy="70" r="5.5" fill="#F8F4EE" filter="url(#sgT)" opacity="0.9"/>
+            <circle cx="200" cy="95" r="3" fill="#B8956A" opacity="0.85"/>
+            <circle cx="130" cy="145" r="6.5" fill="#C4866A" filter="url(#sgT)" opacity="0.9"/>
+            <circle cx="270" cy="145" r="6.5" fill="#C4866A" filter="url(#sgT)" opacity="0.9"/>
+            <circle cx="110" cy="225" r="4.5" fill="#8A9E8C" opacity="0.8"/>
+            <circle cx="290" cy="225" r="4.5" fill="#8A9E8C" opacity="0.8"/>
+            <circle cx="200" cy="285" r="7" fill="#F8F4EE" filter="url(#sgT)" opacity="0.9"/>
+            <circle cx="165" cy="365" r="6" fill="#C4866A" filter="url(#sgT)" opacity="0.85"/>
+            <circle cx="235" cy="365" r="6" fill="#C4866A" filter="url(#sgT)" opacity="0.85"/>
+            <circle cx="155" cy="430" r="4.5" fill="#8A9E8C" opacity="0.75"/>
+            <circle cx="245" cy="430" r="4.5" fill="#8A9E8C" opacity="0.75"/>
+            <!-- Label -->
+            <text x="200" y="470" font-family="Georgia, serif" font-size="10" fill="rgba(248,244,238,0.3)" text-anchor="middle" letter-spacing="0.2em" font-style="italic">Tensegrity Model</text>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -622,7 +738,7 @@
 <!-- MID CTA -->
 <section id="mid-cta">
   <div class="container">
-    <p class="mid-cta-text reveal">まず、体の状態を確認してみませんか。</p>
+    <p class="mid-cta-text reveal">その繰り返し、ここで終わりにしませんか。</p>
     <p class="mid-cta-sub reveal">開業記念期間中につき、お一人おひとりに時間をかけた施術を特別価格でご提供しています。</p>
     <div class="reveal">
       <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-white">空き状況を確認・予約する →</a>
@@ -776,11 +892,11 @@
 <section id="reserve">
   <div class="container">
     <span class="section-label reveal" style="text-align:center;display:block;color:rgba(196,134,106,0.8)">Reservation</span>
-    <h2 class="section-title reveal">その体の状態、<br>一度ちゃんと確認しませんか。</h2>
+    <h2 class="section-title reveal">「また戻ってしまう」を、<br>終わりにしませんか。</h2>
     <p class="reserve-sub reveal">
-      ヒアリングから始めます。何が起きているのかを一緒に把握することから。<br>
-      開業記念期間中だからこそ、お一人おひとりに時間をかけられます。<br>
-      完全予約制・1対1・完全個室。
+      どこに行っても変わらなかった方に、ぜひ一度試してほしい場所があります。<br>
+      ヒアリングから始めます。体に何が起きているのかを、一緒に確認することから。<br>
+      開業記念期間中だからこそ、お一人おひとりに時間をかけられます。
     </p>
     <div class="reserve-buttons reveal">
       <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary">

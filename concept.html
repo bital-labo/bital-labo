@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>施術のアプローチについて | 美体ラボ</title>
+<meta name="description" content="美体ラボが全身のつながりから体を整える理由。テンセグリティ構造と筋膜の関係から、なぜ部分的なケアでは根本が変わらないのかを解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F8F4EE;
+    --warm-white: #FDFAF6;
+    --charcoal: #2A2520;
+    --dark-brown: #1C1714;
+    --mid-brown: #6B5B4E;
+    --accent-sage: #8A9E8C;
+    --accent-terra: #C4866A;
+    --accent-gold: #B8956A;
+    --border: rgba(107, 91, 78, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--dark-brown);
+    padding: 20px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 1px solid rgba(248,244,238,0.06);
+  }
+  .logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px; font-weight: 600;
+    color: var(--cream); text-decoration: none; letter-spacing: 0.15em;
+  }
+  .logo span {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 12px; color: rgba(248,244,238,0.4);
+    display: block; letter-spacing: 0.2em;
+  }
+  .back-link {
+    font-size: 12px; color: rgba(248,244,238,0.5);
+    text-decoration: none; letter-spacing: 0.15em; transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--accent-terra); }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--dark-brown);
+    padding: 80px 48px 100px;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 60%, rgba(196,134,106,0.18) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 20%, rgba(138,158,140,0.1) 0%, transparent 45%);
+  }
+  .page-hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+  .page-eyebrow {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 13px; color: var(--accent-terra);
+    letter-spacing: 0.35em; margin-bottom: 24px; display: block;
+  }
+  .page-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(28px, 4vw, 44px); font-weight: 600;
+    color: var(--cream); line-height: 1.5; letter-spacing: 0.05em;
+    margin-bottom: 24px;
+  }
+  .page-title-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: rgba(248,244,238,0.35);
+    letter-spacing: 0.3em; margin-bottom: 0;
+  }
+
+  /* MAIN */
+  main { max-width: 800px; margin: 0 auto; padding: 80px 48px 120px; }
+
+  /* SECTION */
+  .concept-section { margin-bottom: 80px; }
+  .concept-section:last-child { margin-bottom: 0; }
+
+  .section-eyebrow {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 12px; color: var(--accent-terra);
+    letter-spacing: 0.35em; margin-bottom: 16px; display: block;
+  }
+  .section-heading {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(20px, 2.8vw, 28px); font-weight: 600;
+    color: var(--charcoal); line-height: 1.6;
+    letter-spacing: 0.05em; margin-bottom: 8px;
+  }
+  .section-heading-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 13px; color: var(--mid-brown);
+    letter-spacing: 0.25em; margin-bottom: 32px; display: block;
+  }
+  .divider { width: 36px; height: 1px; background: var(--accent-terra); margin-bottom: 32px; }
+
+  .body-text {
+    font-size: 15px; color: var(--charcoal);
+    line-height: 2.4; margin-bottom: 24px;
+  }
+  .body-text:last-child { margin-bottom: 0; }
+  .body-text strong { font-weight: 500; color: var(--charcoal); }
+
+  /* SVG FIGURE */
+  .figure-wrap {
+    margin: 48px 0;
+    background: var(--dark-brown);
+    border: 1px solid rgba(248,244,238,0.08);
+    overflow: hidden;
+  }
+  .figure-wrap svg { display: block; width: 100%; height: auto; }
+  .figure-caption {
+    padding: 16px 24px;
+    background: rgba(248,244,238,0.03);
+    border-top: 1px solid rgba(248,244,238,0.06);
+    font-size: 12px; color: rgba(248,244,238,0.4);
+    letter-spacing: 0.1em; font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-terra);
+    padding: 28px 32px;
+    margin: 40px 0;
+  }
+  .highlight-box p {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px; color: var(--charcoal);
+    line-height: 2.2;
+  }
+  .highlight-box strong { color: var(--accent-terra); font-weight: 600; }
+
+  /* CONCEPT GRID */
+  .concept-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; background: var(--border);
+    margin: 40px 0;
+  }
+  .concept-cell {
+    background: var(--warm-white);
+    padding: 32px 28px;
+  }
+  .concept-cell-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 11px; letter-spacing: 0.3em; color: var(--accent-terra);
+    margin-bottom: 12px; display: block;
+  }
+  .concept-cell-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 12px; line-height: 1.5;
+  }
+  .concept-cell-body { font-size: 13px; color: var(--mid-brown); line-height: 2.1; }
+
+  /* FLOW */
+  .flow-list { margin: 32px 0; list-style: none; }
+  .flow-item {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 20px 0; border-bottom: 1px solid var(--border);
+  }
+  .flow-item:last-child { border-bottom: none; }
+  .flow-num {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 28px; color: rgba(196,134,106,0.35);
+    line-height: 1; flex-shrink: 0; width: 32px;
+  }
+  .flow-content {}
+  .flow-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+  .flow-body { font-size: 13px; color: var(--mid-brown); line-height: 2; }
+
+  /* QUOTE */
+  .pull-quote {
+    text-align: center; padding: 48px 32px;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, var(--cream) 0%, #EDE8E0 100%);
+    margin: 48px 0;
+  }
+  .pull-quote p {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(16px, 2.2vw, 22px);
+    color: var(--charcoal); line-height: 2; font-weight: 500;
+  }
+  .pull-quote strong { color: var(--accent-terra); }
+
+  /* CTA */
+  .page-cta {
+    background: var(--dark-brown);
+    padding: 60px 48px;
+    text-align: center;
+    position: relative; overflow: hidden;
+    margin-top: 80px;
+  }
+  .page-cta::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(196,134,106,0.12) 0%, transparent 60%);
+  }
+  .page-cta-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(18px, 2.5vw, 26px); font-weight: 600;
+    color: var(--cream); margin-bottom: 16px;
+    letter-spacing: 0.05em; position: relative;
+  }
+  .page-cta-sub {
+    font-size: 13px; color: rgba(248,244,238,0.5);
+    margin-bottom: 36px; line-height: 2; position: relative;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--accent-terra); color: white;
+    text-decoration: none; padding: 18px 44px;
+    font-size: 14px; letter-spacing: 0.15em;
+    font-family: 'Noto Sans JP', sans-serif; font-weight: 400;
+    transition: all 0.3s; position: relative;
+  }
+  .btn-primary:hover { background: #B87258; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark-brown);
+    padding: 40px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(248,244,238,0.06);
+  }
+  .footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px; font-weight: 600; color: var(--cream); letter-spacing: 0.1em;
+  }
+  .footer-logo span {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 11px; color: rgba(248,244,238,0.35);
+    display: block; margin-top: 3px; letter-spacing: 0.2em;
+  }
+  .footer-copy { font-size: 11px; color: rgba(248,244,238,0.3); letter-spacing: 0.12em; }
+
+  @media (max-width: 768px) {
+    header { padding: 14px 20px; }
+
+    .page-hero { padding: 60px 20px 72px; }
+    .page-title { font-size: clamp(24px, 7vw, 36px); }
+
+    main { padding: 60px 20px 80px; }
+
+    .section-heading { font-size: clamp(20px, 6vw, 26px); }
+
+    .concept-grid { grid-template-columns: 1fr; }
+    .concept-cell { padding: 28px 20px; }
+
+    .figure-wrap { margin: 36px 0; }
+    .figure-wrap svg { width: 100%; height: auto; }
+    .figure-caption { padding: 12px 16px; font-size: 11px; }
+
+    .highlight-box { padding: 20px 20px; margin: 28px 0; }
+    .highlight-box p { font-size: 14px; }
+
+    .flow-item { gap: 14px; padding: 16px 0; }
+    .flow-num { font-size: 22px; width: 24px; }
+    .flow-title { font-size: 15px; }
+    .flow-body { font-size: 13px; }
+
+    .pull-quote { padding: 32px 20px; margin: 36px 0; }
+    .pull-quote p { font-size: clamp(14px, 4.5vw, 18px); }
+
+    .body-text { font-size: 14px; }
+
+    .page-cta { padding: 48px 20px; }
+    .page-cta-title { font-size: clamp(17px, 5vw, 22px); }
+    .page-cta-sub { font-size: 13px; }
+    .btn-primary { width: 100%; justify-content: center; padding: 16px 20px; }
+
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 20px; }
+    .footer-copy { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+  }
+
+  @media (max-width: 480px) {
+    .page-title { font-size: clamp(22px, 8vw, 30px); }
+    .section-heading { font-size: clamp(18px, 6.5vw, 24px); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">美体ラボ<span>Bital-Labo</span></a>
+  <a href="index.html" class="back-link">← トップに戻る</a>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-eyebrow">施術のアプローチ</span>
+    <h1 class="page-title">
+      なぜ美体ラボは<br>全身から整えるのか。
+    </h1>
+    <p class="page-title-en">全身から整える、その理由</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- SECTION 1: テンセグリティとは -->
+  <div class="concept-section">
+    <span class="section-eyebrow">01 — Tensegrity</span>
+    <h2 class="section-heading">体は「テンセグリティ構造」で<br>成り立っています</h2>
+    <span class="section-heading-en">人体とテンセグリティ構造</span>
+    <div class="divider"></div>
+
+    <p class="body-text">「テンセグリティ（Tensegrity）」とは、<strong>張力（Tension）</strong>と<strong>統合（Integrity）</strong>を組み合わせた構造概念です。アメリカの建築家バックミンスター・フラーが提唱したこの理論は、部材が直接接触して支え合うのではなく、<strong>張力と圧縮のバランスによって全体が安定する</strong>という構造を指します。</p>
+
+    <p class="body-text">この構造は、実は人体にも驚くほど当てはまります。骨格（圧縮材）と筋膜・腱・靭帯（張力材）が互いに引き合い、押し合いながら、体全体のバランスを維持しているのです。</p>
+
+    <!-- SVG FIGURE -->
+    <div class="figure-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+        <defs>
+          <radialGradient id="bgGrad2" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#2A2520"/>
+            <stop offset="100%" stop-color="#1C1714"/>
+          </radialGradient>
+          <radialGradient id="glow1b" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#C4866A" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#C4866A" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="sg2">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="ng2">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <marker id="at2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#C4866A" opacity="0.7"/>
+          </marker>
+          <marker id="as2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#8A9E8C" opacity="0.7"/>
+          </marker>
+        </defs>
+        <rect width="800" height="600" fill="url(#bgGrad2)"/>
+        <ellipse cx="400" cy="300" rx="280" ry="200" fill="url(#glow1b)" opacity="0.6"/>
+        <!-- Compression members -->
+        <line x1="400" y1="110" x2="400" y2="340" stroke="#F8F4EE" stroke-width="3" stroke-opacity="0.85" filter="url(#sg2)"/>
+        <line x1="400" y1="155" x2="290" y2="190" stroke="#F8F4EE" stroke-width="2.5" stroke-opacity="0.8" filter="url(#sg2)"/>
+        <line x1="400" y1="155" x2="510" y2="190" stroke="#F8F4EE" stroke-width="2.5" stroke-opacity="0.8" filter="url(#sg2)"/>
+        <line x1="290" y1="190" x2="255" y2="285" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.7"/>
+        <line x1="510" y1="190" x2="545" y2="285" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.7"/>
+        <line x1="255" y1="285" x2="235" y2="365" stroke="#F8F4EE" stroke-width="1.8" stroke-opacity="0.6"/>
+        <line x1="545" y1="285" x2="565" y2="365" stroke="#F8F4EE" stroke-width="1.8" stroke-opacity="0.6"/>
+        <line x1="400" y1="340" x2="350" y2="430" stroke="#F8F4EE" stroke-width="2.5" stroke-opacity="0.8" filter="url(#sg2)"/>
+        <line x1="400" y1="340" x2="450" y2="430" stroke="#F8F4EE" stroke-width="2.5" stroke-opacity="0.8" filter="url(#sg2)"/>
+        <line x1="350" y1="430" x2="335" y2="510" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.7"/>
+        <line x1="450" y1="430" x2="465" y2="510" stroke="#F8F4EE" stroke-width="2" stroke-opacity="0.7"/>
+        <!-- Tension members -->
+        <line x1="400" y1="110" x2="290" y2="190" stroke="#C4866A" stroke-width="1.2" stroke-opacity="0.6" stroke-dasharray="4,3" marker-end="url(#at2)"/>
+        <line x1="290" y1="190" x2="350" y2="430" stroke="#C4866A" stroke-width="1.2" stroke-opacity="0.6" stroke-dasharray="4,3"/>
+        <line x1="350" y1="430" x2="335" y2="510" stroke="#C4866A" stroke-width="1.2" stroke-opacity="0.55" stroke-dasharray="4,3"/>
+        <line x1="400" y1="110" x2="510" y2="190" stroke="#C4866A" stroke-width="1.2" stroke-opacity="0.6" stroke-dasharray="4,3" marker-end="url(#at2)"/>
+        <line x1="510" y1="190" x2="450" y2="430" stroke="#C4866A" stroke-width="1.2" stroke-opacity="0.6" stroke-dasharray="4,3"/>
+        <line x1="450" y1="430" x2="465" y2="510" stroke="#C4866A" stroke-width="1.2" stroke-opacity="0.55" stroke-dasharray="4,3"/>
+        <line x1="290" y1="190" x2="450" y2="430" stroke="#8A9E8C" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3,4" marker-end="url(#as2)"/>
+        <line x1="510" y1="190" x2="350" y2="430" stroke="#8A9E8C" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3,4" marker-end="url(#as2)"/>
+        <line x1="400" y1="155" x2="400" y2="340" stroke="#8A9E8C" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="2,5"/>
+        <line x1="255" y1="285" x2="565" y2="285" stroke="#8A9E8C" stroke-width="0.8" stroke-opacity="0.35" stroke-dasharray="3,4"/>
+        <path d="M 290 190 Q 220 300 335 510" stroke="#C4866A" stroke-width="0.8" stroke-opacity="0.3" fill="none" stroke-dasharray="2,6"/>
+        <path d="M 510 190 Q 580 300 465 510" stroke="#C4866A" stroke-width="0.8" stroke-opacity="0.3" fill="none" stroke-dasharray="2,6"/>
+        <!-- Nodes -->
+        <circle cx="400" cy="110" r="7" fill="#F8F4EE" filter="url(#ng2)" opacity="0.95"/>
+        <circle cx="400" cy="110" r="12" fill="none" stroke="#F8F4EE" stroke-width="0.5" stroke-opacity="0.3"/>
+        <circle cx="400" cy="135" r="4" fill="#B8956A" filter="url(#ng2)" opacity="0.9"/>
+        <circle cx="400" cy="155" r="5" fill="#F8F4EE" opacity="0.8"/>
+        <circle cx="290" cy="190" r="8" fill="#C4866A" filter="url(#ng2)" opacity="0.95"/>
+        <circle cx="290" cy="190" r="14" fill="none" stroke="#C4866A" stroke-width="0.8" stroke-opacity="0.3"/>
+        <circle cx="510" cy="190" r="8" fill="#C4866A" filter="url(#ng2)" opacity="0.95"/>
+        <circle cx="510" cy="190" r="14" fill="none" stroke="#C4866A" stroke-width="0.8" stroke-opacity="0.3"/>
+        <circle cx="255" cy="285" r="5.5" fill="#8A9E8C" filter="url(#ng2)" opacity="0.85"/>
+        <circle cx="545" cy="285" r="5.5" fill="#8A9E8C" filter="url(#ng2)" opacity="0.85"/>
+        <circle cx="235" cy="365" r="4" fill="#8A9E8C" opacity="0.7"/>
+        <circle cx="565" cy="365" r="4" fill="#8A9E8C" opacity="0.7"/>
+        <circle cx="400" cy="340" r="9" fill="#F8F4EE" filter="url(#ng2)" opacity="0.95"/>
+        <circle cx="400" cy="340" r="16" fill="none" stroke="#F8F4EE" stroke-width="0.8" stroke-opacity="0.25"/>
+        <circle cx="350" cy="430" r="7" fill="#C4866A" filter="url(#ng2)" opacity="0.9"/>
+        <circle cx="450" cy="430" r="7" fill="#C4866A" filter="url(#ng2)" opacity="0.9"/>
+        <circle cx="335" cy="510" r="5.5" fill="#8A9E8C" opacity="0.8"/>
+        <circle cx="465" cy="510" r="5.5" fill="#8A9E8C" opacity="0.8"/>
+        <!-- Legend -->
+        <g transform="translate(40, 420)">
+          <rect x="0" y="0" width="160" height="82" fill="#1C1714" fill-opacity="0.9" rx="2"/>
+          <rect x="0" y="0" width="160" height="82" fill="none" stroke="rgba(107,91,78,0.3)" stroke-width="1" rx="2"/>
+          <line x1="14" y1="20" x2="34" y2="20" stroke="#F8F4EE" stroke-width="2.5" stroke-opacity="0.85"/>
+          <circle cx="24" cy="20" r="3.5" fill="#F8F4EE" opacity="0.9"/>
+          <text x="42" y="24.5" font-family="Georgia, serif" font-size="11" fill="rgba(248,244,238,0.7)" letter-spacing="0.05em">圧縮材（骨格）</text>
+          <line x1="14" y1="44" x2="34" y2="44" stroke="#C4866A" stroke-width="1.5" stroke-dasharray="4,3" stroke-opacity="0.8"/>
+          <circle cx="24" cy="44" r="3.5" fill="#C4866A" opacity="0.9"/>
+          <text x="42" y="48.5" font-family="Georgia, serif" font-size="11" fill="rgba(248,244,238,0.7)" letter-spacing="0.05em">張力材（前面筋膜）</text>
+          <line x1="14" y1="68" x2="34" y2="68" stroke="#8A9E8C" stroke-width="1.2" stroke-dasharray="3,4" stroke-opacity="0.7"/>
+          <circle cx="24" cy="68" r="3.5" fill="#8A9E8C" opacity="0.85"/>
+          <text x="42" y="72.5" font-family="Georgia, serif" font-size="11" fill="rgba(248,244,238,0.7)" letter-spacing="0.05em">張力材（背面筋膜）</text>
+        </g>
+        <!-- Title -->
+        <text x="400" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="13" fill="rgba(196,134,106,0.8)" text-anchor="middle" letter-spacing="0.3em" font-style="italic">テンセグリティ構造</text>
+        <text x="400" y="68" font-family="Georgia, serif" font-size="11" fill="rgba(248,244,238,0.4)" text-anchor="middle" letter-spacing="0.15em">体は、張力と圧縮のバランスで成り立っています</text>
+        <!-- Annotations -->
+        <g transform="translate(570, 200)">
+          <line x1="0" y1="0" x2="-62" y2="-12" stroke="#C4866A" stroke-width="0.7" stroke-opacity="0.5"/>
+          <text x="5" y="-8" font-family="Georgia, serif" font-size="10" fill="rgba(196,134,106,0.7)" letter-spacing="0.05em">肩の緊張</text>
+          <text x="5" y="6" font-family="Georgia, serif" font-size="10" fill="rgba(196,134,106,0.6)" letter-spacing="0.05em">肩の緊張から</text>
+        </g>
+        <g transform="translate(440, 355)">
+          <line x1="0" y1="0" x2="-38" y2="-12" stroke="#F8F4EE" stroke-width="0.7" stroke-opacity="0.4"/>
+          <text x="5" y="-4" font-family="Georgia, serif" font-size="10" fill="rgba(248,244,238,0.5)" letter-spacing="0.05em">腰椎・骨盤</text>
+          <text x="5" y="9" font-family="Georgia, serif" font-size="10" fill="rgba(248,244,238,0.4)" letter-spacing="0.05em">腰椎・骨盤へ</text>
+        </g>
+        <g transform="translate(88, 220)">
+          <line x1="0" y1="0" x2="160" y2="70" stroke="#8A9E8C" stroke-width="0.7" stroke-opacity="0.4"/>
+          <text x="-5" y="-4" font-family="Georgia, serif" font-size="10" fill="rgba(138,158,140,0.7)" text-anchor="end" letter-spacing="0.05em">連鎖の影響</text>
+          <text x="-5" y="9" font-family="Georgia, serif" font-size="10" fill="rgba(138,158,140,0.6)" text-anchor="end" letter-spacing="0.05em">連鎖が広がる</text>
+        </g>
+      </svg>
+      <p class="figure-caption">図1 — 人体のテンセグリティ構造。骨格（圧縮材）と筋膜（張力材）が全身でネットワークを形成し、互いにバランスを保っています。</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>体のどこか一箇所に緊張が溜まると、その張力はネットワーク全体に伝わります。<strong>これが「肩をほぐしても腰が痛い」「腰を整えても頭が重い」という現象の正体</strong>です。</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: 筋膜とは -->
+  <div class="concept-section">
+    <span class="section-eyebrow">02 — Fascia</span>
+    <h2 class="section-heading">筋膜が体を<br>ひとつにつなげています</h2>
+    <span class="section-heading-en">筋膜ネットワークについて</span>
+    <div class="divider"></div>
+
+    <p class="body-text">筋膜とは、筋肉・骨・内臓などを包み込む薄い結合組織の膜です。体の表面から深部まで、<strong>全身をひとつのスーツのように包み込んでいます</strong>。個々の筋肉を包む局所的なものだけでなく、頭から足先まで連続するラインとして全身に張り巡らされています。</p>
+
+    <p class="body-text">健康な筋膜は柔らかく滑らかで、筋肉の動きを妨げません。しかし、姿勢の偏り・同じ動作の繰り返し・ストレス・過去のけがなどにより、筋膜は硬くなったり癒着したりします。</p>
+
+    <div class="concept-grid">
+      <div class="concept-cell">
+        <span class="concept-cell-label">健康な状態</span>
+        <p class="concept-cell-title">筋膜が柔らかいとき</p>
+        <p class="concept-cell-body">体全体がスムーズに動き、負荷が均等に分散されます。一箇所に負担が集中しないため、疲れにくく、痛みも出にくい状態です。</p>
+      </div>
+      <div class="concept-cell">
+        <span class="concept-cell-label">硬くなった状態</span>
+        <p class="concept-cell-title">筋膜が硬くなったとき</p>
+        <p class="concept-cell-body">硬くなった部位が周囲を引っ張り、離れた場所にも影響が出ます。「なぜここが痛むのか分からない」という症状の多くは、筋膜の連鎖が関係しています。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: 美体ラボのアプローチ -->
+  <div class="concept-section">
+    <span class="section-eyebrow">03 — 施術のアプローチ</span>
+    <h2 class="section-heading">美体ラボが<br>最初にすること</h2>
+    <span class="section-heading-en">美体ラボでの施術の流れ</span>
+    <div class="divider"></div>
+
+    <p class="body-text">テンセグリティ構造と筋膜の理解を前提に、美体ラボでは「痛みの出ている場所」ではなく「体全体のバランスの乱れ」を確認することから始めます。</p>
+
+    <ul class="flow-list">
+      <li class="flow-item">
+        <span class="flow-num">1</span>
+        <div class="flow-content">
+          <p class="flow-title">じっくりヒアリング</p>
+          <p class="flow-body">現在の症状だけでなく、生活習慣・仕事環境・過去のけがや手術歴なども含めて伺います。筋膜の硬化には過去の出来事が影響していることが多いからです。</p>
+        </div>
+      </li>
+      <li class="flow-item">
+        <span class="flow-num">2</span>
+        <div class="flow-content">
+          <p class="flow-title">全身のバランスを確認</p>
+          <p class="flow-body">痛みの出ている部位だけでなく、体全体の姿勢・動作パターン・筋膜のテンションを確認します。「原因は痛い場所にはない」という前提で見ていきます。</p>
+        </div>
+      </li>
+      <li class="flow-item">
+        <span class="flow-num">3</span>
+        <div class="flow-content">
+          <p class="flow-title">筋膜へのアプローチ</p>
+          <p class="flow-body">骨をボキッと鳴らす施術は行いません。筋肉とそれを包む膜に対して、圧や動きを使って丁寧にアプローチします。体が自然に緩むことを促す、負担の少ない手技です。</p>
+        </div>
+      </li>
+      <li class="flow-item">
+        <span class="flow-num">4</span>
+        <div class="flow-content">
+          <p class="flow-title">変化の確認とセルフケア</p>
+          <p class="flow-body">施術後に体の変化を一緒に確認します。日常で実践できるセルフケアもお伝えします。次回来院時には「前回からどう変わったか」をヒアリングして、施術内容を組み立て直します。</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="pull-quote">
+      <p>
+        「治す」のではなく、「整える」。<br>
+        <strong>体が本来の状態に戻ろうとする力</strong>を引き出すことが、<br>美体ラボの仕事です。
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<!-- CTA -->
+<div class="page-cta">
+  <p class="page-cta-title">「また戻ってしまう」を、終わりにしませんか。</p>
+  <p class="page-cta-sub">
+    どこに行っても変わらなかった方に、ぜひ一度試してほしい場所があります。<br>
+    ヒアリングから始めます。体に何が起きているのかを、一緒に確認することから。<br>
+    開業記念期間中だからこそ、お一人おひとりに時間をかけられます。
+  </p>
+  <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-primary">
+    空き状況を確認・予約する
+  </a>
+</div>
+
+<footer>
+  <div class="footer-logo">美体ラボ<span>Bital-Labo · Body Care Salon</span></div>
+  <p class="footer-copy">
+    <a href="tokusho.html" style="color:rgba(248,244,238,0.3);text-decoration:none;margin-right:20px;font-size:11px;">特定商取引法に基づく表記</a>
+    <a href="privacy.html" style="color:rgba(248,244,238,0.3);text-decoration:none;margin-right:20px;font-size:11px;">プライバシーポリシー</a>
+    © 2026 美体ラボ. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
