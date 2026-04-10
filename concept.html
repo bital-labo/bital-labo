@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>施術のアプローチについて | 美体ラボ</title>
 <meta name="description" content="美体ラボが全身のつながりから体を整える理由。テンセグリティ構造と筋膜の関係から、なぜ部分的なケアでは根本が変わらないのかを解説します。">
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "w9hlnr36iu");
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
@@ -23,13 +32,14 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; background: var(--cream); }
   body {
     background: var(--cream);
     color: var(--charcoal);
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 2.0;
+    min-height: 100vh;
   }
 
   /* HEADER */
@@ -86,7 +96,10 @@
   }
 
   /* MAIN */
-  main { max-width: 800px; margin: 0 auto; padding: 80px 48px 120px; }
+  main {
+    max-width: 800px; margin: 0 auto; padding: 80px 48px 120px;
+    background: var(--cream);
+  }
 
   /* SECTION */
   .concept-section { margin-bottom: 80px; }
@@ -94,8 +107,8 @@
 
   .section-eyebrow {
     font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 12px; color: var(--accent-terra);
-    letter-spacing: 0.35em; margin-bottom: 16px; display: block;
+    font-size: 13px; color: var(--accent-terra);
+    letter-spacing: 0.15em; margin-bottom: 16px; display: block;
   }
   .section-heading {
     font-family: 'Shippori Mincho', serif;
@@ -104,15 +117,16 @@
     letter-spacing: 0.05em; margin-bottom: 8px;
   }
   .section-heading-en {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 13px; color: var(--mid-brown);
-    letter-spacing: 0.25em; margin-bottom: 32px; display: block;
+    letter-spacing: 0.05em; margin-bottom: 32px; display: block;
+    font-weight: 300;
   }
   .divider { width: 36px; height: 1px; background: var(--accent-terra); margin-bottom: 32px; }
 
   .body-text {
     font-size: 15px; color: var(--charcoal);
-    line-height: 2.4; margin-bottom: 24px;
+    line-height: 2.6; margin-bottom: 32px;
   }
   .body-text:last-child { margin-bottom: 0; }
   .body-text strong { font-weight: 500; color: var(--charcoal); }
@@ -140,12 +154,12 @@
     border: 1px solid var(--border);
     border-left: 3px solid var(--accent-terra);
     padding: 28px 32px;
-    margin: 40px 0;
+    margin: 48px 0;
   }
   .highlight-box p {
     font-family: 'Shippori Mincho', serif;
     font-size: 15px; color: var(--charcoal);
-    line-height: 2.2;
+    line-height: 2.4;
   }
   .highlight-box strong { color: var(--accent-terra); font-weight: 600; }
 
@@ -160,48 +174,48 @@
     padding: 32px 28px;
   }
   .concept-cell-label {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 11px; letter-spacing: 0.3em; color: var(--accent-terra);
-    margin-bottom: 12px; display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px; letter-spacing: 0.1em; color: var(--accent-terra);
+    margin-bottom: 12px; display: block; font-weight: 400;
   }
   .concept-cell-title {
     font-family: 'Shippori Mincho', serif;
     font-size: 16px; font-weight: 600; color: var(--charcoal);
     margin-bottom: 12px; line-height: 1.5;
   }
-  .concept-cell-body { font-size: 13px; color: var(--mid-brown); line-height: 2.1; }
+  .concept-cell-body { font-size: 13px; color: var(--mid-brown); line-height: 2.4; }
 
   /* FLOW */
-  .flow-list { margin: 32px 0; list-style: none; }
+  .flow-list { margin: 40px 0; list-style: none; }
   .flow-item {
     display: flex; gap: 20px; align-items: flex-start;
-    padding: 20px 0; border-bottom: 1px solid var(--border);
+    padding: 24px 0; border-bottom: 1px solid var(--border);
   }
   .flow-item:last-child { border-bottom: none; }
   .flow-num {
     font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 28px; color: rgba(196,134,106,0.35);
-    line-height: 1; flex-shrink: 0; width: 32px;
+    font-size: 28px; color: var(--accent-terra);
+    line-height: 1; flex-shrink: 0; width: 32px; opacity: 0.6;
   }
   .flow-content {}
   .flow-title {
     font-family: 'Shippori Mincho', serif;
     font-size: 16px; font-weight: 600; color: var(--charcoal);
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
-  .flow-body { font-size: 13px; color: var(--mid-brown); line-height: 2; }
+  .flow-body { font-size: 14px; color: var(--mid-brown); line-height: 2.4; }
 
   /* QUOTE */
   .pull-quote {
     text-align: center; padding: 48px 32px;
     border: 1px solid var(--border);
     background: linear-gradient(135deg, var(--cream) 0%, #EDE8E0 100%);
-    margin: 48px 0;
+    margin: 56px 0;
   }
   .pull-quote p {
     font-family: 'Shippori Mincho', serif;
     font-size: clamp(16px, 2.2vw, 22px);
-    color: var(--charcoal); line-height: 2; font-weight: 500;
+    color: var(--charcoal); line-height: 2.4; font-weight: 500;
   }
   .pull-quote strong { color: var(--accent-terra); }
 
@@ -260,13 +274,17 @@
 
     .page-hero { padding: 60px 20px 72px; }
     .page-title { font-size: clamp(24px, 7vw, 36px); }
+    .page-eyebrow { letter-spacing: 0.1em; }
 
-    main { padding: 60px 20px 80px; }
+    main { padding: 60px 20px 80px; background: var(--cream); }
 
     .section-heading { font-size: clamp(20px, 6vw, 26px); }
+    .section-eyebrow { letter-spacing: 0.08em; font-size: 12px; }
+    .section-heading-en { letter-spacing: 0.03em; }
 
     .concept-grid { grid-template-columns: 1fr; }
     .concept-cell { padding: 28px 20px; }
+    .concept-cell-label { letter-spacing: 0.05em; }
 
     .figure-wrap { margin: 36px 0; }
     .figure-wrap svg { width: 100%; height: auto; }
@@ -297,6 +315,7 @@
   @media (max-width: 480px) {
     .page-title { font-size: clamp(22px, 8vw, 30px); }
     .section-heading { font-size: clamp(18px, 6.5vw, 24px); }
+    .section-eyebrow { letter-spacing: 0.05em; }
   }
 </style>
 </head>
@@ -516,6 +535,60 @@
         「治す」のではなく、「整える」。<br>
         <strong>体が本来の状態に戻ろうとする力</strong>を引き出すことが、<br>美体ラボの仕事です。
       </p>
+    </div>
+  </div>
+
+  <!-- SECTION 4: 施術中の感覚について -->
+  <div class="concept-section">
+    <span class="section-eyebrow">04 — During the Session</span>
+    <h2 class="section-heading">施術中に感じることについて</h2>
+    <span class="section-heading-en">施術の感覚と反応</span>
+    <div class="divider"></div>
+
+    <p class="body-text">美体ラボの施術は、強い力で押したり、骨をボキッと鳴らしたりするものではありません。筋肉とそれを包む膜に対して、圧や動きを使って丁寧にアプローチする手技が中心です。</p>
+
+    <div class="concept-grid">
+      <div class="concept-cell">
+        <span class="concept-cell-label">よくある感覚</span>
+        <p class="concept-cell-title">「気持ちいい」「じわじわ緩む」</p>
+        <p class="concept-cell-body">多くの方は、ほぐれていく感覚や、じわじわと緊張が解けていく感覚を感じます。施術後に「体が軽くなった」「呼吸がしやすくなった」とおっしゃる方も多いです。</p>
+      </div>
+      <div class="concept-cell">
+        <span class="concept-cell-label">場合によっては</span>
+        <p class="concept-cell-title">施術箇所によって圧感・痛みを感じることがあります</p>
+        <p class="concept-cell-body">硬くなった筋膜へのアプローチでは、圧迫感や一時的な痛みを感じる場合があります。強さは都度調整しますので、施術中に感じた違和感はその場でお伝えください。</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <p>施術中は「次はここに触れますね」と都度声をかけながら進めます。<strong>途中で止めていただくことも遠慮なくお申し付けください。</strong>あなたのペースに合わせて施術を進めます。</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5: 施術後に起こること -->
+  <div class="concept-section">
+    <span class="section-eyebrow">05 — After the Session</span>
+    <h2 class="section-heading">施術後に起こること</h2>
+    <span class="section-heading-en">施術後の反応とそのメカニズム</span>
+    <div class="divider"></div>
+
+    <p class="body-text">美体ラボの施術は、筋膜・筋肉への丁寧なアプローチを通じて、体を<strong>副交感神経優位の状態</strong>へと導きます。これは「リラックスしている状態」「眠っているときの状態」に近い、体が回復・修復を行うモードです。</p>
+
+    <div class="concept-grid">
+      <div class="concept-cell">
+        <span class="concept-cell-label">副交感神経とは</span>
+        <p class="concept-cell-title">体が「回復モード」に入った状態</p>
+        <p class="concept-cell-body">自律神経には交感神経（活動・緊張）と副交感神経（休息・回復）があります。現代の生活では交感神経が優位になりがちで、体が常に緊張状態に置かれます。美体ラボの施術はこのバランスを整え、副交感神経優位へと切り替えることを促します。</p>
+      </div>
+      <div class="concept-cell">
+        <span class="concept-cell-label">施術後に感じること</span>
+        <p class="concept-cell-title">眠気・だるさは「体が反応しているサイン」</p>
+        <p class="concept-cell-body">副交感神経優位になると、眠気やだるさを感じる方が一定数いらっしゃいます。これは施術が効いている反応であり、体が回復モードに入ったサインです。施術後はゆっくり過ごしていただくことをお勧めします。</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <p>施術後に眠気を感じる可能性があるため、<strong>お車での来院はお控えいただくことを推奨しています。</strong>最寄りの広島電鉄「市役所前」駅・バス「市役所前」停留所をご利用ください。</p>
     </div>
   </div>
 
