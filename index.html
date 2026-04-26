@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>「生き返ったみたいに楽になった」と言っていただいた話｜美体ラボ 広島市中区</title>
-<meta name="description" content="連日のデスクワークと、雨続き。休日なのに体が起き上がらない。来てくださった方の話と、美体ラボがやっていること。広島市中区・完全予約制・土日祝営業。">
+<title>頭痛・肩こりが、何度通っても戻ってしまう方へ｜美体ラボ 広島市中区</title>
+<meta name="description" content="広島市中区・市役所前駅徒歩4分。何度通っても戻ってしまう頭痛・肩こり・腰痛に、全身のつながりを読み解いて向き合う姿勢改善サロン。土日祝・完全予約制。">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="「生き返ったみたいに楽になった」と言っていただいた話｜美体ラボ 広島市中区">
-<meta property="og:description" content="広島市中区・全身のつながりを読み解いてから整える、ボディケアサロン。完全予約制・土日祝営業。">
+<meta property="og:title" content="頭痛・肩こりが、何度通っても戻ってしまう方へ｜美体ラボ 広島市中区">
+<meta property="og:description" content="広島市中区・全身のつながりを読み解いて整える、姿勢改善サロン。完全予約制・土日祝営業。">
 <meta property="og:url" content="https://bital-labo.com/">
 <meta property="og:site_name" content="美体ラボ（Bital-Labo）">
 <meta name="twitter:card" content="summary_large_image">
@@ -42,7 +42,7 @@
     --mid-brown: #6B5B4E;
     --accent-terra: #C4866A;
     --accent-terra-dark: #B07258;
-    --accent-sage: #8A9E8C;
+    --accent-deep-green: #3d5e44;
     --line-green: #06C755;
     --border: rgba(107,91,78,0.15);
     --border-strong: rgba(107,91,78,0.3);
@@ -89,17 +89,18 @@
     margin-top: 1px;
   }
   .header-cta {
-    background: transparent;
-    color: rgba(248,244,238,0.85);
+    background: var(--accent-terra);
+    color: white;
     text-decoration: none;
-    padding: 6px 12px;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    border: 1px solid rgba(248,244,238,0.25);
+    padding: 7px 14px;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
   }
 
   .container { padding: 0 22px; max-width: 640px; margin: 0 auto; }
-  section { padding: 64px 0; }
+  section { padding: 56px 0; }
+
   .eyebrow {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -129,29 +130,11 @@
     background: rgba(196,134,106,0.7);
     margin-bottom: 28px;
   }
-  .body-text {
-    font-size: 14.5px;
-    color: var(--charcoal);
-    line-height: 2.2;
-    font-weight: 300;
-  }
-  .body-text + .body-text { margin-top: 18px; }
-  .body-dark {
-    font-size: 14.5px;
-    color: rgba(248,244,238,0.78);
-    line-height: 2.25;
-    font-weight: 300;
-  }
-  .body-dark + .body-dark { margin-top: 18px; }
-  .body-dark strong, .body-text strong {
-    color: var(--accent-terra);
-    font-weight: 400;
-  }
 
-  /* HERO - 広告との連続性最優先 */
+  /* HERO */
   #hero {
     background: var(--darker);
-    padding: 56px 0 64px;
+    padding: 48px 0 0;
     position: relative;
     overflow: hidden;
   }
@@ -159,7 +142,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 20% 50%, rgba(196,134,106,0.12) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 20% 30%, rgba(196,134,106,0.12) 0%, transparent 60%);
     pointer-events: none;
   }
   .hero-eyebrow {
@@ -168,129 +151,187 @@
     font-size: 11px;
     color: rgba(248,244,238,0.5);
     letter-spacing: 0.32em;
-    margin-bottom: 36px;
+    margin-bottom: 22px;
     position: relative;
   }
-  .hero-quote {
+  .hero-headline {
     font-family: 'Shippori Mincho', serif;
-    font-size: clamp(26px, 7.8vw, 36px);
-    font-weight: 400;
+    font-size: clamp(22px, 6.8vw, 30px);
+    font-weight: 600;
     color: var(--cream);
     line-height: 1.55;
     letter-spacing: 0.02em;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
     position: relative;
   }
-  .hero-quote em {
+  .hero-headline em {
     font-style: normal;
     color: var(--accent-terra);
   }
   .hero-line {
     width: 32px; height: 1px;
     background: var(--accent-terra);
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: rgba(248,244,238,0.78);
+    line-height: 2.1;
     margin-bottom: 28px;
     position: relative;
   }
-  .hero-attr {
-    font-size: 13.5px;
-    color: rgba(248,244,238,0.65);
-    line-height: 2.2;
-    font-weight: 300;
-    margin-bottom: 8px;
-    position: relative;
-  }
-  .hero-attr strong {
-    color: rgba(248,244,238,0.9);
+  .hero-sub strong {
+    color: rgba(248,244,238,0.95);
     font-weight: 400;
-  }
-  .hero-attr-meta {
-    font-size: 10.5px;
-    color: rgba(248,244,238,0.35);
-    margin-bottom: 44px;
-    letter-spacing: 0.05em;
-    position: relative;
-  }
-  .hero-soft-cta {
-    border-top: 1px solid rgba(248,244,238,0.1);
-    padding-top: 28px;
-    position: relative;
-  }
-  .hero-soft-cta p {
-    font-size: 12.5px;
-    color: rgba(248,244,238,0.55);
-    line-height: 2.1;
-    margin-bottom: 18px;
-    text-align: center;
-  }
-  .hero-soft-cta .scroll-prompt {
-    text-align: center;
-    color: rgba(248,244,238,0.4);
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 11px;
-    letter-spacing: 0.25em;
-  }
-  .hero-soft-cta .scroll-prompt::after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background: rgba(248,244,238,0.2);
-    margin: 14px auto 0;
-  }
-  .hero-meta-strip {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 36px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(248,244,238,0.08);
-    position: relative;
-  }
-  .hero-meta-strip span {
-    font-size: 10.5px;
-    color: rgba(248,244,238,0.45);
-    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(196,134,106,0.5);
   }
 
-  /* STORY */
-  #story { background: var(--cream); padding: 64px 0; }
-  .story-block + .story-block { margin-top: 24px; }
-  .story-block p {
-    font-size: 14.5px;
-    color: var(--charcoal);
-    line-height: 2.3;
-    font-weight: 300;
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: rgba(248,244,238,0.06);
+    border: 1px solid rgba(248,244,238,0.1);
+    margin-bottom: 18px;
+    position: relative;
   }
-  .story-pullquote {
+  .hero-trust .stars {
+    color: #F9A825;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .hero-trust .num {
     font-family: 'Shippori Mincho', serif;
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--charcoal);
-    line-height: 1.85;
-    padding: 24px 16px 24px 22px;
-    border-left: 2px solid var(--accent-terra);
-    margin: 32px 0;
-    background: linear-gradient(90deg, rgba(196,134,106,0.04) 0%, transparent 100%);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-left: 4px;
   }
-  .story-disclaimer {
-    font-size: 10.5px;
-    color: var(--mid-brown);
-    margin-top: 24px;
+  .hero-trust .meta {
+    font-size: 11px;
+    color: rgba(248,244,238,0.55);
     letter-spacing: 0.04em;
+    margin-left: auto;
+  }
+
+  .hero-price {
+    border: 1px solid rgba(196,134,106,0.4);
+    background: rgba(196,134,106,0.08);
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .hero-price-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 10.5px;
+    color: var(--accent-terra);
+    letter-spacing: 0.22em;
+    margin-bottom: 4px;
+  }
+  .hero-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hero-price-row .price-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--cream);
+    font-weight: 400;
+  }
+  .hero-price-row .price-unit {
+    font-size: 12px;
+    color: rgba(248,244,238,0.5);
+  }
+
+  .hero-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .btn-reserve-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent-terra);
+    color: white;
+    text-decoration: none;
+    padding: 17px 22px;
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    transition: background 0.2s;
+    box-shadow: 0 4px 14px rgba(196,134,106,0.3);
+  }
+  .btn-reserve-primary:hover { background: var(--accent-terra-dark); }
+  .btn-reserve-primary::after { content: '→'; font-size: 16px; }
+  .btn-line-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    color: rgba(248,244,238,0.85);
+    text-decoration: none;
+    padding: 13px 22px;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(248,244,238,0.25);
+  }
+  .btn-line-secondary svg { flex-shrink: 0; }
+
+  .hero-safety {
+    border-top: 1px solid rgba(248,244,238,0.1);
+    padding: 22px 0 28px;
+    position: relative;
+  }
+  .hero-safety h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    color: var(--cream);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .hero-safety ul {
+    list-style: none;
+  }
+  .hero-safety li {
+    font-size: 12px;
+    color: rgba(248,244,238,0.7);
+    line-height: 1.95;
+    padding-left: 16px;
+    position: relative;
+  }
+  .hero-safety li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: var(--accent-terra);
+  }
+
+  .hero-image {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 8px;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* EMPATHY */
   #empathy { background: var(--warm-white); }
-  .empathy-intro {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--charcoal);
-    line-height: 1.85;
-    margin-bottom: 24px;
-  }
-  .checklist { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
   .checklist li {
     display: flex;
     align-items: flex-start;
@@ -300,7 +341,7 @@
     line-height: 1.85;
     padding: 12px 14px;
     background: var(--cream);
-    border-left: 2px solid rgba(196,134,106,0.4);
+    border-left: 2px solid rgba(196,134,106,0.45);
   }
   .checklist li::before {
     content: '';
@@ -320,7 +361,7 @@
     background: var(--cream);
     border: 1px solid var(--border-strong);
     font-size: 14px;
-    line-height: 2.2;
+    line-height: 2.15;
     color: var(--charcoal);
   }
   .empathy-close strong {
@@ -328,209 +369,164 @@
     font-weight: 500;
   }
 
-  /* DARK SECTIONS */
-  .sec-dark { background: var(--dark-brown); position: relative; overflow: hidden; }
-  .sec-dark.with-glow::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(196,134,106,0.08) 0%, transparent 55%);
-    pointer-events: none;
+  /* COMPARISON */
+  #comparison { background: var(--cream); }
+  .compare-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -22px;
+    padding: 0 22px;
   }
-  .sec-dark .container { position: relative; }
-
-  .insight-box {
-    margin: 28px 0 12px;
-    padding: 26px 22px;
-    border: 1px solid rgba(196,134,106,0.3);
-    background: rgba(196,134,106,0.05);
-  }
-  .insight-box h3 {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--cream);
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-  .insight-box p {
-    font-size: 13.5px;
-    color: rgba(248,244,238,0.7);
-    line-height: 2.15;
-  }
-  .insight-box strong {
-    color: rgba(248,244,238,0.95);
-    font-weight: 400;
-  }
-
-  .step-card {
-    background: rgba(248,244,238,0.04);
-    border: 1px solid rgba(248,244,238,0.08);
-    padding: 24px 22px;
-    margin-bottom: 2px;
-  }
-  .step-card .step-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+  .compare-table {
+    border-collapse: collapse;
+    min-width: 100%;
     font-size: 12px;
-    color: var(--accent-terra);
-    letter-spacing: 0.25em;
-    margin-bottom: 8px;
-  }
-  .step-card h3 {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--cream);
-    margin-bottom: 10px;
-    line-height: 1.65;
-  }
-  .step-card p {
-    font-size: 13px;
-    color: rgba(248,244,238,0.6);
-    line-height: 2.15;
-  }
-
-  .vision-box {
-    margin-top: 28px;
-    padding: 24px 22px;
-    border-left: 2px solid var(--accent-terra);
-    background: rgba(248,244,238,0.04);
-  }
-  .vision-box h3 {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--cream);
-    line-height: 1.7;
-    margin-bottom: 10px;
-  }
-  .vision-box p {
-    font-size: 13px;
-    color: rgba(248,244,238,0.65);
-    line-height: 2.25;
-  }
-
-  /* THERAPIST */
-  #therapist { background: var(--cream); }
-  .therapist-head {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 28px;
-  }
-  .therapist-avatar {
-    width: 60px; height: 60px;
-    border-radius: 50%;
-    background: var(--accent-terra);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .therapist-avatar span {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: white;
-  }
-  .therapist-name {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--charcoal);
-    letter-spacing: 0.08em;
-  }
-  .therapist-role {
-    font-size: 11px;
-    color: var(--mid-brown);
-    letter-spacing: 0.15em;
-    margin-top: 3px;
-  }
-  .therapist-quote {
-    margin-top: 24px;
-    padding: 20px 22px;
-    background: var(--warm-white);
-    border-left: 2px solid var(--accent-terra);
-  }
-  .therapist-quote p:first-child {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 12px;
-    color: var(--accent-terra);
-    letter-spacing: 0.18em;
-    margin-bottom: 6px;
-  }
-  .therapist-quote p:last-child {
-    font-size: 13.5px;
-    color: var(--charcoal);
-    line-height: 2.05;
-    font-weight: 400;
-  }
-
-  .therapist-honest-block {
-    margin-top: 36px;
-    padding: 26px 22px;
-    background: var(--warm-white);
+    background: white;
     border: 1px solid var(--border-strong);
   }
-  .therapist-honest-block h3 {
+  .compare-table th, .compare-table td {
+    padding: 11px 10px;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.65;
+    min-width: 110px;
+  }
+  .compare-table thead th {
+    background: var(--charcoal);
+    color: var(--cream);
+    font-weight: 500;
     font-family: 'Shippori Mincho', serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--charcoal);
-    line-height: 1.7;
-    margin-bottom: 14px;
-  }
-  .therapist-honest-block p.intro {
-    font-size: 13.5px;
-    color: var(--charcoal);
-    line-height: 2.15;
-    margin-bottom: 18px;
-  }
-  .therapist-honest-block ul {
-    list-style: none;
-    margin-bottom: 16px;
-  }
-  .therapist-honest-block ul li {
-    font-size: 12.5px;
-    color: var(--mid-brown);
-    line-height: 1.95;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .therapist-honest-block ul li:last-child { border-bottom: none; }
-  .therapist-honest-block ul li::before {
-    content: '✓';
-    color: var(--accent-terra);
-    font-weight: 600;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .therapist-honest-block .voice-anchor {
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px solid var(--border);
     font-size: 12px;
-    color: var(--mid-brown);
-    line-height: 1.95;
-    font-style: italic;
+    letter-spacing: 0.04em;
+    text-align: center;
   }
-  .therapist-honest-block .voice-anchor strong {
-    font-style: normal;
+  .compare-table thead th.col-bitai {
+    background: var(--accent-terra);
+    color: white;
+  }
+  .compare-table tbody th {
+    background: var(--warm-white);
+    color: var(--charcoal);
+    font-weight: 600;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 12px;
+    white-space: nowrap;
+    min-width: 92px;
+  }
+  .compare-table td.col-bitai {
+    background: rgba(196,134,106,0.08);
     color: var(--charcoal);
     font-weight: 500;
   }
+  .compare-close {
+    margin-top: 22px;
+    font-size: 14px;
+    color: var(--charcoal);
+    line-height: 2;
+    text-align: center;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 500;
+  }
+  .compare-close strong { color: var(--accent-terra); }
 
-  /* CASES */
-  #cases { background: var(--warm-white); }
-  .case-card {
+  /* BEFORE/AFTER */
+  #beforeafter { background: var(--warm-white); }
+  .ba-intro {
+    font-size: 13.5px;
+    color: var(--charcoal);
+    line-height: 2.15;
+    margin-bottom: 24px;
+  }
+  .ba-card {
     background: var(--cream);
     border: 1px solid var(--border);
-    padding: 20px 20px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+  .ba-card.placeholder {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border-strong);
+    background: transparent;
+  }
+  .ba-card.placeholder p {
+    font-family: 'Shippori Mincho', serif;
+    color: var(--mid-brown);
+    font-size: 13px;
+    text-align: center;
+    line-height: 2;
+  }
+  .ba-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .ba-image {
+    margin: 0;
+    background: white;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .ba-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    order: 2;
+  }
+  .ba-label {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cream);
+    background: var(--charcoal);
+    padding: 8px 12px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    order: 1;
+  }
+  .ba-meta {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 6px 12px;
+    font-size: 12.5px;
+    line-height: 1.85;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .ba-meta dt {
+    color: var(--accent-terra);
+    font-weight: 500;
+  }
+  .ba-meta dd {
+    color: var(--charcoal);
+  }
+  .ba-soon {
+    font-size: 12px;
+    color: var(--mid-brown);
+    text-align: center;
+    margin-top: 16px;
+    font-style: italic;
+  }
+  .ba-disclaimer {
+    font-size: 10.5px;
+    color: var(--mid-brown);
+    line-height: 1.95;
+    margin-top: 14px;
+  }
+
+  /* CASES */
+  #cases { background: var(--cream); }
+  .case-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    padding: 20px;
   }
   .case-card + .case-card { margin-top: 2px; }
   .case-head {
@@ -566,18 +562,9 @@
     font-weight: 500;
     margin-right: 4px;
   }
-  .disclaimer {
-    font-size: 10.5px;
-    color: var(--mid-brown);
-    line-height: 1.95;
-    padding: 12px 14px;
-    background: white;
-    border: 1px solid var(--border);
-    margin-top: 14px;
-  }
 
   /* VOICES */
-  #voices { background: var(--cream); }
+  #voices { background: var(--warm-white); }
   .reviews-bar {
     display: flex;
     align-items: center;
@@ -585,7 +572,7 @@
     padding: 16px 18px;
     background: white;
     border: 1px solid var(--border);
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .reviews-bar .stars {
     color: #F9A825;
@@ -618,17 +605,16 @@
     white-space: nowrap;
   }
   .voice-card {
-    padding: 24px 22px;
-    background: var(--warm-white);
+    padding: 22px 20px;
+    background: var(--cream);
     border: 1px solid var(--border);
   }
   .voice-card + .voice-card { margin-top: 2px; }
   .voice-card .quote {
     font-size: 13px;
     color: var(--charcoal);
-    line-height: 2.2;
+    line-height: 2.15;
     margin-bottom: 14px;
-    font-weight: 300;
   }
   .voice-card .voice-title {
     font-family: 'Shippori Mincho', serif;
@@ -643,11 +629,122 @@
     color: var(--mid-brown);
     letter-spacing: 0.05em;
   }
+  .voices-disclaimer {
+    font-size: 10.5px;
+    color: var(--mid-brown);
+    line-height: 1.95;
+    padding: 12px 14px;
+    background: white;
+    border: 1px solid var(--border);
+    margin-top: 14px;
+  }
+
+  /* THERAPIST */
+  #therapist { background: var(--cream); }
+  .therapist-image {
+    width: 100%;
+    margin: 0 -22px 28px;
+    width: calc(100% + 44px);
+  }
+  .therapist-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .therapist-name-block {
+    margin-bottom: 22px;
+  }
+  .therapist-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--charcoal);
+    letter-spacing: 0.06em;
+  }
+  .therapist-role {
+    font-size: 11px;
+    color: var(--mid-brown);
+    letter-spacing: 0.15em;
+    margin-top: 4px;
+  }
+  .therapist-lead {
+    font-size: 14.5px;
+    color: var(--charcoal);
+    line-height: 2.15;
+    margin-bottom: 22px;
+    padding: 18px 20px;
+    background: var(--warm-white);
+    border-left: 2px solid var(--accent-terra);
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 500;
+  }
+  .therapist-meta {
+    list-style: none;
+    margin-bottom: 28px;
+  }
+  .therapist-meta li {
+    font-size: 13px;
+    color: var(--charcoal);
+    line-height: 1.95;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .therapist-meta li:last-child { border-bottom: none; }
+  .therapist-meta li::before {
+    content: '・';
+    color: var(--accent-terra);
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .therapist-honest-block {
+    padding: 24px 22px;
+    background: var(--warm-white);
+    border: 1px solid var(--border-strong);
+  }
+  .therapist-honest-block h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .therapist-honest-block p.intro {
+    font-size: 13px;
+    color: var(--charcoal);
+    line-height: 2.1;
+    margin-bottom: 14px;
+  }
+  .therapist-honest-block ul {
+    list-style: none;
+  }
+  .therapist-honest-block ul li {
+    font-size: 12.5px;
+    color: var(--mid-brown);
+    line-height: 1.95;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .therapist-honest-block ul li:last-child { border-bottom: none; }
+  .therapist-honest-block ul li::before {
+    content: '✓';
+    color: var(--accent-terra);
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
 
   /* MID CTA */
   .mid-cta {
     background: var(--accent-terra);
-    padding: 44px 0;
+    padding: 40px 0;
     text-align: center;
   }
   .mid-cta h2 {
@@ -656,76 +753,48 @@
     font-weight: 700;
     color: white;
     line-height: 1.85;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .mid-cta p.lead {
     font-size: 12.5px;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 24px;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 22px;
     line-height: 2;
   }
-  .btn-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: var(--line-green);
-    color: white;
-    text-decoration: none;
-    padding: 18px 22px;
-    font-size: 14.5px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    width: 100%;
-    box-shadow: 0 4px 14px rgba(6,199,85,0.25);
-    transition: transform 0.15s, box-shadow 0.15s;
-  }
-  .btn-line:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(6,199,85,0.35); }
-  .mid-cta .btn-line {
-    background: white;
-    color: var(--line-green);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-  }
-  .mid-cta .btn-line svg path { fill: var(--line-green); }
-  .btn-reserve {
+  .mid-cta .btn-mid-primary {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: var(--accent-terra);
-    color: white;
+    background: white;
+    color: var(--accent-terra);
     text-decoration: none;
     padding: 16px 22px;
-    font-size: 13.5px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    width: 100%;
-    transition: background 0.2s;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
   }
-  .btn-reserve:hover { background: var(--accent-terra-dark); }
-  .btn-reserve::after { content: '→'; font-size: 16px; }
-  .mid-cta .btn-reserve-alt {
+  .mid-cta .btn-mid-primary::after { content: '→'; font-size: 16px; }
+  .mid-cta .btn-mid-secondary {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: rgba(255,255,255,0.15);
+    background: transparent;
     color: white;
     text-decoration: none;
-    padding: 14px 22px;
-    font-size: 13px;
+    padding: 13px 22px;
+    font-size: 12.5px;
     font-weight: 500;
-    letter-spacing: 0.08em;
-    width: 100%;
-    border: 1px solid rgba(255,255,255,0.4);
-    margin-top: 10px;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(255,255,255,0.5);
+    margin-top: 8px;
   }
-  .mid-cta .btn-reserve-alt::after { content: '→'; font-size: 15px; }
   .mid-cta .micro {
     font-size: 10.5px;
-    color: rgba(255,255,255,0.6);
-    margin-top: 16px;
-    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.7);
+    margin-top: 14px;
+    letter-spacing: 0.05em;
   }
 
   /* PRICE */
@@ -734,11 +803,11 @@
     font-size: 13.5px;
     color: var(--charcoal);
     line-height: 2.15;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .price-card {
     border: 1px solid var(--border-strong);
-    padding: 26px 22px;
+    padding: 24px 22px;
     background: var(--cream);
     position: relative;
     margin-bottom: 2px;
@@ -751,12 +820,13 @@
     font-size: 10.5px;
     letter-spacing: 0.1em;
     padding: 4px 12px;
+    font-weight: 500;
   }
   .price-course {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 11px;
-    color: var(--accent-sage);
+    color: var(--accent-deep-green);
     letter-spacing: 0.25em;
     margin-bottom: 6px;
   }
@@ -771,7 +841,7 @@
     font-size: 12.5px;
     color: var(--mid-brown);
     line-height: 2;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .price-row {
     display: flex;
@@ -779,16 +849,16 @@
     gap: 8px;
     flex-wrap: wrap;
   }
-  .price-row .label-monitor {
+  .price-row .label-init {
     font-size: 10.5px;
     color: var(--accent-terra);
     background: rgba(196,134,106,0.1);
     padding: 2px 8px;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
   }
   .price-row .price-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
+    font-size: 28px;
     color: var(--charcoal);
     font-weight: 400;
   }
@@ -801,7 +871,7 @@
     color: var(--mid-brown);
     line-height: 1.95;
     margin-top: 14px;
-    padding: 14px 16px;
+    padding: 12px 16px;
     background: white;
     border: 1px solid var(--border);
   }
@@ -830,6 +900,12 @@
     font-size: 14px;
     font-weight: 700;
     color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+  .flow-item .flow-time {
+    font-size: 10.5px;
+    color: var(--accent-terra);
+    letter-spacing: 0.08em;
     margin-bottom: 6px;
   }
   .flow-item p {
@@ -837,6 +913,16 @@
     color: var(--mid-brown);
     line-height: 2;
   }
+  .flow-note {
+    font-size: 12px;
+    color: var(--charcoal);
+    line-height: 2;
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: var(--warm-white);
+    border-left: 2px solid var(--accent-terra);
+  }
+  .flow-note strong { color: var(--accent-terra); font-weight: 500; }
 
   /* FAQ */
   #faq { background: var(--warm-white); }
@@ -874,44 +960,78 @@
     line-height: 2.15;
   }
 
+  /* ACCESS */
+  #access { background: var(--cream); }
+  .access-info {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .access-info dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 8px 12px;
+    font-size: 12.5px;
+    line-height: 1.9;
+  }
+  .access-info dt {
+    color: var(--accent-terra);
+    font-weight: 500;
+  }
+  .access-info dd {
+    color: var(--charcoal);
+  }
+  .access-info dd a {
+    color: var(--charcoal);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .access-map {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border: 1px solid var(--border);
+    background: var(--warm-white);
+    overflow: hidden;
+  }
+  .access-map iframe { width: 100%; height: 100%; border: 0; }
+
   /* FINAL CTA */
   #final-cta {
-    padding: 60px 0 64px;
+    padding: 56px 0 60px;
     text-align: center;
   }
   #final-cta .container { position: relative; }
   #final-cta .cta-quote {
     font-family: 'Shippori Mincho', serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     color: var(--cream);
     line-height: 1.85;
     margin-bottom: 18px;
-    text-align: center;
+    text-align: left;
   }
   #final-cta .cta-quote em {
     font-style: normal;
     color: var(--accent-terra);
-    display: block;
-    margin-top: 4px;
   }
   #final-cta .cta-lead {
     font-size: 13.5px;
-    color: rgba(248,244,238,0.65);
-    line-height: 2.2;
-    margin-bottom: 32px;
-    text-align: center;
+    color: rgba(248,244,238,0.7);
+    line-height: 2.15;
+    margin-bottom: 28px;
+    text-align: left;
   }
   #final-cta .scarcity {
     border: 1px solid rgba(196,134,106,0.35);
     background: rgba(196,134,106,0.06);
-    padding: 18px 16px;
-    margin-bottom: 28px;
+    padding: 16px 16px;
+    margin-bottom: 24px;
     text-align: left;
   }
   #final-cta .scarcity p {
     font-size: 12px;
-    color: rgba(248,244,238,0.65);
+    color: rgba(248,244,238,0.7);
     line-height: 2;
   }
   #final-cta .scarcity strong {
@@ -925,32 +1045,15 @@
   #final-cta .micro {
     font-size: 11.5px;
     color: rgba(248,244,238,0.4);
-    margin-top: 18px;
-    letter-spacing: 0.06em;
+    margin-top: 16px;
+    letter-spacing: 0.05em;
     text-align: center;
-  }
-  #final-cta .access-info {
-    margin-top: 36px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(248,244,238,0.1);
-    text-align: left;
-  }
-  #final-cta .access-info p {
-    font-size: 11.5px;
-    color: rgba(248,244,238,0.5);
-    line-height: 2.05;
-    margin-bottom: 4px;
-  }
-  #final-cta .access-info a {
-    color: rgba(248,244,238,0.65);
-    text-decoration: underline;
-    text-underline-offset: 3px;
   }
 
   /* FOOTER */
   footer {
     background: var(--darker);
-    padding: 36px 20px;
+    padding: 32px 20px;
     text-align: center;
     color: var(--cream);
   }
@@ -969,7 +1072,7 @@
     letter-spacing: 0.2em;
     margin-bottom: 18px;
   }
-  .footer-links { margin-bottom: 14px; }
+  .footer-links { margin-bottom: 12px; }
   .footer-links a {
     font-size: 11px;
     color: rgba(248,244,238,0.55);
@@ -1009,6 +1112,16 @@
 
   .fade { opacity: 0; transform: translateY(12px); transition: opacity 0.7s, transform 0.7s; }
   .fade.in { opacity: 1; transform: translateY(0); }
+
+  .sec-dark { background: var(--dark-brown); position: relative; overflow: hidden; }
+  .sec-dark.with-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 40%, rgba(196,134,106,0.08) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .sec-dark .container { position: relative; }
 </style>
 </head>
 <body>
@@ -1018,214 +1131,126 @@
     美体ラボ
     <span>Bital-Labo</span>
   </a>
-  <a href="https://lin.ee/YLX6144" target="_blank" class="header-cta">LINEで相談</a>
+  <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="header-cta">予約する</a>
 </header>
 
-<!-- ① HERO：広告と全く同じ世界観で「続きを読む」感覚で入ってもらう -->
+<!-- ① HERO -->
 <section id="hero">
   <div class="container">
-    <p class="hero-eyebrow">A VOICE FROM 美体ラボ</p>
+    <p class="hero-eyebrow">HIROSHIMA · NAKA-KU</p>
 
-    <h1 class="hero-quote">
-      「生き返ったみたいに<br>
-      <em>楽になった」</em>
+    <h1 class="hero-headline">
+      頭痛、肩こり、腰痛——<br>
+      <em>何度通っても、<br>また戻ってしまう方へ。</em>
     </h1>
 
     <div class="hero-line"></div>
 
-    <p class="hero-attr">
-      そう言ってくださった、<br>
-      連日のデスクワークと雨続きで<br>
-      <strong>「休日なのに起き上がれない」</strong>と<br>
-      お越しになった方の話です。
+    <p class="hero-sub">
+      肩を揉んでも、3日でぶり返す。<br>
+      それは、<strong>肩だけが原因ではない</strong>から。<br><br>
+      全身のつながりを読み解いてから、<br>
+      本当の原因の場所を整えるサロンです。
     </p>
-    <p class="hero-attr-meta">※個人の感想です</p>
 
-    <div class="hero-soft-cta">
-      <p>
-        どんな状態で来られて、<br>
-        何が起きたのか。<br>
-        そしてあなたの体に<br>
-        起きていることは、何なのか。
-      </p>
-      <p class="scroll-prompt">続きを読む</p>
+    <div class="hero-trust">
+      <span class="stars">★★★★★</span>
+      <span class="num">5.0</span>
+      <span class="meta">Googleマップ（5件）｜土日祝・市役所前駅徒歩4分</span>
     </div>
 
-    <div class="hero-meta-strip">
-      <span>📍 広島市中区</span>
-      <span>土・日・祝</span>
-      <span>完全予約制</span>
+    <div class="hero-price">
+      <p class="hero-price-label">FIRST VISIT ONLY</p>
+      <div class="hero-price-row">
+        <span class="price-num">¥8,000〜</span>
+        <span class="price-unit">（通常 ¥12,000〜）</span>
+      </div>
     </div>
+
+    <div class="hero-cta-wrap">
+      <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-reserve-primary">
+        空き状況を確認・予約する
+      </a>
+      <a href="https://lin.ee/YLX6144" target="_blank" class="btn-line-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(248,244,238,0.85)"><path d="M19.365 9.863c.349 0 .631.287.631.63 0 .345-.282.63-.631.63H17.61v1.125h1.755c.349 0 .631.283.631.63 0 .344-.282.629-.631.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .628.285.628.63 0 .349-.282.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        LINEで相談・空き確認する
+      </a>
+    </div>
+
+    <div class="hero-safety">
+      <h3>男性施術者ですが、安心してお越しください</h3>
+      <ul>
+        <li>完全個室・完全予約制（1対1）</li>
+        <li>施術中も「次はここに触れますね」と都度声かけ</li>
+        <li>40〜60代の女性が中心です</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/therapist-hands.jpg" alt="美体ラボの施術風景">
   </div>
 </section>
 
-<!-- ② STORY：広告で始まったストーリーの続き -->
-<section id="story">
-  <div class="container">
-    <span class="eyebrow">THE STORY</span>
-    <h2 class="sec-title fade">来てくださった日のこと。</h2>
-    <div class="divider"></div>
-
-    <div class="story-block fade">
-      <p>
-        その方は、平日の連日デスクワークと、ちょうどその週末に続いた雨で、すっかり体が重くなっていました。「せっかくの休日なのに、起き上がれない」と言いながらお越しになりました。
-      </p>
-    </div>
-
-    <div class="story-block fade">
-      <p>
-        ヒアリングで分かったのは、足のだるさ、首・肩のこわばり、そして「最近ちゃんと休めた感覚がない」という実感。それぞれが別々の症状ではなく、<strong>体全体のつながりの中で起きている連鎖</strong>でした。
-      </p>
-    </div>
-
-    <p class="story-pullquote fade">
-      原因は一箇所ではなく、<br>
-      体全体のつながりの中にありました。
-    </p>
-
-    <div class="story-block fade">
-      <p>
-        痛みが出ている場所だけを揉むのではなく、なぜそこに緊張が集まっているのかを読み解いてから、優先順位の高い場所にアプローチしました。
-      </p>
-    </div>
-
-    <div class="story-block fade">
-      <p>
-        施術後、しばらくしてから「足先がポカポカしている」とお伝えいただきました。3時間半経ってもその感覚が続いていたそうです。その夜は、ぐっすり眠れた。翌朝、体が軽くて「あれ？」と感じた——そう連絡をいただきました。
-      </p>
-    </div>
-
-    <p class="story-disclaimer">※実際にお越しいただいたお客様の体験談です。感じ方には個人差があります。</p>
-  </div>
-</section>
-
-<!-- ③ EMPATHY -->
+<!-- ② EMPATHY -->
 <section id="empathy">
   <div class="container">
     <span class="eyebrow">DOES THIS SOUND LIKE YOU?</span>
-    <h2 class="sec-title fade">これ、もしかして<br>あなたの話でもないですか。</h2>
+    <h2 class="sec-title fade">こんなお悩み、<br>ありませんか。</h2>
     <div class="divider"></div>
 
-    <p class="empathy-intro fade">
-      この方の話に、自分のことのように頷いてしまう方がいます。<br>
-      たとえば——
-    </p>
-
     <ul class="checklist fade">
-      <li>朝からすでに体が重い。起き上がるのがしんどい</li>
-      <li>休みの日なのに、ベッドから出られないまま終わる</li>
-      <li>整体に行けば楽になるが、3日で戻ってくる</li>
-      <li>最近「ちゃんと休めた」と感じた記憶がない</li>
-      <li>肩こり・頭痛・倦怠感が「当たり前」になってきた</li>
-      <li>どこに行けば変わるのか、もう分からなくなってきた</li>
+      <li>頭痛薬が手放せない</li>
+      <li>肩こりが慢性的で、揉んでもらってもすぐ戻る</li>
+      <li>朝起きた瞬間から、首・肩が重い</li>
+      <li>整体やマッサージに通っても、3日でぶり返す</li>
+      <li>一箇所が楽になると、別の場所が痛み始める</li>
+      <li>もう、この体と付き合っていくしかないと諦めかけている</li>
     </ul>
 
     <div class="empathy-close fade">
-      「また同じところが痛い」<br>
-      「通っているのに、なぜ変わらないんだろう」<br><br>
+      なぜ、何度通っても戻ってきてしまうのか。<br>
       その繰り返しには、<strong>理由があります。</strong>
     </div>
   </div>
 </section>
 
-<!-- ④ MECHANISM -->
-<section class="sec-dark with-glow">
+<!-- ③ BEFORE/AFTER -->
+<section id="beforeafter">
   <div class="container">
-    <span class="eyebrow" style="color:rgba(196,134,106,0.85)">THE REAL REASON</span>
-    <h2 class="sec-title sec-title-light fade">肩を揉んでもすぐ戻るのは、<br>「肩が原因じゃない」<br>からかもしれません。</h2>
-    <div class="divider-light"></div>
-
-    <p class="body-dark fade">整体で肩を揉んでもらう。その日は楽になる。でも3日後、また元に戻っている。これを繰り返してきたなら、もう気づいているはずです。「肩を揉んでも、肩は治らない」と。</p>
-
-    <div class="insight-box fade">
-      <h3>体は、テントのように<br>全体で支え合っています。</h3>
-      <p>一本のロープが緩めば、全体のバランスが崩れる。だから肩を揉んでも腰が引っ張り返す。腰を整えても首が戻す。これは「また痛くなった」のではなく、<strong>「ずっと同じ状態が続いている」</strong>だけです。</p>
-    </div>
-
-    <p class="body-dark fade">だから美体ラボでは、痛い場所を揉むことより、<strong>「なぜそこが痛むのか」を読み解くこと</strong>に時間を使います。</p>
-  </div>
-</section>
-
-<!-- ⑤ APPROACH -->
-<section class="sec-dark with-glow" style="padding-top:32px;">
-  <div class="container">
-    <span class="eyebrow" style="color:rgba(196,134,106,0.85)">OUR APPROACH</span>
-    <h2 class="sec-title sec-title-light fade">美体ラボがやっていること。</h2>
-    <div class="divider-light"></div>
-
-    <div class="step-card fade">
-      <p class="step-num">STEP 01</p>
-      <h3>「なぜ今の状態になったか」を特定する</h3>
-      <p>症状・生活習慣・過去のケガまで聞きます。どこが乱れていて、なぜその症状が出ているかを、まず把握します。</p>
-    </div>
-    <div class="step-card fade">
-      <p class="step-num">STEP 02</p>
-      <h3>痛い場所ではなく「原因の場所」を施術する</h3>
-      <p>肩が痛くても、肩を揉まないことがあります。全身のバランスを読み解き、影響を与えている場所にアプローチします。</p>
-    </div>
-    <div class="step-card fade">
-      <p class="step-num">STEP 03</p>
-      <h3>「なぜ変わったか」を言語化して伝える</h3>
-      <p>施術後、何がどう変わったかを必ずお伝えします。原因を理解することが、日常での悪化を防ぐ一番の方法です。</p>
-    </div>
-    <div class="step-card fade">
-      <p class="step-num">STEP 04</p>
-      <h3>次回、「前回からの変化」を確認して組み立て直す</h3>
-      <p>毎回状態を確認し、施術内容を組み立て直します。「また同じことをされた」にはなりません。</p>
-    </div>
-
-    <div class="vision-box fade">
-      <h3>整ってくると、<br>こんな変化が出てきます。</h3>
-      <p>朝、起きた瞬間の体が変わります。夕方になっても頭が重くならない。週末を、回復だけで終わらせなくなる。「最近、体が楽だな」とふと気づく瞬間が増えていきます。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ⑥ THERAPIST：男性施術者を物語の中で自然に開示 -->
-<section id="therapist">
-  <div class="container">
-    <span class="eyebrow">THERAPIST</span>
-    <h2 class="sec-title fade">「変わらない」の苦しさを、<br>自分自身が知っています。</h2>
+    <span class="eyebrow">BEFORE & AFTER</span>
+    <h2 class="sec-title fade">施術前後の変化</h2>
     <div class="divider"></div>
 
-    <div class="therapist-head fade">
-      <div class="therapist-avatar"><span>黒</span></div>
-      <div>
-        <p class="therapist-name">黒岩 大志</p>
-        <p class="therapist-role">美体ラボ 代表施術者</p>
+    <p class="ba-intro fade">
+      実際にお越しいただいた方の、施術前と施術後の姿勢の変化です。
+    </p>
+
+    <div class="ba-card fade">
+      <div class="ba-images">
+        <figure class="ba-image">
+          <figcaption class="ba-label">施術前</figcaption>
+          <img src="images/before-with-line.jpeg" alt="施術前の姿勢" loading="lazy">
+        </figure>
+        <figure class="ba-image">
+          <figcaption class="ba-label">施術後</figcaption>
+          <img src="images/after-with-line.jpeg" alt="施術後の姿勢" loading="lazy">
+        </figure>
       </div>
+      <dl class="ba-meta">
+        <dt>主訴</dt>
+        <dd>肩こり・頭痛</dd>
+        <dt>変化</dt>
+        <dd>頭の位置が後方へ。耳・肩・腰のラインが揃ってきた</dd>
+      </dl>
     </div>
 
-    <p class="body-text fade">小学1年からサッカー・フットサルを続け、体を動かすことが日常でした。看護学で解剖生理学・病態生理学を学び、体の仕組みを理論から理解しました。</p>
-
-    <p class="body-text fade">20代後半、慢性的な偏頭痛と倦怠感に悩んでいました。整体に行けば楽になる。でも、また戻ってくる。その繰り返しに疲弊して、自分で学び始めました。辿り着いたのは、体を「部分」ではなく「全体の構造」として見るアプローチでした。実践を重ねた結果、慢性的だった偏頭痛はほぼ出なくなりました。</p>
-
-    <div class="therapist-quote fade">
-      <p>BEEN WALKING THIS PATH FOR 23 YEARS</p>
-      <p>「また来ただけ」で終わる施術はしたくない。来るたびに「変わっている」と感じてもらえる場所にしたい。</p>
-    </div>
-
-    <div class="therapist-honest-block fade">
-      <h3>はじめに、<br>正直にお伝えしておくこと。</h3>
-      <p class="intro">
-        美体ラボの施術者は、私（男性）一人です。お越しくださる方の多くは40〜60代の女性ですので、「男性に体を触られるのは少し抵抗がある」というお気持ち、よく分かります。だからこそ、次のことを必ずお約束しています。
-      </p>
-      <ul>
-        <li>完全個室・完全予約制（ほかのお客様と顔を合わせません）</li>
-        <li>施術前に「今日触れる可能性のある部位」を必ずご説明します</li>
-        <li>施術中も「次はここに触れますね」と都度声かけしながら進めます</li>
-        <li>動きやすい服装でお越しください（着替えは不要です）</li>
-        <li>ボキボキする施術は一切行いません</li>
-      </ul>
-      <p class="voice-anchor">
-        実際にお越しいただいた50代の女性から——<br>
-        <strong>「最初は少し不安がありましたが、丁寧に説明してくださり、施術中も都度声をかけてくださるので、安心して身を委ねることができました」</strong>とお声をいただいています。
-      </p>
-    </div>
+    <p class="ba-soon fade">他の事例も順次追加予定です。</p>
+    <p class="ba-disclaimer fade">※ ご本人の許可をいただいて掲載しています。感じ方には個人差があり、すべての方に同様の変化をお約束するものではありません。</p>
   </div>
 </section>
 
-<!-- ⑦ CASES -->
+<!-- ④ CASES -->
 <section id="cases">
   <div class="container">
     <span class="eyebrow">CASES</span>
@@ -1245,38 +1270,18 @@
     <div class="case-card fade">
       <div class="case-head">
         <span class="case-num">CASE 02</span>
-        <p class="case-title">2年間続いた膝の痛み。原因は膝ではなかった</p>
+        <p class="case-title">腰痛の原因は、骨盤の前傾とお尻周りの硬さだった</p>
       </div>
-      <p class="case-row"><span>原因として特定：</span>骨盤の外旋による膝への負担の集中</p>
-      <p class="case-row"><span>アプローチした場所：</span>膝ではなく骨盤・股関節周辺</p>
-      <p class="case-row"><span>施術後の変化：</span>「膝の痛みが気にならなくなってきた」</p>
+      <p class="case-row"><span>原因として特定：</span>骨盤が前傾し、お尻周りの筋肉が固まることで腰への負担が集中していた</p>
+      <p class="case-row"><span>アプローチした場所：</span>骨盤周辺の動きの改善と、お尻周りの筋肉のリリース</p>
+      <p class="case-row"><span>施術後の変化：</span>「腰が楽になった」</p>
     </div>
 
-    <div class="case-card fade">
-      <div class="case-head">
-        <span class="case-num">CASE 03</span>
-        <p class="case-title">腕が上がらないほどの肩の痛み。原因は背中にあった</p>
-      </div>
-      <p class="case-row"><span>原因として特定：</span>背中の緊張が肩の動きに影響していた</p>
-      <p class="case-row"><span>アプローチした場所：</span>背中を中心に、肩にも少しアプローチ</p>
-      <p class="case-row"><span>施術後の変化：</span>「腕が動かしやすくなった」「痛みが気にならなくなってきた」</p>
-    </div>
-
-    <div class="case-card fade">
-      <div class="case-head">
-        <span class="case-num">CASE 04</span>
-        <p class="case-title">むくみと扁平足で、ずっと足が重かった</p>
-      </div>
-      <p class="case-row"><span>原因として特定：</span>むくみと運動不足による足裏への影響</p>
-      <p class="case-row"><span>アプローチした場所：</span>足裏・すね周辺</p>
-      <p class="case-row"><span>施術後の変化：</span>「足が軽くなった」「足首が動かしやすくなった」</p>
-    </div>
-
-    <p class="disclaimer fade">※ 実際にお越しいただいた方の体験をもとに作成しています。感じ方には個人差があり、すべての方に同様の変化をお約束するものではありません。</p>
+    <p class="ba-disclaimer fade" style="margin-top:14px;">※ 実際にお越しいただいた方の体験をもとに作成しています。感じ方には個人差があり、すべての方に同様の変化をお約束するものではありません。</p>
   </div>
 </section>
 
-<!-- ⑧ VOICES -->
+<!-- ⑤ VOICES -->
 <section id="voices">
   <div class="container">
     <span class="eyebrow">VOICES</span>
@@ -1297,12 +1302,6 @@
     </div>
 
     <div class="voice-card fade">
-      <p class="quote">「2年間膝の痛みがあり、いろんなところの施術を受けましたが、なかなか変化がありませんでした。それなのに、膝の痛みがどういうからくりで発生しているのかを説明していただき、とてもびっくりしました。」</p>
-      <p class="voice-title">2年間変わらなかった膝痛の、<br>原因を初めて説明してもらえた</p>
-      <p class="voice-attr">— 50代・女性</p>
-    </div>
-
-    <div class="voice-card fade">
       <p class="quote">「急に肩の痛みが出て、腕を上げるのがとてもつらかったのですが、ほぐすだけでなく、原因を説明してくださり、日々のケアについても教えていただきました。大変満足しています。」</p>
       <p class="voice-title">原因の説明と、<br>日々のケアまで教えてくれた</p>
       <p class="voice-attr">— 40代・女性</p>
@@ -1314,7 +1313,56 @@
       <p class="voice-attr">— 50代・女性</p>
     </div>
 
-    <p class="disclaimer fade">※ 掲載はご本人の許可をいただいています。感じ方には個人差があります。</p>
+    <div class="voice-card fade">
+      <p class="quote">「2年間膝の痛みがあり、いろんなところの施術を受けましたが、なかなか変化がありませんでした。それなのに、膝の痛みがどういうからくりで発生しているのかを説明していただき、とてもびっくりしました。」</p>
+      <p class="voice-title">2年間変わらなかった膝痛の、<br>原因を初めて説明してもらえた</p>
+      <p class="voice-attr">— 50代・女性</p>
+    </div>
+
+    <p class="voices-disclaimer fade">※ 掲載はご本人の許可をいただいています。感じ方には個人差があります。</p>
+  </div>
+</section>
+
+<!-- ⑥ THERAPIST -->
+<section id="therapist">
+  <div class="container">
+    <span class="eyebrow">THERAPIST</span>
+    <h2 class="sec-title fade">体を「部分」ではなく、<br>「全身のつながり」で読み解く。</h2>
+    <div class="divider"></div>
+
+    <div class="therapist-image fade">
+      <img src="images/therapist-hands.jpg" alt="美体ラボ施術者の手">
+    </div>
+
+    <div class="therapist-name-block fade">
+      <p class="therapist-name">黒岩 大志</p>
+      <p class="therapist-role">美体ラボ 代表施術者</p>
+    </div>
+
+    <p class="therapist-lead fade">
+      何度通っても変わらない肩こり・頭痛・腰痛・膝痛は、痛みの場所だけを見ていては変わりません。全身のつながりを読み解いて、本当の原因の場所に向き合います。
+    </p>
+
+    <ul class="therapist-meta fade">
+      <li>看護学で解剖生理学・病態生理学を学ぶ</li>
+      <li>サッカー・フットサルを14年（高校・大学とも県ベスト4）。アスリート経験から体の構造を理解</li>
+      <li>自身の慢性偏頭痛を、全身を読み解くアプローチで解消した経験を持つ</li>
+      <li>NSCA-CPT（パーソナルトレーナー資格）取得準備中</li>
+    </ul>
+
+    <div class="therapist-honest-block fade">
+      <h3>はじめに、<br>正直にお伝えしておくこと。</h3>
+      <p class="intro">
+        美体ラボの施術者は、私（男性）一人です。お越しくださる方の多くは40〜60代の女性ですので、「男性に体を触られるのは少し抵抗がある」というお気持ち、よく分かります。だからこそ、次のことを必ずお約束しています。
+      </p>
+      <ul>
+        <li>完全個室・完全予約制（ほかのお客様と顔を合わせません）</li>
+        <li>施術前に「今日触れる可能性のある部位」を必ずご説明します</li>
+        <li>施術中も「次はここに触れますね」と都度声かけしながら進めます</li>
+        <li>動きやすい服装でお越しください（着替えは不要です）</li>
+        <li>ボキボキする施術は一切行いません</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -1327,61 +1375,58 @@
       無理な提案は一切しません。
     </p>
 
-    <div style="display:flex;flex-direction:column;gap:0;">
-      <a href="https://lin.ee/YLX6144" target="_blank" class="btn-line">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .631.287.631.63 0 .345-.282.63-.631.63H17.61v1.125h1.755c.349 0 .631.283.631.63 0 .344-.282.629-.631.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .628.285.628.63 0 .349-.282.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        LINEで質問・空き確認する
-      </a>
-      <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-reserve-alt">
-        WEBで予約する
-      </a>
-    </div>
-    <p class="micro">完全予約制 · 1対1 · 完全個室 · モニター受付中</p>
+    <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-mid-primary">
+      空き状況を確認・予約する
+    </a>
+    <a href="https://lin.ee/YLX6144" target="_blank" class="btn-mid-secondary">
+      LINEで相談・空き確認する
+    </a>
+    <p class="micro">完全予約制 · 1対1 · 完全個室</p>
   </div>
 </section>
 
-<!-- ⑨ PRICE -->
+<!-- ⑦ PRICE -->
 <section id="price">
   <div class="container">
     <span class="eyebrow">MENU & PRICE</span>
-    <h2 class="sec-title fade">メニュー・料金</h2>
+    <h2 class="sec-title fade">料金</h2>
     <div class="divider"></div>
 
     <p class="price-intro fade">
-      モニター期間中は、お一人おひとりに時間をかけられるよう、人数を絞って受付しています。
+      初回の方は、まずヒアリングと施術で全身の状態を読み解きます。<br>お一人おひとりに時間をかけて向き合えるよう、新規受付は1日4名までに絞っています。
     </p>
 
     <div class="price-card fade">
-      <div class="price-tag">モニター価格</div>
+      <div class="price-tag">初回限定</div>
       <p class="price-course">BODY CARE · 60 MIN</p>
       <p class="price-name">「整える」コース</p>
-      <p class="price-desc">体全体の状態を把握し、優先度の高い部位を中心に整えます。<strong>はじめての方はこちらから。</strong></p>
+      <p class="price-desc">体全体の状態を読み解き、優先度の高い部位を中心に整えます。<strong>はじめての方はこちらから。</strong></p>
       <div class="price-row">
-        <span class="label-monitor">モニター期間中</span>
+        <span class="label-init">初回限定</span>
         <span class="price-num">¥8,000</span>
         <span class="price-unit">（通常 ¥12,000〜）</span>
       </div>
     </div>
 
     <div class="price-card fade">
-      <div class="price-tag">モニター価格</div>
+      <div class="price-tag">初回限定</div>
       <p class="price-course">BODY CARE · 90 MIN</p>
       <p class="price-name">「読み解く」コース</p>
-      <p class="price-desc">全身をじっくり読み解き、体の状態を丁寧に整えるコース。慢性的な不調が長く続いている方に。</p>
+      <p class="price-desc">全身をじっくり読み解き、丁寧に整えるコース。慢性的な不調が長く続いている方に。</p>
       <div class="price-row">
-        <span class="label-monitor">モニター期間中</span>
+        <span class="label-init">初回限定</span>
         <span class="price-num">¥10,000</span>
         <span class="price-unit">（通常 ¥15,000〜）</span>
       </div>
     </div>
 
     <p class="price-note fade">
-      表示価格はすべて税込みです。モニター期間は予告なく終了する場合があります。
+      表示価格はすべて税込みです。お支払いは現金のみとなります。
     </p>
   </div>
 </section>
 
-<!-- ⑩ FLOW -->
+<!-- ⑧ FLOW -->
 <section id="flow">
   <div class="container">
     <span class="eyebrow">FIRST VISIT</span>
@@ -1391,7 +1436,8 @@
     <div class="flow-item fade">
       <span class="flow-num">01</span>
       <div>
-        <h3>ご来院・ヒアリング（約10分）</h3>
+        <h3>ご来院・ヒアリング</h3>
+        <p class="flow-time">約5分</p>
         <p>症状・生活習慣・いつから続いているか等を丁寧に確認します。焦らず話してください。</p>
       </div>
     </div>
@@ -1399,6 +1445,7 @@
       <span class="flow-num">02</span>
       <div>
         <h3>体の状態チェック</h3>
+        <p class="flow-time">約5分</p>
         <p>全身のバランス・可動域・張りの状態を確認します。「どこが原因か」を見極めます。</p>
       </div>
     </div>
@@ -1406,27 +1453,18 @@
       <span class="flow-num">03</span>
       <div>
         <h3>施術（原因にアプローチ）</h3>
-        <p>痛い場所ではなく、そこに影響を与えている部位へアプローチします。施術中も都度声かけをしながら進めます。</p>
+        <p class="flow-time">約45〜75分</p>
+        <p>痛い場所ではなく、そこに影響を与えている部位へアプローチします。施術中も「今、何のためにここに触れているか」を都度お伝えしながら進めます。</p>
       </div>
     </div>
-    <div class="flow-item fade">
-      <span class="flow-num">04</span>
-      <div>
-        <h3>変化の説明</h3>
-        <p>「今日何をしたか・なぜ変わったか」をお伝えします。原因を理解することが、日常での悪化を防ぎます。</p>
-      </div>
-    </div>
-    <div class="flow-item fade">
-      <span class="flow-num">05</span>
-      <div>
-        <h3>今後の方針をご相談</h3>
-        <p>状態に合わせて次回の目安をお伝えします。<strong>無理な回数の提案や勧誘は一切行いません。</strong></p>
-      </div>
-    </div>
+
+    <p class="flow-note fade">
+      <strong>無理な回数の提案や勧誘は一切行いません。</strong>体の状態と次回の目安はお伝えしますが、判断はご自身でしていただいて大丈夫です。
+    </p>
   </div>
 </section>
 
-<!-- ⑪ FAQ -->
+<!-- ⑨ FAQ -->
 <section id="faq">
   <div class="container">
     <span class="eyebrow">FAQ</span>
@@ -1449,13 +1487,18 @@
     </details>
 
     <details class="fade">
-      <summary>何回通えば変化が出ますか？<span>＋</span></summary>
-      <div>個人差がありますが、初回から「なんとなく軽くなった」「呼吸がしやすい」という感想をいただくことは多いです。ただし、長年の慢性的な不調は1回で全て解決するものではありません。目安として3〜5回を一つの区切りとして体の変化を確認しながら進めています。施術のたびに状態をヒアリングして次の施術内容を組み立て直すので、「また同じことをされただけ」にはなりません。</div>
+      <summary>肩こり・頭痛は何回通えば変化が出ますか？<span>＋</span></summary>
+      <div>個人差がありますが、初回から「肩が軽くなった」「頭の重さが取れた」とお伝えいただくことが多いです。ただし、長年続いた慢性的な肩こり・頭痛は1回で完全に解決するものではなく、3〜5回を目安に体の変化を確認しながら進めています。施術のたびに状態をヒアリングして次の施術内容を組み立て直すので、「また同じことをされただけ」にはなりません。</div>
     </details>
 
     <details class="fade">
       <summary>施術後に体の反応が出ることはありますか？<span>＋</span></summary>
-      <div>痛みが出ることはありません。ただ、眠くなったり、施術後にだるさを感じる方がいらっしゃいます。これは体が変化しているサインです。施術後は無理をせず、ゆっくり過ごしていただけると理想的です。眠気を感じることもあるため、お車でお越しの際はご注意ください。</div>
+      <div>痛みが出ることはありません。ただ、眠くなったり、施術後にだるさを感じる方がいらっしゃいます。これは体が変化しているサインです。施術後は無理をせず、ゆっくり過ごしていただけると理想的です。</div>
+    </details>
+
+    <details class="fade">
+      <summary>駐車場はありますか？<span>＋</span></summary>
+      <div>当サロンに駐車場はございません。近隣のコインパーキングをご利用いただくか、公共交通機関でのお越しをおすすめしています。施術後に眠気を感じる方がいらっしゃるため、できるだけ電車・バスでお越しください。広島電鉄「市役所前」駅から徒歩4分です。</div>
     </details>
 
     <details class="fade">
@@ -1465,46 +1508,135 @@
   </div>
 </section>
 
+<!-- ⑩ COMPARISON -->
+<section id="comparison" style="background:var(--cream);">
+  <div class="container">
+    <span class="eyebrow">WHAT MAKES US DIFFERENT</span>
+    <h2 class="sec-title fade">整骨院・マッサージ・<br>カイロプラクティックとの違い。</h2>
+    <div class="divider"></div>
+
+    <div class="compare-wrap fade">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>整骨院</th>
+            <th>マッサージ店</th>
+            <th>カイロプラクティック</th>
+            <th class="col-bitai">美体ラボ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>向いているお悩み</th>
+            <td>ぎっくり腰など急性の痛み</td>
+            <td>疲労回復・リラックス</td>
+            <td>骨格・脊椎の矯正</td>
+            <td class="col-bitai">何度も戻る慢性不調</td>
+          </tr>
+          <tr>
+            <th>アプローチ</th>
+            <td>痛い部位を中心に</td>
+            <td>全身を均一にほぐす</td>
+            <td>骨・関節の矯正が中心</td>
+            <td class="col-bitai">全身のつながりを読み解き、原因の場所を整える</td>
+          </tr>
+          <tr>
+            <th>施術時間</th>
+            <td>15〜30分</td>
+            <td>60〜90分</td>
+            <td>20〜40分</td>
+            <td class="col-bitai">60〜90分</td>
+          </tr>
+          <tr>
+            <th>原因の言語化</th>
+            <td>簡潔</td>
+            <td>ほぼなし</td>
+            <td>矯正部位の説明</td>
+            <td class="col-bitai">毎回必ず説明</td>
+          </tr>
+          <tr>
+            <th>ボキボキ施術</th>
+            <td>あることも</td>
+            <td>なし</td>
+            <td>あることが多い</td>
+            <td class="col-bitai">一切なし</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="compare-close fade">
+      「何度通っても変わらない」を抜け出すための場所として、<br>
+      <strong>美体ラボはあります。</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ⑪ ACCESS -->
+<section id="access">
+  <div class="container">
+    <span class="eyebrow">ACCESS</span>
+    <h2 class="sec-title fade">アクセス</h2>
+    <div class="divider"></div>
+
+    <div class="access-info fade">
+      <dl>
+        <dt>住所</dt>
+        <dd><a href="https://maps.app.goo.gl/SdEMdW4DL9oYfZRz9" target="_blank">広島県広島市中区大手町4-3-18 ABE bldg 2F</a></dd>
+        <dt>営業時間</dt>
+        <dd>土・日・祝　10:00〜18:00</dd>
+        <dt>予約</dt>
+        <dd>完全予約制</dd>
+        <dt>アクセス</dt>
+        <dd>広島電鉄「市役所前」駅から徒歩4分</dd>
+        <dt>駐車場</dt>
+        <dd>なし（近隣のコインパーキングをご利用ください）</dd>
+        <dt>お支払い</dt>
+        <dd>現金のみ</dd>
+      </dl>
+    </div>
+
+    <div class="access-map fade">
+      <iframe src="https://www.google.com/maps?q=広島県広島市中区大手町4-3-18&output=embed" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
 <!-- ⑫ FINAL CTA -->
 <section id="final-cta" class="sec-dark with-glow">
   <div class="container">
-    <span class="eyebrow" style="color:rgba(196,134,106,0.85);text-align:center;display:block;">RESERVATION</span>
+    <span class="eyebrow" style="color:rgba(196,134,106,0.85);">RESERVATION</span>
 
     <p class="cta-quote fade">
-      まず、体のことを<br>
-      <em>話しに来てください。</em>
+      肩こりや頭痛が、<br>
+      <em>何度通っても戻ってきてしまう。</em><br>
+      その繰り返しに、<br>
+      心当たりのある方へ。
     </p>
 
     <p class="cta-lead fade">
-      何が起きているのかを、<br>
-      一緒に確認するところから始めます。<br>
-      ヒアリングだけで終わっても構いません。<br>
-      無理な提案は一切しません。
+      まず、体の状態を読み解くところから始めます。<br>
+      無理な回数のご提案や勧誘は、一切いたしません。
     </p>
 
     <div class="scarcity fade">
       <p>
-        <strong>週末のみ営業のため、新規受付は1日4名まで。</strong>1対1の完全個室・完全予約制。直近2週間はすでに6〜7割が埋まっています。モニター価格での受付は、終了する場合があります。
+        <strong>週末のみの営業のため、新規受付は1日4名まで。</strong>完全個室・1対1・完全予約制。
       </p>
     </div>
 
     <div class="cta-buttons-wrap fade">
-      <a href="https://lin.ee/YLX6144" target="_blank" class="btn-line">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .631.287.631.63 0 .345-.282.63-.631.63H17.61v1.125h1.755c.349 0 .631.283.631.63 0 .344-.282.629-.631.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .628.285.628.63 0 .349-.282.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        LINEで質問・空き確認する
+      <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-reserve-primary">
+        空き状況を確認・予約する
       </a>
-      <a href="https://airrsv.net/bitailab/calendar/" target="_blank" class="btn-reserve">
-        WEBで予約する（24時間OK）
+      <a href="https://lin.ee/YLX6144" target="_blank" class="btn-line-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(248,244,238,0.85)"><path d="M19.365 9.863c.349 0 .631.287.631.63 0 .345-.282.63-.631.63H17.61v1.125h1.755c.349 0 .631.283.631.63 0 .344-.282.629-.631.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .628.285.628.63 0 .349-.282.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        LINEで相談・空き確認する
       </a>
     </div>
 
     <p class="micro">※ ご予約・ご相談は無料です。</p>
-
-    <div class="access-info fade">
-      <p>📍 <a href="https://maps.app.goo.gl/SdEMdW4DL9oYfZRz9" target="_blank">広島県広島市中区大手町4-3-18 ABE bldg 2F</a></p>
-      <p>🕐 土・日・祝　10:00〜18:00　完全予約制</p>
-      <p>🚃 広島電鉄「市役所前」駅すぐ</p>
-    </div>
   </div>
 </section>
 
